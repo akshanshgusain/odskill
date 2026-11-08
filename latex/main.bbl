@@ -1,0 +1,78 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Tang et~al.(2026)Tang, Rashtchian, Ferng, Tomkins, Juan, and
+  Vu]{tang2026wikiskill}
+Liyan Tang, Cyrus Rashtchian, Chun-Sung Ferng, Andrew Tomkins, Da-Cheng Juan,
+  and Tu~Vu.
+\newblock {WikiSkill}: Compiling agent experience into persistent knowledge for
+  skill evolution.
+\newblock \emph{arXiv preprint arXiv:2608.27454}, 2026.
+
+\bibitem[Su et~al.(2026)Su, Long, Ai, Tang, Wang, Tu, and Liu]{su2026sra}
+Weihang Su, Jianming Long, Qingyao Ai, Yichen Tang, Changyue Wang, Yiteng Tu,
+  and Yiqun Liu.
+\newblock Skill retrieval augmentation for agentic {AI}.
+\newblock \emph{arXiv preprint arXiv:2604.24594}, 2026.
+
+\bibitem[Ma et~al.(2024)Ma, Zhang, Zhang, et~al.]{ma2024spreadsheetbench}
+Zeyao Ma, Bohan Zhang, Jing Zhang, et~al.
+\newblock {SpreadsheetBench}: Towards challenging real world spreadsheet
+  manipulation.
+\newblock In \emph{Advances in Neural Information Processing Systems (NeurIPS)
+  Datasets and Benchmarks Track}, 2024.
+
+\bibitem[{Anthropic}(2025{\natexlab{a}})]{anthropic2025overview}
+{Anthropic}.
+\newblock {Agent Skills} overview.
+\newblock
+  \url{https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview},
+  2025{\natexlab{a}}.
+
+\bibitem[{Anthropic}(2025{\natexlab{b}})]{anthropic2025engineering}
+{Anthropic}.
+\newblock Equipping agents for the real world with {Agent Skills}.
+\newblock
+  \url{https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills},
+  2025{\natexlab{b}}.
+
+\bibitem[Shridhar et~al.(2021)Shridhar, Yuan, C{\^o}t{\'e}, Bisk, Trischler,
+  and Hausknecht]{shridhar2021alfworld}
+Mohit Shridhar, Xingdi Yuan, Marc-Alexandre C{\^o}t{\'e}, Yonatan Bisk, Adam
+  Trischler, and Matthew Hausknecht.
+\newblock {ALFWorld}: Aligning text and embodied environments for interactive
+  learning.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2021.
+
+\bibitem[Ma et~al.(2026)Ma, Qian, Ma, Liang, Ji, Cai, Chen, Jiang, and
+  Sun]{ma2026skillv}
+Jie Ma, Zhipeng Qian, Yufei Ma, Zihan Liang, Jiayi Ji, Qingpeng Cai, Ben Chen,
+  Peng Jiang, and Xiaoshuai Sun.
+\newblock {Skill-V}: Verifiable self-evolving skill library for interactive
+  agents.
+\newblock \emph{arXiv preprint arXiv:2610.11781}, 2026.
+
+\bibitem[Shi et~al.(2026)Shi, Chen, et~al.]{shi2026skill1}
+Yaorui Shi, Yuxin Chen, et~al.
+\newblock {Skill1}: Unified evolution of skill-augmented agents via
+  reinforcement learning.
+\newblock \emph{arXiv preprint arXiv:2605.06130}, 2026.
+
+\bibitem[{Stahl-G}()]{stahlg2026wikiskill}
+{Stahl-G}.
+\newblock wikiskill: an independent {WikiSkill} implementation.
+\newblock \url{https://github.com/Stahl-G/wikiskill}.
+\newblock MIT licence.
+
+\bibitem[Li et~al.(2026)Li, Liu, Chen, You, et~al.]{li2026skillsbench}
+Xiangyi Li, Yimin Liu, Wenbo Chen, Bingran You, et~al.
+\newblock {SkillsBench}: Benchmarking how well {Agent Skills} work across
+  diverse tasks.
+\newblock \emph{arXiv preprint arXiv:2602.12670}, 2026.
+
+\end{thebibliography}

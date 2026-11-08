@@ -1,0 +1,7 @@
+{
+  "descriptions": {
+    "look_at_obj_in_light": "ALWAYS load for ANY task that mentions a desklamp or floorlamp, or says look at / examine / inspect / see an object in light (e.g. \"look at the alarmclock under the desklamp\", \"examine the book with the desklamp\"). Take the object, go to the lamp, `use` it to turn it on. Not a put task.",
+    "pick_and_place": "ALWAYS load for ANY task of the form \"put/place/move a/some X in/on/to Y\" with ONE object and none of the words clean/wash/hot/heat/cool/cold/lamp/two (e.g. \"put a mug on the desk\", \"put some soap in the cabinet\", \"put a book on the bed\", \"put a pencil in the drawer\"). Default skill for simple put tasks: find, take, put.",
+    "pick_two_obj_and_place": "ALWAYS load when the task says \"two\", \"2\", \"both\", or a plural object to put somewhere (e.g. \"put two pillows on the sofa\", \"put two cds in the drawer\", \"find two soapbars and put them in the cabinet\"). Even if it is a simple put, load this instead of pick_and_place. Place the first, then find and place a second, one at a time."
+  }
+}

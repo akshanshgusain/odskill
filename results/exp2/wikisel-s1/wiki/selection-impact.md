@@ -1,0 +1,106 @@
+# Candidate descriptions
+
+## iteration 0 baseline
+- look_at_obj_in_light: Procedure for examining an object under a light.
+- pick_and_place: Procedure for picking up one object and putting it somewhere.
+- pick_clean_then_place: Procedure for cleaning an object and then putting it somewhere.
+- pick_cool_then_place: Procedure for cooling an object and then putting it somewhere.
+- pick_heat_then_place: Procedure for heating an object and then putting it somewhere.
+- pick_two_obj_and_place: Procedure for picking up two objects and putting them somewhere.
+val_f1 0.000
+- look_at_obj_in_light — recall 0.000 precision 0.000
+- pick_and_place — recall 0.000 precision 0.000
+- pick_clean_then_place — recall 0.000 precision 0.000
+- pick_cool_then_place — recall 0.000 precision 0.000
+- pick_heat_then_place — recall 0.000 precision 0.000
+- pick_two_obj_and_place — recall 0.000 precision 0.000
+
+## iteration 1 reject
+- look_at_obj_in_light: Use for tasks to look at, examine, or inspect an object under a desklamp or floorlamp (e.g. 'look at the alarmclock under the desklamp'). Turn on the lamp while holding the object.
+- pick_and_place: Use for a single object moved/put/placed somewhere (e.g. 'put a mug on the desk', 'move the watch from drawer to table') with NO heat, cool, clean, lamp, or count of two.
+- pick_clean_then_place: Use when the object must be cleaned, washed, or rinsed (e.g. 'put a clean plate in the cabinet', 'place a rinsed knife on the counter') before placing it. Cleans at the sinkbasin.
+- pick_cool_then_place: Use when the object must be cooled, chilled, cold, or refrigerated (e.g. 'put a cold apple on the table') before placing it. Cools using the fridge.
+- pick_heat_then_place: Use when the object must be heated, warmed, hot, or cooked (e.g. 'put a hot potato on the countertop', 'heat a tomato and place it') before placing it. Heats with the microwave.
+- pick_two_obj_and_place: Use when the task involves two objects of one kind or a plural noun (e.g. 'put two pillows on the sofa', 'alarm clocks on a shelf'), placed at one destination. Prefer over pick_and_place when plural or 'two'.
+val_f1 0.000
+- look_at_obj_in_light — recall 0.000 precision 0.000
+- pick_and_place — recall 0.000 precision 0.000
+- pick_clean_then_place — recall 0.000 precision 0.000
+- pick_cool_then_place — recall 0.000 precision 0.000
+- pick_heat_then_place — recall 0.000 precision 0.000
+- pick_two_obj_and_place — recall 0.000 precision 0.000
+
+## iteration 2 reject
+- look_at_obj_in_light: Use when the task says look at, examine, or inspect an object under/with a desklamp or floorlamp (e.g. 'look at the alarmclock under the desklamp'). Find the object, then turn on the lamp while holding it.
+- pick_and_place: Use for moving ONE object to a destination (e.g. 'put a mug on the desk', 'move the watch from the drawer to the coffee table', 'put some soap in the cabinet') with no heating, cooling, cleaning, lamp, plural, or 'two'.
+- pick_clean_then_place: Use when the object must be cleaned, washed, or rinsed first (e.g. 'put a clean plate in the cabinet', 'place a rinsed knife on the counter'), then placed. Cleans at the sinkbasin.
+- pick_cool_then_place: Use when the object must be cooled, chilled, cold, or refrigerated first (e.g. 'put a cold apple on the table'), then placed. Cools with the fridge.
+- pick_heat_then_place: Use when the object must be heated, warmed, hot, or cooked first (e.g. 'put a hot potato on the countertop', 'heat a tomato and place it'), then placed. Heats with the microwave.
+- pick_two_obj_and_place: Use when the task has 'two' of an object or a bare plural noun (e.g. 'put two pillows on the sofa', 'move the alarm clocks on the desk to the shelf', 'two spray bottles on the cabinet'), all placed at one destination. Prefer over pick_and_place for plurals.
+val_f1 0.000
+- look_at_obj_in_light — recall 0.000 precision 0.000
+- pick_and_place — recall 0.000 precision 0.000
+- pick_clean_then_place — recall 0.000 precision 0.000
+- pick_cool_then_place — recall 0.000 precision 0.000
+- pick_heat_then_place — recall 0.000 precision 0.000
+- pick_two_obj_and_place — recall 0.000 precision 0.000
+
+## iteration 3 reject
+- look_at_obj_in_light: Use when the task says look at, examine, or inspect an object under/with a desklamp or floorlamp (turn on the lamp while holding the object).
+- pick_and_place: Use for simple one-object tasks: put/place/move a single object in or on a destination (e.g. 'put a mug on the desk'), with no heating, cooling, cleaning, lamp, or count of two.
+- pick_clean_then_place: Use when the task says clean (or a clean/washed/rinsed object) then put it somewhere; clean at the sinkbasin with water before placing.
+- pick_cool_then_place: Use when the task says cool, chill, cold, or cooled object, then place it; cool it in the fridge before placing.
+- pick_heat_then_place: Use when the task says heat, warm, hot, or cook an object (e.g. in the microwave) then place it; heat before placing.
+- pick_two_obj_and_place: Use when the task says two of an object kind (e.g. 'two pillows', 'two cds', plural with count 2) to put in or on one destination; find and place both.
+val_f1 0.000
+- look_at_obj_in_light — recall 0.000 precision 0.000
+- pick_and_place — recall 0.000 precision 0.000
+- pick_clean_then_place — recall 0.000 precision 0.000
+- pick_cool_then_place — recall 0.000 precision 0.000
+- pick_heat_then_place — recall 0.000 precision 0.000
+- pick_two_obj_and_place — recall 0.000 precision 0.000
+
+## iteration 4 reject
+- look_at_obj_in_light: Use when the task says look at, examine, or inspect an object under/with a desklamp or floorlamp (e.g. "look at the alarmclock under the desklamp"). Find the object, take it, turn on the lamp.
+- pick_and_place: Use for a simple put/place/move of ONE object into or onto a destination (e.g. "put a mug on the desk", "put some soap in the cabinet") with no heat, cool, clean, lamp, or count of two.
+- pick_clean_then_place: Use when the object must be cleaned/washed first: "clean", "washed", "rinse", or sink/water use, then placed (e.g. "put a clean plate in the cabinet"). Cleans at the sinkbasin.
+- pick_cool_then_place: Use when the object must be cooled first: "cool", "cold", "chilled", "cooled", or fridge use, then placed (e.g. "put a cold apple on the table"). Cools in the fridge.
+- pick_heat_then_place: Use when the object must be heated first: "heat", "hot", "warm", "cook", or microwave use, then placed (e.g. "put a hot potato on the countertop"). Heats in the microwave.
+- pick_two_obj_and_place: Use when the task wants TWO of an object kind placed in/on a destination: "two", "2", or a bare plural (e.g. "put two pillows on the sofa"). Take one at a time, place both.
+val_f1 0.000
+- look_at_obj_in_light — recall 0.000 precision 0.000
+- pick_and_place — recall 0.000 precision 0.000
+- pick_clean_then_place — recall 0.000 precision 0.000
+- pick_cool_then_place — recall 0.000 precision 0.000
+- pick_heat_then_place — recall 0.000 precision 0.000
+- pick_two_obj_and_place — recall 0.000 precision 0.000
+
+## iteration 5 reject
+- look_at_obj_in_light: Use when the task says look at, examine, or inspect an object under/with a desklamp or floorlamp (e.g. "look at the alarmclock under the desklamp"). Find the object, then turn on the lamp.
+- pick_and_place: Use for simple single-object tasks: "put a mug on the desk", "put some soap in the cabinet", "put a/an X in/on Y". No heating, cooling, cleaning, lamp, or count of two.
+- pick_clean_then_place: Use when the object must be cleaned/washed first ("clean", "clean X", sink/water implied) then placed, e.g. "put a clean plate in the cabinet". Uses sinkbasin.
+- pick_cool_then_place: Use when the object must be cooled first: words cool, cold, chilled, chill, refrigerate ("put a cold apple on the table", "cooled lettuce"). Uses fridge, then place.
+- pick_heat_then_place: Use when the object must be heated first: words heat, hot, warm, cook, microwave ("put a hot potato on the countertop", "heat the mug"). Uses microwave, then place.
+- pick_two_obj_and_place: Use when the task has two or a plural count of the same object: "put two pillows on the sofa", "two/both/2 X in/on Y". Find and place two separate objects.
+val_f1 0.000
+- look_at_obj_in_light — recall 0.000 precision 0.000
+- pick_and_place — recall 0.000 precision 0.000
+- pick_clean_then_place — recall 0.000 precision 0.000
+- pick_cool_then_place — recall 0.000 precision 0.000
+- pick_heat_then_place — recall 0.000 precision 0.000
+- pick_two_obj_and_place — recall 0.000 precision 0.000
+
+## iteration 6 reject
+- look_at_obj_in_light: Use for tasks to look at, examine, or inspect an object under a lamp/desklamp (e.g. 'look at the book under the desklamp'): find the object, turn on the light, examine it.
+- pick_and_place: Use for plain tasks to put/place/move ONE object in or on a receptacle (e.g. 'put a mug on the desk', 'put the apple in the fridge') with no heating, cooling, cleaning, or count of two.
+- pick_clean_then_place: Use when the object must be cleaned/washed or is described as clean ('clean X', 'put a clean X in/on ...'): take it to the sink, wash with water, then place it.
+- pick_cool_then_place: Use when the object must be cooled/chilled or is described as cool/cooled ('cool X', 'put a cooled X in/on ...'): use the fridge to cool it, then place it.
+- pick_heat_then_place: Use when the object must be heated/warmed/cooked or is described as hot/heated ('heat X', 'microwave X', 'put a hot X in/on ...'): use microwave/heat source, then place it.
+- pick_two_obj_and_place: Use when the task involves TWO objects or a plural ('two', 'both', 'put 2 pencils', bare plurals like 'put cds in the safe'): find and place both of the same kind in one receptacle.
+val_f1 0.000
+- look_at_obj_in_light — recall 0.000 precision 0.000
+- pick_and_place — recall 0.000 precision 0.000
+- pick_clean_then_place — recall 0.000 precision 0.000
+- pick_cool_then_place — recall 0.000 precision 0.000
+- pick_heat_then_place — recall 0.000 precision 0.000
+- pick_two_obj_and_place — recall 0.000 precision 0.000

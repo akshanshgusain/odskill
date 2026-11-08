@@ -1,0 +1,164 @@
+{
+  "source": "https://huggingface.co/datasets/WeihangSu/SRA-Bench",
+  "paper": "Skill Retrieval Augmentation for Agentic AI (arXiv 2604.24594)",
+  "revision": "6143f2634eb284955ce312213bac24b582d039f3",
+  "seed": 0,
+  "count": 300,
+  "corpus_count": 26262,
+  "adjacent_pool": 221,
+  "adjacent_count": 30,
+  "adjacent_rule": "spreadsheet|\\bexcel\\b|\\bxlsx\\b|\\bxls\\b|workbook|worksheet|openpyxl|\\bxlwt\\b|\\bxlrd\\b|vlookup|pivot table|\\bcsv\\b|tabular|dataframe",
+  "adjacent": [
+    {
+      "source_id": "web_01563",
+      "name": "polars",
+      "original_name": "polars"
+    },
+    {
+      "source_id": "web_06993",
+      "name": "financial_document_processor",
+      "original_name": "financial-document-processor"
+    },
+    {
+      "source_id": "web_12212",
+      "name": "convert_doc",
+      "original_name": "convert-doc"
+    },
+    {
+      "source_id": "web_19607",
+      "name": "data_converter",
+      "original_name": "data-converter"
+    },
+    {
+      "source_id": "web_05696",
+      "name": "markitdown_skill",
+      "original_name": "markitdown-skill"
+    },
+    {
+      "source_id": "web_08921",
+      "name": "section_mapper",
+      "original_name": "section-mapper"
+    },
+    {
+      "source_id": "web_01591",
+      "name": "spreadsheet",
+      "original_name": "spreadsheet"
+    },
+    {
+      "source_id": "web_14322",
+      "name": "polars_2",
+      "original_name": "polars"
+    },
+    {
+      "source_id": "web_06546",
+      "name": "paper_notes",
+      "original_name": "paper-notes"
+    },
+    {
+      "source_id": "web_02808",
+      "name": "csv_data_visualizer",
+      "original_name": "csv-data-visualizer"
+    },
+    {
+      "source_id": "web_09395",
+      "name": "document_quality_standards",
+      "original_name": "document-quality-standards"
+    },
+    {
+      "source_id": "web_11983",
+      "name": "ingesting_data",
+      "original_name": "ingesting-data"
+    },
+    {
+      "source_id": "web_16234",
+      "name": "polars_3",
+      "original_name": "polars"
+    },
+    {
+      "source_id": "web_02644",
+      "name": "finlab",
+      "original_name": "finlab"
+    },
+    {
+      "source_id": "web_06185",
+      "name": "sheets_cli",
+      "original_name": "sheets-cli"
+    },
+    {
+      "source_id": "web_07297",
+      "name": "large_scale_text_editing",
+      "original_name": "large-scale-text-editing"
+    },
+    {
+      "source_id": "web_23629",
+      "name": "jira_search_jql",
+      "original_name": "jira-search-jql"
+    },
+    {
+      "source_id": "web_08223",
+      "name": "dedupe_rank",
+      "original_name": "dedupe-rank"
+    },
+    {
+      "source_id": "web_23158",
+      "name": "pandas_pro",
+      "original_name": "pandas-pro"
+    },
+    {
+      "source_id": "web_22539",
+      "name": "excel_processor",
+      "original_name": "excel-processor"
+    },
+    {
+      "source_id": "web_07112",
+      "name": "data_type_converter",
+      "original_name": "data-type-converter"
+    },
+    {
+      "source_id": "bigcodebench_084",
+      "name": "statistics_descriptive_statistics_and_dataframe_integration",
+      "original_name": "statistics \u2014 Descriptive Statistics and DataFrame Integration"
+    },
+    {
+      "source_id": "web_20277",
+      "name": "pandas",
+      "original_name": "pandas"
+    },
+    {
+      "source_id": "web_11435",
+      "name": "curriculum_package_pdf",
+      "original_name": "curriculum-package-pdf"
+    },
+    {
+      "source_id": "web_08615",
+      "name": "multi_source_data_merger",
+      "original_name": "multi-source-data-merger"
+    },
+    {
+      "source_id": "web_11828",
+      "name": "pandasai",
+      "original_name": "pandasai"
+    },
+    {
+      "source_id": "web_15027",
+      "name": "excel_parser",
+      "original_name": "excel-parser"
+    },
+    {
+      "source_id": "web_22373",
+      "name": "spreadsheet_builder",
+      "original_name": "Spreadsheet Builder"
+    },
+    {
+      "source_id": "web_25238",
+      "name": "actual_budget_assistant",
+      "original_name": "actual-budget-assistant"
+    },
+    {
+      "source_id": "web_12955",
+      "name": "xsv",
+      "original_name": "xsv"
+    }
+  ],
+  "sha256": "ba2fcf3f6ecca37d0231e58218451477ed7d823bac830a2aac00ad97ffd1bf60"
+}

@@ -1,0 +1,9 @@
+[project]
+name = "odskill"
+version = "0.0.1"
+description = "On-demand skill loading and wiki-guided skill selection on top of WikiSkill"
+requires-python = ">=3.11"
+dependencies = ["wikiskill-research", "openpyxl>=3.1", "pandas>=2"]
+
+[tool.setuptools.packages.find]
+include = ["odskill*"]

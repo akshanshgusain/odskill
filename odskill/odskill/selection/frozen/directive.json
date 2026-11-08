@@ -1,0 +1,8 @@
+{
+  "look_at_obj_in_light": "Load this before acting on any task that requires examining an object under a lamp or other light.",
+  "pick_and_place": "Load this before acting on any task that only requires picking up one object and placing it, with no heating, cooling, or cleaning.",
+  "pick_clean_then_place": "Load this before acting on any task that requires cleaning an object.",
+  "pick_cool_then_place": "Load this before acting on any task that requires cooling an object.",
+  "pick_heat_then_place": "Load this before acting on any task that requires heating an object.",
+  "pick_two_obj_and_place": "Load this before acting on any task that requires picking up two objects and placing them."
+}

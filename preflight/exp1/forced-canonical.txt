@@ -1,0 +1,457 @@
+skills_in_index 106
+noise_k 100
+seed 0
+descriptions plain
+
+===== first-turn user text =====
+You are an expert agent operating in the ALFRED Embodied Environment. A load_skill tool lists skills by name and description. Before you act, call load_skill for the skill whose description matches this task. You may call it more than once. Then output exactly one admissible action inside <action> tags.
+You are an expert agent operating in the ALFRED Embodied Environment. Your task is to:
+
+Examine the keys under the light of the table lamp
+
+
+
+Prior to this step, you have already taken 0 step(s). Below are the most recent 0 observations and the corresponding actions you took:
+
+(none yet)
+
+You are now at step 1 and your current observation is:
+
+-= Welcome to TextWorld, ALFRED! =-
+
+You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.
+
+Your task is to: examine the keychain with the desklamp.
+
+Your admissible actions of the current situation are: [go to bed 1, go to desk 1, go to drawer 1, go to drawer 2, go to drawer 3, go to drawer 4, go to drawer 5, go to drawer 6, go to drawer 7, go to drawer 8, go to dresser 1, go to garbagecan 1, go to shelf 1, go to shelf 2, go to shelf 3, go to shelf 4, go to shelf 5, help, inventory, look].
+
+Now it's your turn to take an action. You should first reason step-by-step about the current situation. This reasoning process MUST be enclosed within <think> </think> tags. Once you've finished your reasoning, you should choose an admissible action for current step and present it within <action> </action> tags.
+===== load_skill tool description =====
+Check whether an available skill matches the task. When one does, load it with this tool before starting the work.
+
+<available_skills>
+<skill>
+<name>polars</name>
+<description>Fast DataFrame library (Apache Arrow). Select, filter, group_by, joins, lazy evaluation, CSV/Parquet I/O, expression API, for high-performance data analysis workflows.</description>
+</skill>
+<skill>
+<name>flipboard</name>
+<description>Curate and discover news content with Flipboard's personalized magazine-style reader.</description>
+</skill>
+<skill>
+<name>appsec_expert</name>
+<description>Elite Application Security engineer specializing in secure SDLC, OWASP Top 10 2025, SAST/DAST/SCA integration, threat modeling (STRIDE), and vulnerability remediation. Expert in security testing, cryptography, authentication patterns, and</description>
+</skill>
+<skill>
+<name>kamal</name>
+<description>Deploy containerized web applications to any Linux server using Kamal. Use when users need to deploy, configure, debug, or manage Kamal deployments including initial setup, configuration of deploy.yml, deployment workflows, rollbacks,</description>
+</skill>
+<skill>
+<name>project_planner</name>
+<description>Create comprehensive project plans with timelines, dependencies, and resource allocation</description>
+</skill>
+<skill>
+<name>axolotl</name>
+<description>Expert guidance for fine-tuning LLMs with Axolotl - YAML configs, 100+ models, LoRA/QLoRA, DPO/KTO/ORPO/GRPO, multimodal support</description>
+</skill>
+<skill>
+<name>git_worktrees</name>
+<description>Git worktree isolation for parallel plan execution. Creates isolated working directories so multiple plans can execute simultaneously without conflicts.</description>
+</skill>
+<skill>
+<name>ruff_linting</name>
+<description>Python code quality with ruff linter. Fast linting, rule selection, auto-fixing, and configuration. Use when checking Python code quality, enforcing standards, or finding bugs.</description>
+</skill>
+<skill>
+<name>creating_workflows_from_description</name>
+<description>Use when user describes complex multi-step tasks that could benefit from orchestration - guides natural language workflow creation</description>
+</skill>
+<skill>
+<name>game_development</name>
+<description>Game development orchestrator.</description>
+</skill>
+<skill>
+<name>zenstack</name>
+<description>ZenStack access policies and enhanced Prisma ORM. Use when defining access control rules (@@allow/@@deny), integrating with tRPC, setting up auth(), or working with ZModel schemas.</description>
+</skill>
+<skill>
+<name>claude_md_architect</name>
+<description>CLAUDE.md file generation and optimization for Claude Code projects. Capabilities: initialize project instructions, analyze codebase context, optimize existing CLAUDE.md, apply Anthropic best practices, reduce token usage, improve</description>
+</skill>
+<skill>
+<name>tailwind_patterns</name>
+<description>Quick reference for Tailwind CSS utility patterns, responsive design, and configuration. Triggers on: tailwind, utility classes, responsive design, tailwind config, dark mode css, tw classes.</description>
+</skill>
+<skill>
+<name>pick_cool_then_place</name>
+<description>Procedure for cooling an object and then putting it somewhere.</description>
+</skill>
+<skill>
+<name>motion</name>
+<description>Motion (Framer Motion) React animation library. Use for drag-and-drop, scroll animations, gestures, SVG morphing, or encountering bundle size, complex transitions, spring physics errors.</description>
+</skill>
+<skill>
+<name>presentation_architect</name>
+<description>Transform high-level ideas or briefs into fully structured presentation scripts saved as Markdown files, describing presentations slide by slide with exhaustive detail. Use this skill when users request: (1) Creating presentation</description>
+</skill>
+<skill>
+<name>kata_remove_phase</name>
+<description>Remove a future phase from roadmap and renumber subsequent phases. Triggers include "remove phase", "remove phase".</description>
+</skill>
+<skill>
+<name>superplan</name>
+<description>Use when starting significant features, epics, or complex tasks. Creates multi-phase implementation plans with parallelizable phases, poker estimates, TDD-first acceptance criteria, and quality gates. Detects tech stack from</description>
+</skill>
+<skill>
+<name>mutation_testing</name>
+<description>Validate test effectiveness with mutation testing using Stryker (TypeScript/JavaScript) and mutmut (Python). Find weak tests that pass despite code mutations. Use to improve test quality.</description>
+</skill>
+<skill>
+<name>explainer_visuals</name>
+<description>Create high-quality animated explainer visuals for essays and blog posts. Use when the user wants to visualize concepts, processes, data, or ideas with interactive web animations. Triggers on requests like "create a visual for", "animate</description>
+</skill>
+<skill>
+<name>pick_clean_then_place</name>
+<description>Procedure for cleaning an object and then putting it somewhere.</description>
+</skill>
+<skill>
+<name>component_patterns</name>
+<description>Implement React component patterns including composition, custom hooks, render props, HOCs, and compound components. Use when building reusable React components, implementing design patterns, or refactoring component architecture.</description>
+</skill>
+<skill>
+<name>getstorage_patterns</name>
+<description>Local storage with GetStorage for preferences, caching, and offline-first patterns</description>
+</skill>
+<skill>
+<name>markitdown_skill</name>
+<description>Guide for using Microsoft MarkItDown - a Python utility for converting files to Markdown. Use when converting PDF, Word, PowerPoint, Excel, images, audio, HTML, CSV, JSON, XML, ZIP, YouTube URLs, EPubs, Jupyter notebooks, RSS feeds, or</description>
+</skill>
+<skill>
+<name>design_foundation</name>
+<description>Establish or formalize your design system foundation. Create design tokens (color, typography, spacing, shadows, borders), define component architecture, document design principles, and build the structure that enables consistency and</description>
+</skill>
+<skill>
+<name>azure_mgmt_botservice_dotnet</name>
+<description>Azure Resource Manager SDK for Bot Service in .NET. Management plane operations for creating and managing Azure Bot resources, channels (Teams, DirectLine, Slack), and connection settings. Triggers: "Bot Service", "BotResource", "Azure</description>
+</skill>
+<skill>
+<name>dev_kit_work</name>
+<description>Implement existing tickets autonomously. Use when: working on tickets in `.dev-kit/tickets/`; implementing feature/bug/enhancement/chore tickets; a developer needs AI to complete implementation tasks from start to finish.</description>
+</skill>
+<skill>
+<name>voice_apply</name>
+<description>Applies a voice profile to transform content. Use when user asks to write in a specific voice, match a tone, apply a style, or transform content to sound like a particular voice profile.</description>
+</skill>
+<skill>
+<name>breadcrumbs</name>
+<description>Leaves notes for future Claude sessions in .claude/breadcrumbs.md. At session end or after significant work, records what was tried, what worked, what failed, and context for next time. On session start, reads breadcrumbs to understand</description>
+</skill>
+<skill>
+<name>scientific_schematics</name>
+<description>Create publication-quality scientific diagrams, flowcharts, and schematics using Python (graphviz, matplotlib, schemdraw, networkx). Specialized in neural network architectures, system diagrams, and flowcharts. Generates SVG/EPS in</description>
+</skill>
+<skill>
+<name>pricing_strategy</name>
+<description>定价决策、包装或变现策略时使用。触发词：pricing、pricing tiers、freemium、free trial、packaging、price increase、value metric、Van Westendorp、willingness to pay、monetization。覆盖定价研究、层级结构与包装策略。</description>
+</skill>
+<skill>
+<name>ai_response_refiner</name>
+<description>AI応答を洗練・改善するスキル。粗い出力を流暢で専門的な文章に変換。構造化、明確化、詳細化、トーン調整、専門性向上、読みやすさ改善を実施。</description>
+</skill>
+<skill>
+<name>web_payments</name>
+<description>Stripe Checkout, subscriptions, webhooks, customer portal</description>
+</skill>
+<skill>
+<name>risk_analysis</name>
+<description>Risk analysis using risk registers, probability/impact matrices, and mitigation planning. Identifies, assesses, and manages project, business, and technical risks with structured response strategies.</description>
+</skill>
+<skill>
+<name>sentry_pr_code_review</name>
+<description>Review a project's PRs to check for issues detected in code review by Seer Bug Prediction. Use when asked to review or fix issues identified by Sentry in PR comments, or to find recent PRs with Sentry feedback.</description>
+</skill>
+<skill>
+<name>promql_generator</name>
+<description>Comprehensive toolkit for generating best practice PromQL (Prometheus Query Language) queries following current standards and conventions. Use this skill when creating new PromQL queries, implementing monitoring and alerting rules, or</description>
+</skill>
+<skill>
+<name>mmt_api_best_practices</name>
+<description>Best practices for building apps with the MMT real-time crypto market data API. Use when building trading bots, dashboards, analytics tools, or any application consuming MMT REST or WebSocket APIs. Covers connection management, rate</description>
+</skill>
+<skill>
+<name>leadership_stakeholder_management</name>
+<description>Master stakeholder management, executive communication, cross-functional alignment, and product advocacy. Lead effectively across your organization.</description>
+</skill>
+<skill>
+<name>drama_workflow</name>
+<description>协调情节点戏剧功能分析流程，管理文本预处理、并行分析、结果整合。适用于长文本的情节点和戏剧功能分析、需要结构化分析报告的场景</description>
+</skill>
+<skill>
+<name>creating_agent_skills</name>
+<description>Expert guidance for creating, writing, and refining Claude Code Skills. Use when working with SKILL.md files, authoring new skills, improving existing skills, or understanding skill structure and best practices.</description>
+</skill>
+<skill>
+<name>ecs_task_definition_creator</name>
+<description>Create ecs task definition creator operations. Auto-activating skill for AWS Skills. Triggers on: ecs task definition creator, ecs task definition creator Part of the AWS Skills skill category. Use when working with ecs task definition</description>
+</skill>
+<skill>
+<name>debugging_troubleshooting_2025</name>
+<description>Comprehensive bash script debugging and troubleshooting techniques for 2025</description>
+</skill>
+<skill>
+<name>seo_metadata</name>
+<description>Dynamic metadata generation per locale with canonical URLs, Open Graph tags, Twitter cards, and hreflang alternates. Use when implementing page metadata, setting up SEO for multilingual sites, or configuring social sharing previews.</description>
+</skill>
+<skill>
+<name>n8n</name>
+<description>Develop workflows, custom nodes, and integrations for n8n automation platform</description>
+</skill>
+<skill>
+<name>raycast_ui_skills</name>
+<description>Raycast's UI design system. Use when building interfaces inspired by Raycast's aesthetic - light mode, Inter font, 4px grid.</description>
+</skill>
+<skill>
+<name>spec_workflow</name>
+<description>Standard software engineering workflow for requirement analysis, technical design, and task planning. Use this skill when developing new features, complex architecture designs, multi-module integrations, or projects involving database/UI</description>
+</skill>
+<skill>
+<name>segmentation_framework</name>
+<description>Use to design and document customer segments with clear criteria, metrics, and governance.</description>
+</skill>
+<skill>
+<name>symfony_symfony_voters</name>
+<description>Use when symfony symfony voters</description>
+</skill>
+<skill>
+<name>pick_heat_then_place</name>
+<description>Procedure for heating an object and then putting it somewhere.</description>
+</skill>
+<skill>
+<name>elicitation_methodology</name>
+<description>Hub skill for requirements elicitation. Provides technique selection, orchestration guidance, LLMREI patterns, and autonomy level configuration. Use when gathering requirements from stakeholders, conducting elicitation sessions, or</description>
+</skill>
+<skill>
+<name>commit</name>
+<description>[UDS] Generate commit messages following Conventional Commits standard</description>
+</skill>
+<skill>
+<name>gpui_global</name>
+<description>Global state management in GPUI. Use when implementing global state, app-wide configuration, or shared resources.</description>
+</skill>
+<skill>
+<name>financial_document_processor</name>
+<description>Guidance for processing financial documents (invoices, receipts, statements) with OCR and text extraction. This skill should be used when tasks involve extracting data from financial PDFs or images, generating summaries (CSV/JSON), or</description>
+</skill>
+<skill>
+<name>continental_critical</name>
+<description>Master Continental philosophy and Critical Theory. Use for: post-structuralism, deconstruction, Frankfurt School, hermeneutics, psychoanalysis. Triggers: 'Foucault', 'power/knowledge', 'deconstruction', 'Derrida', 'différance', 'critical</description>
+</skill>
+<skill>
+<name>spreadsheet</name>
+<description>Use when tasks involve creating, editing, analyzing, or formatting spreadsheets (`.xlsx`, `.csv`, `.tsv`) using Python (`openpyxl`, `pandas`), especially when formulas, references, and formatting need to be preserved and verified.</description>
+</skill>
+<skill>
+<name>langchain_patterns</name>
+<description>Implement Retrieval-Augmented Generation (RAG) systems with LangChain4j. Build document ingestion pipelines, embedding stores, vector search strategies, and knowledge-enhanced AI applications. Use when creating question-answering systems</description>
+</skill>
+<skill>
+<name>marketing_status</name>
+<description>CLI dashboard for marketing metrics. Pulls from PostHog, Stripe, and Postiz MCPs when configured. Shows traffic, activation, conversion. Includes CLI script examples for direct API access.</description>
+</skill>
+<skill>
+<name>look_at_obj_in_light</name>
+<description>Procedure for examining an object under a light.</description>
+</skill>
+<skill>
+<name>ecto_query_patterns</name>
+<description>Use when querying data with Ecto.Query DSL including where clauses, joins, aggregates, preloading, and query composition. Use for building flexible database queries in Elixir applications.</description>
+</skill>
+<skill>
+<name>kamal_coder</name>
+<description>This skill guides deploying Rails applications with Kamal. Use when configuring deploy.yml, setting up accessories, managing secrets, or preparing servers for container deployment.</description>
+</skill>
+<skill>
+<name>monthly_review</name>
+<description>Conduct a monthly review of project alignment and progress toward aims. Use when the user types /monthly_review, at the start of a new month, after completing a major milestone, or when uncertain about project direction.</description>
+</skill>
+<skill>
+<name>axiom_ios_ml</name>
+<description>Use when deploying ANY machine learning model on-device, converting models to CoreML, compressing models, or implementing speech-to-text. Covers CoreML conversion, MLTensor, model compression (quantization/palettization/pruning), stateful</description>
+</skill>
+<skill>
+<name>cayley_s_theorem</name>
+<description>Understanding Cayley's theorem: every finite group is isomorphic to a subgroup of some symmetric group.</description>
+</skill>
+<skill>
+<name>cloudwatch</name>
+<description>AWS CloudWatch monitoring for logs, metrics, alarms, and dashboards. Use when setting up monitoring, creating alarms, querying logs with Insights, configuring metric filters, building dashboards, or troubleshooting application issues.</description>
+</skill>
+<skill>
+<name>rust_testing</name>
+<description>Rust testing patterns for CLI applications, libraries, and frameworks. This skill should be used when writing, reviewing, or refactoring Rust tests including unit tests, integration tests, mocking, async testing, and CI integration.</description>
+</skill>
+<skill>
+<name>pick_and_place</name>
+<description>Procedure for picking up one object and putting it somewhere.</description>
+</skill>
+<skill>
+<name>blueprint_init</name>
+<description>Initialize Blueprint Development structure in current project</description>
+</skill>
+<skill>
+<name>wallet_send_bsv</name>
+<description>This skill should be used when the user asks to "send BSV", "transfer satoshis", "create payment transaction", "broadcast transaction", "send from WIF", or needs to build, sign, and broadcast P2PKH transactions using @bsv/sdk.</description>
+</skill>
+<skill>
+<name>git_workflow</name>
+<description>Complete git workflow patterns including GitHub Flow branching, atomic commits with interactive staging, and recovery operations using reflog. Essential patterns for clean history. Use when defining branching strategy or recovering git</description>
+</skill>
+<skill>
+<name>session_pretty_replay</name>
+<description>将Agent会话的原始JSON/JSONL记录转换为易读文本，并输出一些基础统计信息。Use when 需要回放Agent会话记录、转换会话JSON/JSONL为人类可读格式。</description>
+</skill>
+<skill>
+<name>codemap</name>
+<description>Navigate codebases efficiently using structural indexes. Use when finding symbol definitions (classes, functions, methods), exploring file structure, or locating code by name. Reduces token consumption by 60-80% through targeted line-range</description>
+</skill>
+<skill>
+<name>runpod_serverless</name>
+<description>Create serverless endpoint templates and endpoints on RunPod.io. Supports Python/Node.js runtimes, GPU selection (3090, A100, etc.), and idempotent configuration. Use this skill when a user wants to set up a new serverless endpoint or</description>
+</skill>
+<skill>
+<name>skill_creator</name>
+<description>Create new Claude Code skills with proper structure and documentation</description>
+</skill>
+<skill>
+<name>quickstart_guide_generator</name>
+<description>Generate quickstart guide generator operations. Auto-activating skill for Technical Documentation. Triggers on: quickstart guide generator, quickstart guide generator Part of the Technical Documentation skill category. Use when working</description>
+</skill>
+<skill>
+<name>project_manager</name>
+<description>Plan and track projects with timelines, resources, and risk management</description>
+</skill>
+<skill>
+<name>rehype</name>
+<description>Operate, configure, test, and deploy Doppler's Rehype V4 hook whenever a task mentions Rehype, fee splits, buybacks, or Doppler hook troubleshooting.</description>
+</skill>
+<skill>
+<name>quarterly_review</name>
+<description>Conduct a quarterly review of your overall research mission and direction. This is a user-level review stored in ~/.researchAssistant/. Use when the user types /quarterly_review, every 3 months, after major project milestones, or when</description>
+</skill>
+<skill>
+<name>section_mapper</name>
+<description>Map papers from the core set to each outline subsection and write `outline/mapping.tsv` with coverage tracking. **Trigger**: section mapper, mapping.tsv, coverage, paper-to-section mapping, 论文映射, 覆盖率. **Use when**: structure 阶段（C2），已有</description>
+</skill>
+<skill>
+<name>leanmcp_builder</name>
+<description>Build MCP servers using the LeanMCP SDK with decorator-based TypeScript. Use this skill when users ask for "leanmcp", "MCP with decorators", "MCP with authentication", "MCP with elicitation", "MCP with environment injection", or want a</description>
+</skill>
+<skill>
+<name>axiom_sf_symbols_ref</name>
+<description>Use when you need complete SF Symbols API reference including every rendering mode, symbol effect, configuration option, UIKit equivalent, and platform availability - comprehensive code examples for iOS 17 through iOS 26</description>
+</skill>
+<skill>
+<name>venue_templates</name>
+<description>Access comprehensive LaTeX templates, formatting requirements, and submission guidelines for major scientific publication venues (Nature, Science, PLOS, IEEE, ACM), academic conferences (NeurIPS, ICML, CVPR, CHI), research posters, and</description>
+</skill>
+<skill>
+<name>pike_simplicity_first</name>
+<description>Write Go code in the style of Rob Pike, co-creator of Go. Emphasizes radical simplicity, concurrency through communication, and composition over inheritance. Use when writing Go that should be clear, concurrent, and maintainable.</description>
+</skill>
+<skill>
+<name>work_on_ticket</name>
+<description>Pulls ticket details from Jira, creates feature branches with proper naming conventions, and handles planning steps. Use when starting work on a Jira ticket, creating branches for tickets, or when users mention "work on ticket", "start</description>
+</skill>
+<skill>
+<name>permission_system</name>
+<description>应急管理系统权限体系开发规范。当创建新功能模块、配置菜单权限、设置数据权限时必须使用此 Skill。CX 命令执行时强制要求生成菜单权限迁移 SQL。</description>
+</skill>
+<skill>
+<name>waf_setup</name>
+<description>Deploy and tune Web Application Firewalls. Configure rules for OWASP Top 10 protection. Use when protecting web applications from common attacks.</description>
+</skill>
+<skill>
+<name>video_prompting_guide</name>
+<description>Best practices and techniques for writing effective AI video generation prompts. Covers: Veo, Seedance, Wan, Grok, Kling, Runway, Pika, Sora prompting strategies. Learn: shot types, camera movements, lighting, pacing, style keywords,</description>
+</skill>
+<skill>
+<name>introspect</name>
+<description>Analyze Claude Code session logs - extract thinking blocks, tool usage stats, error patterns, debug trajectories. Triggers on: introspect, session logs, trajectory, analyze sessions, what went wrong, tool usage, thinking blocks, session</description>
+</skill>
+<skill>
+<name>note_taker</name>
+<description>Capture chat notes (text, voice, image) into the git-backed notes repo, summarize and organize them, extract tasks into KANBAN.md, and commit/push changes. Use when user says they want to take a note, save a note, capture this, or manage</description>
+</skill>
+<skill>
+<name>speckit_tasks</name>
+<description>Generate an actionable, dependency-ordered tasks.md for the feature based on available design artifacts.</description>
+</skill>
+<skill>
+<name>e2e_testing_patterns</name>
+<description>Master end-to-end testing with Playwright and Cypress to build reliable test suites that catch bugs, improve confidence, and enable fast deployment. Use when implementing E2E tests, debugging flaky tests, or establishing testing standards.</description>
+</skill>
+<skill>
+<name>pdb_database</name>
+<description>Access RCSB PDB for 3D protein/nucleic acid structures. Search by text/sequence/structure, download coordinates (PDB/mmCIF), retrieve metadata, for structural biology and drug discovery.</description>
+</skill>
+<skill>
+<name>convert_doc</name>
+<description>Smart Document Pipeline - Context-Efficient Document Handling Converts PDF, Word, PowerPoint, Excel to clean markdown. Auto-summarizes large documents. Caches for reuse. TRIGGERS: convert, konvertera, pdf to markdown, docx to md, pptx WHY:</description>
+</skill>
+<skill>
+<name>ui_design_system</name>
+<description>React UI component systems with TailwindCSS + Radix + shadcn/ui. Stack: TailwindCSS (styling), Radix UI (primitives), shadcn/ui (components), React/Next.js. Capabilities: design system architecture, accessible components, responsive</description>
+</skill>
+<skill>
+<name>tweet_writer</name>
+<description>Write viral, persuasive, engaging tweets and threads. Uses web research to find viral examples in your niche, then models writing based on proven formulas and X algorithm optimization. Use when creating tweets, threads, or X content</description>
+</skill>
+<skill>
+<name>react_expert</name>
+<description>React ecosystem expert including hooks, state management, component patterns, React 19 features, Shadcn UI, and Radix primitives</description>
+</skill>
+<skill>
+<name>having_difficult_conversations</name>
+<description>Prepare and lead difficult conversations as a manager/leader and produce a Difficult Conversation Pack (conversation brief, talk track/script, objection+emotion handling plan, follow-up note, and quality gates). Use for difficult</description>
+</skill>
+<skill>
+<name>agent_creator</name>
+<description>Use when creating expert agents. Generates agent.md with frontmatter, hooks, required sections, and skill references.</description>
+</skill>
+<skill>
+<name>java_concurrency</name>
+<description>Master Java concurrency - threads, executors, locks, CompletableFuture, virtual threads</description>
+</skill>
+<skill>
+<name>data_converter</name>
+<description>Convert data between formats (JSON, XML, CSV, YAML, TOML). Use when transforming data structures or migrating between data formats.</description>
+</skill>
+<skill>
+<name>n8n_workflow_patterns</name>
+<description>Proven workflow architectural patterns from real n8n workflows. Use when building new workflows, designing workflow structure, choosing workflow patterns, planning workflow architecture, or asking about webhook processing, HTTP API</description>
+</skill>
+<skill>
+<name>cloud_tencent_cvm</name>
+<description>Provides comprehensive guidance for Tencent Cloud CVM including instance creation, configuration, security groups, and CVM management. Use when the user asks about Tencent Cloud CVM, needs to create CVM instances, configure CVM, or manage</description>
+</skill>
+<skill>
+<name>tailwind_utility_classes</name>
+<description>Use when working with Tailwind CSS utility classes for layout, spacing, typography, colors, and visual effects. Covers utility-first CSS patterns and class composition.</description>
+</skill>
+<skill>
+<name>pick_two_obj_and_place</name>
+<description>Procedure for picking up two objects and putting them somewhere.</description>
+</skill>
+<skill>
+<name>data_analyst</name>
+<description>Data analysis best practices with pandas, numpy, matplotlib, seaborn, and Jupyter notebooks.</description>
+</skill>
+<skill>
+<name>php_api</name>
+<description>PHP API development mastery - REST, GraphQL, JWT/OAuth, OpenAPI documentation</description>
+</skill>
+<skill>
+<name>electron_base</name>
+<description>Build secure desktop applications with Electron 33, Vite, React, and TypeScript. Covers type-safe IPC via contextBridge, OAuth with custom protocol handlers, native module compatibility (better-sqlite3, electron-store), and</description>
+</skill>
+</available_skills>

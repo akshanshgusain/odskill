@@ -1,0 +1,170 @@
+[
+ {
+  "role": "system",
+  "content": [
+   {
+    "type": "text",
+    "text": "You keep a wiki of skill-selection failures. Read the staged traces. Each trace has the task text, the offered index, the loads, and the ground-truth skill. Write pattern pages named selection-<what happened>, for example selection-missed-heat-when-microwave-mentioned. finish with the four paper fields create_patterns, update_patterns, update_index, append_log. update_index must mention every pattern stem. Do not edit selection-impact, bodies, descriptions, or catalog.",
+    "cache_control": {
+     "type": "ephemeral"
+    }
+   }
+  ]
+ },
+ {
+  "role": "user",
+  "content": "Selection evidence\nHarness aggregates only. No per-task validation details.\n\n# Candidate descriptions\n\n## iteration 0 baseline\n- look_at_obj_in_light: Procedure for examining an object under a light.\n- pick_and_place: Procedure for picking up one object and putting it somewhere.\n- pick_clean_then_place: Procedure for cleaning an object and then putting it somewhere.\n- pick_cool_then_place: Procedure for cooling an object and then putting it somewhere.\n- pick_heat_then_place: Procedure for heating an object and then putting it somewhere.\n- pick_two_obj_and_place: Procedure for picking up two objects and putting them somewhere.\nval_f1 0.000\n- look_at_obj_in_light \u2014 recall 0.000 precision 0.000\n- pick_and_place \u2014 recall 0.000 precision 0.000\n- pick_clean_then_place \u2014 recall 0.000 precision 0.000\n- pick_cool_then_place \u2014 recall 0.000 precision 0.000\n- pick_heat_then_place \u2014 recall 0.000 precision 0.000\n- pick_two_obj_and_place \u2014 recall 0.000 precision 0.000\n\n## iteration 1 reject\n- look_at_obj_in_light: Use for tasks to look at, examine, or inspect an object under a desklamp or floorlamp (e.g. 'look at the alarmclock under the desklamp'). Turn on the lamp while holding the object.\n- pick_and_place: Use for a single object moved/put/placed somewhere (e.g. 'put a mug on the desk', 'move the watch from drawer to table') with NO heat, cool, clean, lamp, or count of two.\n- pick_clean_then_place: Use when the object must be cleaned, washed, or rinsed (e.g. 'put a clean plate in the cabinet', 'place a rinsed knife on the counter') before placing it. Cleans at the sinkbasin.\n- pick_cool_then_place: Use when the object must be cooled, chilled, cold, or refrigerated (e.g. 'put a cold apple on the table') before placing it. Cools using the fridge.\n- pick_heat_then_place: Use when the object must be heated, warmed, hot, or cooked (e.g. 'put a hot potato on the countertop', 'heat a tomato and place it') before placing it. Heats with the microwave.\n- pick_two_obj_and_place: Use when the task involves two objects of one kind or a plural noun (e.g. 'put two pillows on the sofa', 'alarm clocks on a shelf'), placed at one destination. Prefer over pick_and_place when plural or 'two'.\nval_f1 0.000\n- look_at_obj_in_light \u2014 recall 0.000 precision 0.000\n- pick_and_place \u2014 recall 0.000 precision 0.000\n- pick_clean_then_place \u2014 recall 0.000 precision 0.000\n- pick_cool_then_place \u2014 recall 0.000 precision 0.000\n- pick_heat_then_place \u2014 recall 0.000 precision 0.000\n- pick_two_obj_and_place \u2014 recall 0.000 precision 0.000\n\nAccepted skills, latest TRAIN batch:\nNo accepted skill in the latest TRAIN batch.\n\nRead every traces/ file below, then finish with selection patterns.\n- traces/t1.md\n- traces/t2.md\n- traces/t3.md\n- traces/t4.md\n- traces/t5.md\n- traces/t6.md\n- traces/t7.md\n- traces/t8.md\n- wiki/bodies.md\n- wiki/descriptions.md\n- wiki/index.md\n- wiki/patterns/selection-loaded-nothing-for-bare-plural-two-object-task.md\n- wiki/patterns/selection-loaded-nothing-for-heat-or-clean-transform.md\n- wiki/patterns/selection-loaded-nothing-for-plain-pick-and-place.md\n- wiki/patterns/selection-loaded-nothing-for-two-object-placement.md\n- wiki/selection-impact.md"
+ },
+ {
+  "role": "assistant",
+  "content": null,
+  "tool_calls": [
+   {
+    "type": "function",
+    "index": 0,
+    "id": "toolu_01Ah6DaNDzPNeWHkpcPuELNZ",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"traces/t1.md\"}"
+    }
+   },
+   {
+    "type": "function",
+    "index": 1,
+    "id": "toolu_01HYd57q25PfBtTVZd82uiBe",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"traces/t2.md\"}"
+    }
+   },
+   {
+    "type": "function",
+    "index": 2,
+    "id": "toolu_013GRVYxZmoHpdW6eYaaiTAH",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"traces/t3.md\"}"
+    }
+   },
+   {
+    "type": "function",
+    "index": 3,
+    "id": "toolu_011ftXSJgLugxq9ewGrVAscr",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"traces/t4.md\"}"
+    }
+   },
+   {
+    "type": "function",
+    "index": 4,
+    "id": "toolu_01EM3jxSQ23pT4kqGxS7yUd8",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"traces/t5.md\"}"
+    }
+   },
+   {
+    "type": "function",
+    "index": 5,
+    "id": "toolu_01BAGapE6cfRtcQx6wRCEGzj",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"traces/t6.md\"}"
+    }
+   },
+   {
+    "type": "function",
+    "index": 6,
+    "id": "toolu_012xYZfS3j5LiGabfnfXB7uP",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"traces/t7.md\"}"
+    }
+   },
+   {
+    "type": "function",
+    "index": 7,
+    "id": "toolu_01VLKrxvX6TVsxiecBAMi8HY",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"traces/t8.md\"}"
+    }
+   },
+   {
+    "type": "function",
+    "index": 8,
+    "id": "toolu_01CVEKSZmxkvY7oSDfj6KTyw",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"wiki/index.md\"}"
+    }
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01Ah6DaNDzPNeWHkpcPuELNZ",
+  "content": "Task: Put a salt shaker in the drawer.\nGround-truth skill: pick_and_place\nLoaded, in order: (none)\nRelevant loaded: no\n\nOffered index:\n- pick_and_place: Procedure for picking up one object and putting it somewhere.\n- pick_two_obj_and_place: Procedure for picking up two objects and putting them somewhere.\n- look_at_obj_in_light: Procedure for examining an object under a light.\n- pick_cool_then_place: Procedure for cooling an object and then putting it somewhere.\n- pick_clean_then_place: Procedure for cleaning an object and then putting it somewhere.\n- pick_heat_then_place: Procedure for heating an object and then putting it somewhere.\n+ 20 distractor skills\n\n"
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01HYd57q25PfBtTVZd82uiBe",
+  "content": "Task: Heat a tomato and place it on the table.\nGround-truth skill: pick_heat_then_place\nLoaded, in order: (none)\nRelevant loaded: no\n\nOffered index:\n- pick_and_place: Procedure for picking up one object and putting it somewhere.\n- pick_two_obj_and_place: Procedure for picking up two objects and putting them somewhere.\n- look_at_obj_in_light: Procedure for examining an object under a light.\n- pick_cool_then_place: Procedure for cooling an object and then putting it somewhere.\n- pick_clean_then_place: Procedure for cleaning an object and then putting it somewhere.\n- pick_heat_then_place: Procedure for heating an object and then putting it somewhere.\n+ 20 distractor skills\n\n"
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_013GRVYxZmoHpdW6eYaaiTAH",
+  "content": "Task: Place a cooled plate in the cupboard beneath the sink.\nGround-truth skill: pick_cool_then_place\nLoaded, in order: (none)\nRelevant loaded: no\n\nOffered index:\n- pick_and_place: Procedure for picking up one object and putting it somewhere.\n- pick_two_obj_and_place: Procedure for picking up two objects and putting them somewhere.\n- look_at_obj_in_light: Procedure for examining an object under a light.\n- pick_cool_then_place: Procedure for cooling an object and then putting it somewhere.\n- pick_clean_then_place: Procedure for cleaning an object and then putting it somewhere.\n- pick_heat_then_place: Procedure for heating an object and then putting it somewhere.\n+ 20 distractor skills\n\n"
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_011ftXSJgLugxq9ewGrVAscr",
+  "content": "Task: Put a salt shaker on the black table.\nGround-truth skill: pick_and_place\nLoaded, in order: (none)\nRelevant loaded: no\n\nOffered index:\n- pick_and_place: Procedure for picking up one object and putting it somewhere.\n- pick_two_obj_and_place: Procedure for picking up two objects and putting them somewhere.\n- look_at_obj_in_light: Procedure for examining an object under a light.\n- pick_cool_then_place: Procedure for cooling an object and then putting it somewhere.\n- pick_clean_then_place: Procedure for cleaning an object and then putting it somewhere.\n- pick_heat_then_place: Procedure for heating an object and then putting it somewhere.\n+ 20 distractor skills\n\n"
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01EM3jxSQ23pT4kqGxS7yUd8",
+  "content": "Task: place two spray bottles on top of the white cabinet in the bathroom\nGround-truth skill: pick_two_obj_and_place\nLoaded, in order: (none)\nRelevant loaded: no\n\nOffered index:\n- pick_and_place: Procedure for picking up one object and putting it somewhere.\n- pick_two_obj_and_place: Procedure for picking up two objects and putting them somewhere.\n- look_at_obj_in_light: Procedure for examining an object under a light.\n- pick_cool_then_place: Procedure for cooling an object and then putting it somewhere.\n- pick_clean_then_place: Procedure for cleaning an object and then putting it somewhere.\n- pick_heat_then_place: Procedure for heating an object and then putting it somewhere.\n+ 20 distractor skills\n\n"
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01BAGapE6cfRtcQx6wRCEGzj",
+  "content": "Task: Heat up a black mug in the microwave to put away in the cabinet above it.\nGround-truth skill: pick_heat_then_place\nLoaded, in order: (none)\nRelevant loaded: no\n\nOffered index:\n- pick_and_place: Procedure for picking up one object and putting it somewhere.\n- pick_two_obj_and_place: Procedure for picking up two objects and putting them somewhere.\n- look_at_obj_in_light: Procedure for examining an object under a light.\n- pick_cool_then_place: Procedure for cooling an object and then putting it somewhere.\n- pick_clean_then_place: Procedure for cleaning an object and then putting it somewhere.\n- pick_heat_then_place: Procedure for heating an object and then putting it somewhere.\n+ 20 distractor skills\n\n"
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_012xYZfS3j5LiGabfnfXB7uP",
+  "content": "Task: Put soap in the sink with water to be placed on the toilet lid.\nGround-truth skill: pick_clean_then_place\nLoaded, in order: (none)\nRelevant loaded: no\n\nOffered index:\n- pick_and_place: Procedure for picking up one object and putting it somewhere.\n- pick_two_obj_and_place: Procedure for picking up two objects and putting them somewhere.\n- look_at_obj_in_light: Procedure for examining an object under a light.\n- pick_cool_then_place: Procedure for cooling an object and then putting it somewhere.\n- pick_clean_then_place: Procedure for cleaning an object and then putting it somewhere.\n- pick_heat_then_place: Procedure for heating an object and then putting it somewhere.\n+ 20 distractor skills\n\n"
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01VLKrxvX6TVsxiecBAMi8HY",
+  "content": "Task: Place two sets of keys inside the desk drawer.\nGround-truth skill: pick_two_obj_and_place\nLoaded, in order: (none)\nRelevant loaded: no\n\nOffered index:\n- pick_and_place: Procedure for picking up one object and putting it somewhere.\n- pick_two_obj_and_place: Procedure for picking up two objects and putting them somewhere.\n- look_at_obj_in_light: Procedure for examining an object under a light.\n- pick_cool_then_place: Procedure for cooling an object and then putting it somewhere.\n- pick_clean_then_place: Procedure for cleaning an object and then putting it somewhere.\n- pick_heat_then_place: Procedure for heating an object and then putting it somewhere.\n+ 20 distractor skills\n\n"
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01CVEKSZmxkvY7oSDfj6KTyw",
+  "content": "- selection-loaded-nothing-for-plain-pick-and-place: single-object placement tasks, no skill loaded (t1, t4, t6).\n- selection-loaded-nothing-for-two-object-placement: two-object tasks, no skill loaded (t2, t3, t5, t8).\n- selection-loaded-nothing-for-bare-plural-two-object-task: a plural noun with no number word, no skill loaded (t7).\n- selection-loaded-nothing-for-heat-or-clean-transform: heat or rinse tasks, no skill loaded. No trace in this batch.\n- [selection-loaded-nothing-for-heat-or-clean-transform](<wiki/patterns/selection-loaded-nothing-for-heat-or-clean-transform.md>)\n\n- [selection-loaded-nothing-for-plain-pick-and-place](<wiki/patterns/selection-loaded-nothing-for-plain-pick-and-place.md>)\n\n- [selection-loaded-nothing-for-two-object-placement](<wiki/patterns/selection-loaded-nothing-for-two-object-placement.md>)\n\n- [selection-loaded-nothing-for-bare-plural-two-object-task](<wiki/patterns/selection-loaded-nothing-for-bare-plural-two-object-task.md>)\n"
+ },
+ {
+  "role": "assistant",
+  "content": null,
+  "tool_calls": [
+   {
+    "type": "function",
+    "index": 0,
+    "id": "toolu_01RLLEu4A2ihw7iarTbJDqEE",
+    "function": {
+     "name": "finish",
+     "arguments": "{\"proposal\": {\"create_patterns\":[{\"name\":\"selection-missed-heat-when-microwave-or-heat-verb-mentioned\",\"content\":\"Tasks t2 (Heat a tomato and place it on the table) and t6 (Heat up a black mug in the microwave, put in cabinet). Ground truth pick_heat_then_place. Nothing was loaded. The verb 'heat' plainly matches the skill. Select pick_heat_then_place when the task heats something, even if it also names a destination such as a cabinet or table.\"},{\"name\":\"selection-missed-cool-when-cooled-adjective-used\",\"content\":\"Task t3: 'Place a cooled plate in the cupboard beneath the sink'. Ground truth pick_cool_then_place. Nothing was loaded. The cue is the adjective 'cooled', and the task never says 'cool the plate'. The sink in the destination is a distractor and does not mean clean. Select the cool skill.\"},{\"name\":\"selection-missed-clean-when-sink-water-implied\",\"content\":\"Task t7: 'Put soap in the sink with water to be placed on the toilet lid'. Ground truth pick_clean_then_place. Nothing was loaded. The task never says 'clean' or 'wash'. The cue is sink and water, which imply washing. Treat sink-with-water phrasing as a clean-then-place cue.\"},{\"name\":\"selection-missed-two-object-when-two-counted\",\"content\":\"Tasks t5 ('two spray bottles') and t8 ('two sets of keys'). Ground truth pick_two_obj_and_place. Nothing was loaded. The word 'two' is an explicit count cue. Select the two-object skill instead of single pick_and_place.\"},{\"name\":\"selection-missed-plain-place-for-simple-put\",\"content\":\"Tasks t1 and t4: 'Put a salt shaker in the drawer' and 'Put a salt shaker on the black table'. Ground truth pick_and_place. Nothing was loaded. When there is one object, no transform and no count, load pick_and_place. Not loading anything is the failure here.\"}],\"update_patterns\":[],\"update_index\":\"Trace mapping for this batch: selection-missed-plain-place-for-simple-put (t1, t4); selection-missed-heat-when-microwave-or-heat-verb-mentioned (t2, t6); selection-missed-cool-when-cooled-adjective-used (t3); selection-missed-two-object-when-two-counted (t5, t8); selection-missed-clean-when-sink-water-implied (t7). Older pages (selection-loaded-nothing-for-plain-pick-and-place, selection-loaded-nothing-for-two-object-placement, selection-loaded-nothing-for-bare-plural-two-object-task, selection-loaded-nothing-for-heat-or-clean-transform) have trace mappings that do not match this batch. Every trace here loaded nothing.\",\"append_log\":\"Reviewed t1-t8. Every trace loaded nothing. Added 5 pages by cue type: plain place, heat, cool, clean, and two-object.\"}}"
+    }
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01RLLEu4A2ihw7iarTbJDqEE",
+  "content": "{\"accepted\": true, \"message\": \"Submission recorded; finish your response without further tool calls.\"}"
+ }
+]

@@ -1,0 +1,21 @@
+{
+  "body_sha256": "d0515c6cf2a25f63b27972cf5e4a5b13738a442543a381c30a3e88d4f1102ad1",
+  "plain_sha256": "3a5e711f067e83c153b981ab9e57d16b7b28f156335d3bd45df92b34aa89e47f",
+  "directive_sha256": "ae003005824105c3afb53f0ad77a2e96e0d7a6dcff2b011b0ae8bc4ae777ec18",
+  "names": [
+    "look_at_obj_in_light",
+    "pick_and_place",
+    "pick_clean_then_place",
+    "pick_cool_then_place",
+    "pick_heat_then_place",
+    "pick_two_obj_and_place"
+  ],
+  "lines": {
+    "look_at_obj_in_light": 20,
+    "pick_and_place": 19,
+    "pick_clean_then_place": 19,
+    "pick_cool_then_place": 19,
+    "pick_heat_then_place": 19,
+    "pick_two_obj_and_place": 19
+  }
+}

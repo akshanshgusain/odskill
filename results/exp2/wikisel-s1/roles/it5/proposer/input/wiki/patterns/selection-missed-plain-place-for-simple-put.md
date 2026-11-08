@@ -1,0 +1,1 @@
+Tasks t1 and t4: 'Put a salt shaker in the drawer' and 'Put a salt shaker on the black table'. Ground truth pick_and_place. Nothing was loaded. When there is one object, no transform and no count, load pick_and_place. Not loading anything is the failure here.

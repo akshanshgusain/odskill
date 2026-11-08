@@ -1,0 +1,1 @@
+Task: 'Put a clean tomato in the microwave.' Truth: pick_clean_then_place. Nothing loaded. The microwave is only the destination. 'clean' decides the skill, not the appliance named. Related to selection-missed-clean-when-microwave-mentioned.

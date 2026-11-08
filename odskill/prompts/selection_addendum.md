@@ -1,0 +1,1 @@
+Also record skill-selection failures as their own patterns, named with the prefix selection-: a relevant evolved skill was not loaded; an unrelated or noise skill was loaded; a skill was loaded but its instructions did not fit the task. Use the skill_selection feedback to identify them.

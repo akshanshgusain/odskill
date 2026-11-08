@@ -1,0 +1,12 @@
+Trace mapping for this batch: selection-missed-plain-place-for-simple-put (t1, t4); selection-missed-heat-when-microwave-or-heat-verb-mentioned (t2, t6); selection-missed-cool-when-cooled-adjective-used (t3); selection-missed-two-object-when-two-counted (t5, t8); selection-missed-clean-when-sink-water-implied (t7). New: selection-loaded-nothing-despite-explicit-keyword-match, selection-ignored-cue-words-inside-long-task-text. Older pages (selection-loaded-nothing-for-plain-pick-and-place, selection-loaded-nothing-for-two-object-placement, selection-loaded-nothing-for-bare-plural-two-object-task, selection-loaded-nothing-for-heat-or-clean-transform) have trace mappings that do not match this batch. Every trace here loaded nothing.
+- [selection-loaded-nothing-for-bare-plural-two-object-task](<wiki/patterns/selection-loaded-nothing-for-bare-plural-two-object-task.md>)
+- [selection-loaded-nothing-for-heat-or-clean-transform](<wiki/patterns/selection-loaded-nothing-for-heat-or-clean-transform.md>)
+- [selection-loaded-nothing-for-plain-pick-and-place](<wiki/patterns/selection-loaded-nothing-for-plain-pick-and-place.md>)
+- [selection-loaded-nothing-for-two-object-placement](<wiki/patterns/selection-loaded-nothing-for-two-object-placement.md>)
+- [selection-missed-heat-when-microwave-or-heat-verb-mentioned](<wiki/patterns/selection-missed-heat-when-microwave-or-heat-verb-mentioned.md>)
+- [selection-missed-cool-when-cooled-adjective-used](<wiki/patterns/selection-missed-cool-when-cooled-adjective-used.md>)
+- [selection-missed-clean-when-sink-water-implied](<wiki/patterns/selection-missed-clean-when-sink-water-implied.md>)
+- [selection-missed-two-object-when-two-counted](<wiki/patterns/selection-missed-two-object-when-two-counted.md>)
+- [selection-missed-plain-place-for-simple-put](<wiki/patterns/selection-missed-plain-place-for-simple-put.md>)
+- [selection-loaded-nothing-despite-explicit-keyword-match](<wiki/patterns/selection-loaded-nothing-despite-explicit-keyword-match.md>)
+- [selection-ignored-cue-words-inside-long-task-text](<wiki/patterns/selection-ignored-cue-words-inside-long-task-text.md>)

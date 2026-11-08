@@ -1,0 +1,1 @@
+Task t3: 'Place a cooled plate in the cupboard beneath the sink'. Ground truth pick_cool_then_place. Nothing was loaded. The cue is the adjective 'cooled', and the task never says 'cool the plate'. The sink in the destination is a distractor and does not mean clean. Select the cool skill.

@@ -1,0 +1,10 @@
+{
+  "descriptions": {
+    "look_at_obj_in_light": "Use for tasks to look at, examine, or inspect an object under a desklamp or floorlamp (turn on the lamp while holding the object).",
+    "pick_and_place": "Use for plain tasks to put, move, or place one object in/on a destination (e.g. 'put a mug on the desk', 'move the soap to the cabinet') with no heating, cooling, cleaning, lamp, or count of two.",
+    "pick_clean_then_place": "Use when the task wants a clean, washed, or wet object (e.g. 'put a clean plate in the cabinet', 'wash X then place'); clean at a sinkbasin. Use even if a microwave or fridge is just the destination.",
+    "pick_cool_then_place": "Use when the task wants a cold, cooled, chilled, or refrigerated object placed somewhere (e.g. 'put a cold apple on the table'); cool it in the fridge first.",
+    "pick_heat_then_place": "Use when the task wants a hot, heated, warm, or cooked object placed somewhere (e.g. 'put a hot potato on the countertop'); heat it in the microwave first.",
+    "pick_two_obj_and_place": "Use when the task names two of an object kind (e.g. 'put two pillows on the sofa', 'two cds in the drawer'); collect and place both, one at a time."
+  }
+}

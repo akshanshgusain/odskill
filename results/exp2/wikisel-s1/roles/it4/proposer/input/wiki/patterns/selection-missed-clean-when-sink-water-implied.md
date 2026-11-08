@@ -1,0 +1,1 @@
+Task t7: 'Put soap in the sink with water to be placed on the toilet lid'. Ground truth pick_clean_then_place. Nothing was loaded. The task never says 'clean' or 'wash'. The cue is sink and water, which imply washing. Treat sink-with-water phrasing as a clean-then-place cue.

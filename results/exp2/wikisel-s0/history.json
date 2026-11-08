@@ -1,0 +1,401 @@
+[
+  {
+    "iteration": 0,
+    "verdict": "baseline",
+    "f1": 0.0,
+    "descriptions": {
+      "look_at_obj_in_light": "Procedure for examining an object under a light.",
+      "pick_and_place": "Procedure for picking up one object and putting it somewhere.",
+      "pick_clean_then_place": "Procedure for cleaning an object and then putting it somewhere.",
+      "pick_cool_then_place": "Procedure for cooling an object and then putting it somewhere.",
+      "pick_heat_then_place": "Procedure for heating an object and then putting it somewhere.",
+      "pick_two_obj_and_place": "Procedure for picking up two objects and putting them somewhere."
+    },
+    "per_skill": {
+      "look_at_obj_in_light": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_and_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_clean_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_cool_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_heat_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_two_obj_and_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      }
+    }
+  },
+  {
+    "iteration": 1,
+    "verdict": "reject",
+    "f1": 0.0,
+    "descriptions": {
+      "look_at_obj_in_light": "Use when the task says to look at, examine, or inspect an object under a desklamp or floorlamp (e.g. \"look at the alarmclock under the desklamp\"). Not for moving objects.",
+      "pick_and_place": "Use for a plain move of ONE object to a destination (e.g. \"put a mug on the desk\", \"move keys to the safe\") with no clean/wet, heat/hot, cool/cold word and no count of two. Default for simple moves.",
+      "pick_clean_then_place": "Use when the task says to clean (clean, cleaned, wash, wet) an object and then put it somewhere, e.g. \"put a clean plate in the cabinet\". Uses a sinkbasin. One object.",
+      "pick_cool_then_place": "Use when the task says to cool, chill, cold, or refrigerate an object then place it, e.g. \"put a cold apple on the table\". Uses the fridge. One object.",
+      "pick_heat_then_place": "Use when the task says to heat, warm, hot, or cook an object then place it, e.g. \"put a hot potato on the countertop\". Uses the microwave. One object.",
+      "pick_two_obj_and_place": "Use when the task says \"two\" or gives a count of objects to put somewhere, e.g. \"put two pillows on the sofa\". Choose this over pick_and_place whenever two items are required."
+    },
+    "per_skill": {
+      "look_at_obj_in_light": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_and_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_clean_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_cool_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_heat_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_two_obj_and_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      }
+    }
+  },
+  {
+    "iteration": 2,
+    "verdict": "reject",
+    "f1": 0.0,
+    "descriptions": {
+      "look_at_obj_in_light": "Use for tasks to look at, examine, or inspect an object under a desklamp or floorlamp (turn on the lamp while holding the object).",
+      "pick_and_place": "Use for plain tasks to put, move, or place one object in/on a destination (e.g. 'put a mug on the desk', 'move the soap to the cabinet') with no heating, cooling, cleaning, lamp, or count of two.",
+      "pick_clean_then_place": "Use when the task wants a clean, washed, or wet object (e.g. 'put a clean plate in the cabinet', 'wash X then place'); clean at a sinkbasin. Use even if a microwave or fridge is just the destination.",
+      "pick_cool_then_place": "Use when the task wants a cold, cooled, chilled, or refrigerated object placed somewhere (e.g. 'put a cold apple on the table'); cool it in the fridge first.",
+      "pick_heat_then_place": "Use when the task wants a hot, heated, warm, or cooked object placed somewhere (e.g. 'put a hot potato on the countertop'); heat it in the microwave first.",
+      "pick_two_obj_and_place": "Use when the task names two of an object kind (e.g. 'put two pillows on the sofa', 'two cds in the drawer'); collect and place both, one at a time."
+    },
+    "per_skill": {
+      "look_at_obj_in_light": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_and_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_clean_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_cool_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_heat_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_two_obj_and_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      }
+    }
+  },
+  {
+    "iteration": 3,
+    "verdict": "reject",
+    "f1": 0.0,
+    "descriptions": {
+      "look_at_obj_in_light": "Use for tasks to look at, examine, or inspect an object under a desklamp or floorlamp (e.g. 'look at the alarmclock under the desklamp').",
+      "pick_and_place": "Use for plain single-object moves: 'put/move/place a X in/on Y' with no heating, cooling, or cleaning and only one object.",
+      "pick_clean_then_place": "Use when the task says to clean, wash, or put a clean/wet/dirty object somewhere (e.g. 'put a clean plate in the cabinet'). Cleans at the sinkbasin.",
+      "pick_cool_then_place": "Use when the task says to cool, chill, refrigerate, or put a cold/cooled object somewhere (e.g. 'put a cold apple on the table'). Cools in the fridge.",
+      "pick_heat_then_place": "Use when the task says to heat, warm, cook, or put a hot/heated object somewhere (e.g. 'put a hot potato on the countertop'). Heats in the microwave.",
+      "pick_two_obj_and_place": "Use when the task asks to put two of an object kind (e.g. 'two pillows', 'two cds') in or on a destination; carries one at a time."
+    },
+    "per_skill": {
+      "look_at_obj_in_light": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_and_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_clean_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_cool_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_heat_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_two_obj_and_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      }
+    }
+  },
+  {
+    "iteration": 4,
+    "verdict": "reject",
+    "f1": 0.0,
+    "descriptions": {
+      "look_at_obj_in_light": "Use for tasks to look at, examine, or read an object under a lamp/desklamp (e.g. 'look at the book under the desklamp'). Find the object, then turn on the light.",
+      "pick_and_place": "Use for plain tasks moving ONE object to a place: 'put a X in/on Y', 'move X to Y', 'put away X'. No cleaning, heating, or cooling, and no count of two.",
+      "pick_clean_then_place": "Use when the task says clean, wash, rinse, or wet/clean/dirty object, or a clean object is implied, then put it somewhere (even a microwave or fridge). Use the sinkbasin to clean.",
+      "pick_cool_then_place": "Use when the task says cool, chill, cold, or cooled object, then put it somewhere. Use the fridge to cool it.",
+      "pick_heat_then_place": "Use when the task says heat, warm, hot, or cook an object, then put it somewhere. Use the microwave or stove. It also fits cook then put in fridge.",
+      "pick_two_obj_and_place": "Use when the task involves TWO objects of the same type: 'two X', 'both', plural X with a count, or 'put away two'. Pick up and place each in turn."
+    },
+    "per_skill": {
+      "look_at_obj_in_light": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_and_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_clean_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_cool_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_heat_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_two_obj_and_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      }
+    }
+  },
+  {
+    "iteration": 5,
+    "verdict": "reject",
+    "f1": 0.0,
+    "descriptions": {
+      "look_at_obj_in_light": "Use for tasks to look at, examine, or inspect an object under/with a desklamp or floorlamp (e.g. 'examine the book under the desklamp'). Take the object, then turn on the lamp.",
+      "pick_and_place": "Use for plain move/put/place/put-away tasks of ONE object to a destination with no heating, cooling, or cleaning (e.g. 'put a mug on the desk', 'move the soap to the cabinet'). Singular object, even if the task is labeled two.",
+      "pick_clean_then_place": "Use when the object must be cleaned, washed, or is described as clean/wet/dirty, then placed (e.g. 'put a clean plate in the cabinet'). Uses sinkbasin. Applies even if a microwave or other appliance is the destination.",
+      "pick_cool_then_place": "Use when the object must be cooled, chilled, cold, or cooled-down (e.g. 'put a cold apple on the table'), then placed. Uses the fridge to cool. Also for cook-then-fridge destinations where cooling is the step.",
+      "pick_heat_then_place": "Use when the object must be heated, warmed, hot, or cooked (e.g. 'put a hot potato on the countertop'), then placed. Uses the microwave to heat.",
+      "pick_two_obj_and_place": "Use when the task asks for two objects or a plural count (e.g. 'put two pillows on the sofa', 'put away two cups', two objects named). Carry one at a time and place both at the destination."
+    },
+    "per_skill": {
+      "look_at_obj_in_light": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_and_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_clean_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_cool_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_heat_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_two_obj_and_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      }
+    }
+  },
+  {
+    "iteration": 6,
+    "verdict": "reject",
+    "f1": 0.0,
+    "descriptions": {
+      "look_at_obj_in_light": "Use for tasks to examine, look at, or inspect an object under a lamp/desklamp: find the object, then turn on the light.",
+      "pick_and_place": "Use for plain tasks to put, move, or put away ONE object (no number) in/on a receptacle, with no cleaning, heating, or cooling.",
+      "pick_clean_then_place": "Use when the object must be cleaned/washed/clean/wet (or clean is implied) before placing, typically via sink. Even if a microwave is the destination, clean first.",
+      "pick_cool_then_place": "Use when the object must be cooled/chilled/cold (or a cooled item) before placing; cool it in the fridge, then place.",
+      "pick_heat_then_place": "Use when the object must be heated/hot/warm/cooked (e.g. cook then put in fridge) before placing; heat it in the microwave, then place.",
+      "pick_two_obj_and_place": "Use when the task involves TWO objects (two, both, or plural like 'some X' with two found) to move or put away into one receptacle."
+    },
+    "per_skill": {
+      "look_at_obj_in_light": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_and_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_clean_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_cool_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_heat_then_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      },
+      "pick_two_obj_and_place": {
+        "games": 10,
+        "recall": 0.0,
+        "precision": 0.0,
+        "loads": 0,
+        "library_loads": 0
+      }
+    }
+  }
+]

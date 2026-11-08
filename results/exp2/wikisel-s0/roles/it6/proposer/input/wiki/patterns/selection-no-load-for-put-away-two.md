@@ -1,0 +1,1 @@
+Task: 'Put away two pencils in bedside table.' Truth: pick_two_obj_and_place. Nothing loaded, even though 'two' is explicit. 'Put away' phrasing looked like a plain move. A count word should override the plain-move default.

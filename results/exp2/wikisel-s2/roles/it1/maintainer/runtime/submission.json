@@ -1,0 +1,35 @@
+{
+  "proposal": {
+    "create_patterns": [
+      {
+        "name": "selection-no-skill-loaded-for-plain-pick-and-place.md",
+        "content": "# No skill loaded for plain pick-and-place\n\nTraces t1, t6, t7: tasks like 'put the blue vase into the safe', 'move keys from shelf to desktop', 'pick up the item with black base and put near couch'. Ground truth: pick_and_place. Nothing was loaded. Plain move tasks with no heat/cool/clean/light/two-object cue should load pick_and_place.\n"
+      },
+      {
+        "name": "selection-missed-two-object-when-count-two-stated.md",
+        "content": "# Missed pick_two_obj_and_place when 'two' is stated\n\nTraces t2 ('two spray bottles to the bin'), t3 ('two spatulas into the drawer'). Ground truth: pick_two_obj_and_place. Nothing loaded. An explicit count of two objects is the cue for pick_two_obj_and_place, not pick_and_place.\n"
+      },
+      {
+        "name": "selection-lamp-mentioned-confusion-examine-vs-turn-on.md",
+        "content": "# Lamp mentioned: look_at_obj_in_light vs pick_and_place\n\nTraces t4 and t5, nothing loaded. t4 'examine the statue with the lamp' had ground truth pick_and_place, although the wording suggests look_at_obj_in_light. t5 'Hold a pencil and turn on the lamp' had ground truth look_at_obj_in_light. The lamp keyword alone does not decide the skill. Check whether the task is about examining an object under the light, and don't rely on the word 'examine'. Labels here look counterintuitive, so treat them with caution.\n"
+      },
+      {
+        "name": "selection-missed-heat-when-cook-mentioned.md",
+        "content": "# Missed heat when 'cook' is used\n\nTrace t8: 'cook a plate of food then put it into the fridge'. Ground truth: pick_heat_then_place. Nothing loaded. 'Cook' is a synonym for heating, so load pick_heat_then_place even though 'heat' is not written.\n"
+      }
+    ],
+    "update_patterns": [],
+    "update_index": "# Index\n\n- selection-no-skill-loaded-for-plain-pick-and-place: plain moves, nothing loaded (t1, t6, t7)\n- selection-missed-two-object-when-count-two-stated: 'two' objects (t2, t3)\n- selection-lamp-mentioned-confusion-examine-vs-turn-on: lamp tasks (t4, t5)\n- selection-missed-heat-when-cook-mentioned: cook means heat (t8)\n\n- [selection-no-skill-loaded-for-plain-pick-and-place](<wiki/patterns/selection-no-skill-loaded-for-plain-pick-and-place.md>)\n\n- [selection-missed-two-object-when-count-two-stated](<wiki/patterns/selection-missed-two-object-when-count-two-stated.md>)\n\n- [selection-lamp-mentioned-confusion-examine-vs-turn-on](<wiki/patterns/selection-lamp-mentioned-confusion-examine-vs-turn-on.md>)\n\n- [selection-missed-heat-when-cook-mentioned](<wiki/patterns/selection-missed-heat-when-cook-mentioned.md>)\n",
+    "append_log": "Read t1-t8. In all eight, no skill was loaded. Wrote 4 selection patterns."
+  },
+  "read_trace_ids": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+    "t7",
+    "t8"
+  ]
+}

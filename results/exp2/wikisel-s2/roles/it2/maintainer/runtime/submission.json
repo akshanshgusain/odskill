@@ -1,0 +1,35 @@
+{
+  "proposal": {
+    "create_patterns": [
+      {
+        "name": "selection-nothing-loaded-for-plain-move.md",
+        "content": "# Nothing loaded for a plain single-object move\n\nTraces t1 (phone to dresser), t6 (cloth in drawer) and t7 (keys from desk to safe).\nGround truth was pick_and_place. No skill was loaded in any of them.\nThe task has no heat, cool, clean, lamp or count word. The pick_and_place entry says to use it for exactly this case.\nFix: when no special verb or count is present, load pick_and_place. Don't load nothing.\n"
+      },
+      {
+        "name": "selection-nothing-loaded-for-two-count.md",
+        "content": "# Nothing loaded when the task states two\n\nTraces t3 (two smartphones), t5 (two sets of keys) and t8 (two newspapers).\nGround truth was pick_two_obj_and_place. No skill was loaded.\nThe count word 'two' is the trigger. It can sit mid-sentence, and the destination can be a safe, a drawer or a stand.\nFix: when the task says two, load pick_two_obj_and_place instead of pick_and_place.\n"
+      },
+      {
+        "name": "selection-nothing-loaded-for-clean-with-microwave-destination.md",
+        "content": "# Nothing loaded for clean when a microwave is the destination\n\nTrace t4: 'Put a clean pan in the microwave.' Ground truth was pick_clean_then_place. No skill was loaded.\nThe word 'microwave' could pull toward pick_heat_then_place, but the task asks for no heating. 'Clean' is the trigger.\nFix: pick the skill by the verb or adjective (clean), not by the appliance named as the destination.\n"
+      },
+      {
+        "name": "selection-lamp-examine-task-labeled-pick-and-place.md",
+        "content": "# Lamp-examine wording where the ground truth is pick_and_place\n\nTrace t2: 'examine the statue with the lamp.' Ground truth was pick_and_place. No skill was loaded.\nThe look_at_obj_in_light description matches this wording, so the label looks surprising. Treat it as a possible ambiguity.\nThe evidence is one trace, so don't generalize. Note that 'examine ... lamp' does not guarantee look_at_obj_in_light.\nThe common failure in all 8 traces is that nothing was loaded.\n"
+      }
+    ],
+    "update_patterns": [],
+    "update_index": "Patterns: selection-nothing-loaded-for-plain-move (t1, t6, t7); selection-nothing-loaded-for-two-count (t3, t5, t8); selection-nothing-loaded-for-clean-with-microwave-destination (t4); selection-lamp-examine-task-labeled-pick-and-place (t2). Older pages are kept: selection-no-skill-loaded-for-plain-pick-and-place, selection-missed-two-object-when-count-two-stated, selection-lamp-mentioned-confusion-examine-vs-turn-on, selection-missed-heat-when-cook-mentioned.\n- [selection-lamp-mentioned-confusion-examine-vs-turn-on](<wiki/patterns/selection-lamp-mentioned-confusion-examine-vs-turn-on.md>)\n\n- [selection-missed-heat-when-cook-mentioned](<wiki/patterns/selection-missed-heat-when-cook-mentioned.md>)\n\n- [selection-missed-two-object-when-count-two-stated](<wiki/patterns/selection-missed-two-object-when-count-two-stated.md>)\n\n- [selection-no-skill-loaded-for-plain-pick-and-place](<wiki/patterns/selection-no-skill-loaded-for-plain-pick-and-place.md>)\n\n- [selection-nothing-loaded-for-plain-move](<wiki/patterns/selection-nothing-loaded-for-plain-move.md>)\n\n- [selection-nothing-loaded-for-two-count](<wiki/patterns/selection-nothing-loaded-for-two-count.md>)\n\n- [selection-nothing-loaded-for-clean-with-microwave-destination](<wiki/patterns/selection-nothing-loaded-for-clean-with-microwave-destination.md>)\n\n- [selection-lamp-examine-task-labeled-pick-and-place](<wiki/patterns/selection-lamp-examine-task-labeled-pick-and-place.md>)\n",
+    "append_log": "Read t1-t8. Every trace loaded no skill. Added 4 selection patterns covering plain moves, two-count, clean with a microwave destination, and lamp-examine ambiguity."
+  },
+  "read_trace_ids": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+    "t7",
+    "t8"
+  ]
+}

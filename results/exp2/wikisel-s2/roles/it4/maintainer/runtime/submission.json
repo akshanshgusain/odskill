@@ -1,0 +1,27 @@
+{
+  "proposal": {
+    "create_patterns": [
+      {
+        "name": "selection-nothing-loaded-for-washed-paraphrase.md",
+        "content": "# Nothing loaded when task says 'washed'\n\nTrace t7: 'put washed plate on shelves'. Truth: pick_clean_then_place. Nothing was loaded. The description keys on 'clean/wash', but the model skipped it because the task has no 'clean' and reads like a plain put.\n\nSignal: washed, rinsed, or scrubbed means the clean skill, not pick_and_place.\n\nFix: list the inflections washed, rinsed and cleaned in the description."
+      },
+      {
+        "name": "selection-nothing-loaded-despite-always-load-wording.md",
+        "content": "# Nothing loaded even with 'ALWAYS load' wording\n\nTraces t1, t4 and t6 are plain moves ('put a phone on the black dresser', 'place a cell phone on a dresser', 'put a cloth in the drawer'). Truth: pick_and_place. Nothing was loaded, even though the description says 'ALWAYS load' and 'Don't load nothing'.\n\nTraces t3, t5 and t8 are 'two' tasks. Truth: pick_two_obj_and_place. Nothing was loaded there either.\n\nThe imperative wording did not change behavior. Across t1 to t8, 7 of 8 loaded nothing. The failure is in the load decision, not in which skill was picked. Val recall stayed near 0 for pick_and_place.\n\nFix: make the agent's first step an explicit skill choice. Don't rely on emphasis in the descriptions."
+      }
+    ],
+    "update_patterns": [],
+    "update_index": "Patterns: selection-nothing-loaded-for-washed-paraphrase (t7); selection-nothing-loaded-despite-always-load-wording (t1, t3, t4, t5, t6, t8); selection-nothing-loaded-for-plain-move (t1, t4, t6); selection-nothing-loaded-for-throw-away-or-take-paraphrase; selection-nothing-loaded-for-cleaned-adjective; selection-nothing-loaded-for-two-count (t3, t5, t8); selection-nothing-loaded-for-clean-with-microwave-destination; selection-lamp-examine-task-labeled-pick-and-place (t2: look_at_obj_in_light was loaded, but the label was pick_and_place); selection-no-skill-loaded-for-plain-pick-and-place; selection-missed-two-object-when-count-two-stated; selection-lamp-mentioned-confusion-examine-vs-turn-on; selection-missed-heat-when-cook-mentioned.\n- [selection-lamp-examine-task-labeled-pick-and-place](<wiki/patterns/selection-lamp-examine-task-labeled-pick-and-place.md>)\n\n- [selection-lamp-mentioned-confusion-examine-vs-turn-on](<wiki/patterns/selection-lamp-mentioned-confusion-examine-vs-turn-on.md>)\n\n- [selection-missed-heat-when-cook-mentioned](<wiki/patterns/selection-missed-heat-when-cook-mentioned.md>)\n\n- [selection-missed-two-object-when-count-two-stated](<wiki/patterns/selection-missed-two-object-when-count-two-stated.md>)\n\n- [selection-no-skill-loaded-for-plain-pick-and-place](<wiki/patterns/selection-no-skill-loaded-for-plain-pick-and-place.md>)\n\n- [selection-nothing-loaded-for-clean-with-microwave-destination](<wiki/patterns/selection-nothing-loaded-for-clean-with-microwave-destination.md>)\n\n- [selection-nothing-loaded-for-cleaned-adjective](<wiki/patterns/selection-nothing-loaded-for-cleaned-adjective.md>)\n\n- [selection-nothing-loaded-for-plain-move](<wiki/patterns/selection-nothing-loaded-for-plain-move.md>)\n\n- [selection-nothing-loaded-for-throw-away-or-take-paraphrase](<wiki/patterns/selection-nothing-loaded-for-throw-away-or-take-paraphrase.md>)\n\n- [selection-nothing-loaded-for-two-count](<wiki/patterns/selection-nothing-loaded-for-two-count.md>)\n\n- [selection-nothing-loaded-for-washed-paraphrase](<wiki/patterns/selection-nothing-loaded-for-washed-paraphrase.md>)\n\n- [selection-nothing-loaded-despite-always-load-wording](<wiki/patterns/selection-nothing-loaded-despite-always-load-wording.md>)\n",
+    "append_log": "Read t1-t8. 7 of 8 traces loaded nothing. t2 loaded the lamp skill but was labeled pick_and_place. Added 2 patterns: washed paraphrase, and nothing loaded despite ALWAYS-load wording."
+  },
+  "read_trace_ids": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+    "t7",
+    "t8"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "descriptions": {
+    "pick_clean_then_place": "Use when the task says clean, cleaned, wash, or washed an object (e.g. 'put a clean plate in the cabinet', 'wash the mug and put it on the shelf'): take it, clean at the sinkbasin, then place it. Trigger is the clean/wash word, even if the destination is a microwave or fridge.",
+    "pick_and_place": "Use for a plain single-object move with no heat/cool/clean word, no lamp, no count of two: take one object and put/move/place/throw/take it to a destination (e.g. 'put the phone on the dresser', 'move keys from desk to safe'). Load this rather than nothing.",
+    "pick_heat_then_place": "Use when the task says heat, warm, hot, or cook an object (e.g. 'put a hot potato on the countertop', 'cook an egg then put it in the fridge'): heat in the microwave, then place it. Not for 'clean X in the microwave'.",
+    "pick_two_obj_and_place": "Use whenever the task states a count of two or 'two X' anywhere in the sentence (e.g. 'put two smartphones on the sofa', 'two sets of keys in the safe'). Any destination; find and place both, one at a time."
+  }
+}

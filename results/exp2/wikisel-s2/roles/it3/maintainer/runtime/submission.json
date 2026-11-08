@@ -1,0 +1,27 @@
+{
+  "proposal": {
+    "create_patterns": [
+      {
+        "name": "selection-nothing-loaded-for-cleaned-adjective.md",
+        "content": "# Nothing loaded when 'cleaned' is used as an adjective\n\nTask: 'Put cleaned soap on the counter.' Ground truth is pick_clean_then_place. The agent loaded nothing.\n\nThe cue is a form of clean, such as cleaned, clean or wash. It can appear mid-phrase with no sink mentioned. Treat any such word as a trigger for pick_clean_then_place.\n\nSeen in t5."
+      },
+      {
+        "name": "selection-nothing-loaded-for-throw-away-or-take-paraphrase.md",
+        "content": "# Nothing loaded when the move is phrased as throw away, take, or put in a container\n\nThese tasks were all plain single-object moves. Ground truth is pick_and_place. The agent loaded nothing.\n- 'Throw away the spray bottle on the counter' (t7)\n- 'Take a set of keys to the desk' (t4)\n- 'Put a bottle in a waste basket' (t3)\n- 'Put a phone on the black dresser' (t1)\n- 'Put a cloth in the drawer' (t6)\n\nThe verb is not always 'put'. Throw away, take to and place all mean a move. 'A set of' is not a count of two. If there is no heat, cool, clean, lamp or two cue, load pick_and_place. Never load nothing."
+      }
+    ],
+    "update_patterns": [],
+    "update_index": "Patterns: selection-nothing-loaded-for-plain-move (t1, t6); selection-nothing-loaded-for-throw-away-or-take-paraphrase (t1, t3, t4, t6, t7); selection-nothing-loaded-for-cleaned-adjective (t5); selection-nothing-loaded-for-two-count; selection-nothing-loaded-for-clean-with-microwave-destination; selection-lamp-examine-task-labeled-pick-and-place (t2, which was labeled pick_and_place although the lamp skill was loaded); selection-no-skill-loaded-for-plain-pick-and-place; selection-missed-two-object-when-count-two-stated; selection-lamp-mentioned-confusion-examine-vs-turn-on; selection-missed-heat-when-cook-mentioned.\n- [selection-lamp-examine-task-labeled-pick-and-place](<wiki/patterns/selection-lamp-examine-task-labeled-pick-and-place.md>)\n\n- [selection-lamp-mentioned-confusion-examine-vs-turn-on](<wiki/patterns/selection-lamp-mentioned-confusion-examine-vs-turn-on.md>)\n\n- [selection-missed-heat-when-cook-mentioned](<wiki/patterns/selection-missed-heat-when-cook-mentioned.md>)\n\n- [selection-missed-two-object-when-count-two-stated](<wiki/patterns/selection-missed-two-object-when-count-two-stated.md>)\n\n- [selection-no-skill-loaded-for-plain-pick-and-place](<wiki/patterns/selection-no-skill-loaded-for-plain-pick-and-place.md>)\n\n- [selection-nothing-loaded-for-clean-with-microwave-destination](<wiki/patterns/selection-nothing-loaded-for-clean-with-microwave-destination.md>)\n\n- [selection-nothing-loaded-for-plain-move](<wiki/patterns/selection-nothing-loaded-for-plain-move.md>)\n\n- [selection-nothing-loaded-for-two-count](<wiki/patterns/selection-nothing-loaded-for-two-count.md>)\n\n- [selection-nothing-loaded-for-cleaned-adjective](<wiki/patterns/selection-nothing-loaded-for-cleaned-adjective.md>)\n\n- [selection-nothing-loaded-for-throw-away-or-take-paraphrase](<wiki/patterns/selection-nothing-loaded-for-throw-away-or-take-paraphrase.md>)\n",
+    "append_log": "Read t1-t8. Seven of the eight traces loaded nothing. Added pages for the cleaned-adjective case and for throw-away and take paraphrases. t2 is a lamp task whose ground truth is pick_and_place, and it is already covered."
+  },
+  "read_trace_ids": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+    "t7",
+    "t8"
+  ]
+}

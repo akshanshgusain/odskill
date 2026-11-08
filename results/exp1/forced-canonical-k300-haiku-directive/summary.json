@@ -1,0 +1,25 @@
+{
+  "recall": 1.0,
+  "precision": 0.9523809523809523,
+  "f1": 0.975609756097561,
+  "noise_load_rate": 0.0,
+  "wrong_type_load_rate": 0.047619047619047616,
+  "loaded_any": 1.0,
+  "n": 60,
+  "per_pass": [
+    {
+      "n": 60,
+      "recall": 1.0,
+      "precision": 0.9523809523809523,
+      "f1": 0.975609756097561,
+      "noise_load_rate": 0.0,
+      "wrong_type_load_rate": 0.047619047619047616,
+      "loaded_any": 1.0
+    }
+  ],
+  "by_task_type": {},
+  "model": "anthropic/claude-haiku-5.5",
+  "arm": "directive",
+  "agent_prompt": "forced",
+  "names": "canonical"
+}

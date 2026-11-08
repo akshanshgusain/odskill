@@ -1,0 +1,1 @@
+Tasks t5 ('two spray bottles') and t8 ('two sets of keys'). Ground truth pick_two_obj_and_place. Nothing was loaded. The word 'two' is an explicit count cue. Select the two-object skill instead of single pick_and_place.

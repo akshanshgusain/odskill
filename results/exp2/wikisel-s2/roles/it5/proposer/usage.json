@@ -1,0 +1,16 @@
+{
+  "calls": 3,
+  "prompt_tokens": 7948,
+  "completion_tokens": 547,
+  "cached_tokens": 0,
+  "cost_usd": 0.021366,
+  "reported_models": [
+    "anthropic/claude-sonnet-5.5"
+  ],
+  "prompt_tokens_per_call": [
+    1161,
+    3091,
+    3696
+  ],
+  "max_prompt_tokens": 3696
+}

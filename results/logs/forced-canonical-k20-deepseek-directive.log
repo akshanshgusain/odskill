@@ -1,0 +1,3 @@
+mode evolve arm=directive split=val
+deepseek/deepseek-v4.1-flash-1017 val pass=0 full=False pending 60/60
+request_tools: load_skill

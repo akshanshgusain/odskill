@@ -1,0 +1,39 @@
+{
+  "proposal": {
+    "create_patterns": [
+      {
+        "name": "selection-missed-heat-when-microwave-or-heat-verb-mentioned.md",
+        "content": "Tasks t2 (Heat a tomato and place it on the table) and t6 (Heat up a black mug in the microwave, put in cabinet). Ground truth pick_heat_then_place. Nothing was loaded. The verb 'heat' plainly matches the skill. Select pick_heat_then_place when the task heats something, even if it also names a destination such as a cabinet or table."
+      },
+      {
+        "name": "selection-missed-cool-when-cooled-adjective-used.md",
+        "content": "Task t3: 'Place a cooled plate in the cupboard beneath the sink'. Ground truth pick_cool_then_place. Nothing was loaded. The cue is the adjective 'cooled', and the task never says 'cool the plate'. The sink in the destination is a distractor and does not mean clean. Select the cool skill."
+      },
+      {
+        "name": "selection-missed-clean-when-sink-water-implied.md",
+        "content": "Task t7: 'Put soap in the sink with water to be placed on the toilet lid'. Ground truth pick_clean_then_place. Nothing was loaded. The task never says 'clean' or 'wash'. The cue is sink and water, which imply washing. Treat sink-with-water phrasing as a clean-then-place cue."
+      },
+      {
+        "name": "selection-missed-two-object-when-two-counted.md",
+        "content": "Tasks t5 ('two spray bottles') and t8 ('two sets of keys'). Ground truth pick_two_obj_and_place. Nothing was loaded. The word 'two' is an explicit count cue. Select the two-object skill instead of single pick_and_place."
+      },
+      {
+        "name": "selection-missed-plain-place-for-simple-put.md",
+        "content": "Tasks t1 and t4: 'Put a salt shaker in the drawer' and 'Put a salt shaker on the black table'. Ground truth pick_and_place. Nothing was loaded. When there is one object, no transform and no count, load pick_and_place. Not loading anything is the failure here."
+      }
+    ],
+    "update_patterns": [],
+    "update_index": "Trace mapping for this batch: selection-missed-plain-place-for-simple-put (t1, t4); selection-missed-heat-when-microwave-or-heat-verb-mentioned (t2, t6); selection-missed-cool-when-cooled-adjective-used (t3); selection-missed-two-object-when-two-counted (t5, t8); selection-missed-clean-when-sink-water-implied (t7). Older pages (selection-loaded-nothing-for-plain-pick-and-place, selection-loaded-nothing-for-two-object-placement, selection-loaded-nothing-for-bare-plural-two-object-task, selection-loaded-nothing-for-heat-or-clean-transform) have trace mappings that do not match this batch. Every trace here loaded nothing.\n- [selection-loaded-nothing-for-bare-plural-two-object-task](<wiki/patterns/selection-loaded-nothing-for-bare-plural-two-object-task.md>)\n\n- [selection-loaded-nothing-for-heat-or-clean-transform](<wiki/patterns/selection-loaded-nothing-for-heat-or-clean-transform.md>)\n\n- [selection-loaded-nothing-for-plain-pick-and-place](<wiki/patterns/selection-loaded-nothing-for-plain-pick-and-place.md>)\n\n- [selection-loaded-nothing-for-two-object-placement](<wiki/patterns/selection-loaded-nothing-for-two-object-placement.md>)\n\n- [selection-missed-heat-when-microwave-or-heat-verb-mentioned](<wiki/patterns/selection-missed-heat-when-microwave-or-heat-verb-mentioned.md>)\n\n- [selection-missed-cool-when-cooled-adjective-used](<wiki/patterns/selection-missed-cool-when-cooled-adjective-used.md>)\n\n- [selection-missed-clean-when-sink-water-implied](<wiki/patterns/selection-missed-clean-when-sink-water-implied.md>)\n\n- [selection-missed-two-object-when-two-counted](<wiki/patterns/selection-missed-two-object-when-two-counted.md>)\n\n- [selection-missed-plain-place-for-simple-put](<wiki/patterns/selection-missed-plain-place-for-simple-put.md>)\n",
+    "append_log": "Reviewed t1-t8. Every trace loaded nothing. Added 5 pages by cue type: plain place, heat, cool, clean, and two-object."
+  },
+  "read_trace_ids": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+    "t7",
+    "t8"
+  ]
+}

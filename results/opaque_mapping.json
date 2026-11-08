@@ -1,0 +1,19 @@
+{
+  "seed": 0,
+  "opaque_to_canonical": {
+    "skill_01": "pick_heat_then_place",
+    "skill_02": "pick_clean_then_place",
+    "skill_03": "pick_and_place",
+    "skill_04": "look_at_obj_in_light",
+    "skill_05": "pick_two_obj_and_place",
+    "skill_06": "pick_cool_then_place"
+  },
+  "canonical_to_opaque": {
+    "pick_heat_then_place": "skill_01",
+    "pick_clean_then_place": "skill_02",
+    "pick_and_place": "skill_03",
+    "look_at_obj_in_light": "skill_04",
+    "pick_two_obj_and_place": "skill_05",
+    "pick_cool_then_place": "skill_06"
+  }
+}

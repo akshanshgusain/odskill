@@ -1,0 +1,3 @@
+mode eval arm=directive split=val
+anthropic/claude-haiku-5.5 val pass=0 full=False pending 60/60
+request_tools: load_skill

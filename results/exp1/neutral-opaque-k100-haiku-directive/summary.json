@@ -1,0 +1,25 @@
+{
+  "recall": 0.0,
+  "precision": 0.0,
+  "f1": 0.0,
+  "noise_load_rate": 0.0,
+  "wrong_type_load_rate": 0.0,
+  "loaded_any": 0.0,
+  "n": 60,
+  "per_pass": [
+    {
+      "n": 60,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0,
+      "noise_load_rate": 0.0,
+      "wrong_type_load_rate": 0.0,
+      "loaded_any": 0.0
+    }
+  ],
+  "by_task_type": {},
+  "model": "anthropic/claude-haiku-5.5",
+  "arm": "directive",
+  "agent_prompt": "neutral",
+  "names": "opaque"
+}

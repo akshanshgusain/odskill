@@ -1,0 +1,1 @@
+Tasks t2 (Heat a tomato and place it on the table) and t6 (Heat up a black mug in the microwave, put in cabinet). Ground truth pick_heat_then_place. Nothing was loaded. The verb 'heat' plainly matches the skill. Select pick_heat_then_place when the task heats something, even if it also names a destination such as a cabinet or table.

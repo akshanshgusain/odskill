@@ -1,0 +1,3 @@
+# Nothing loaded even when the task matches an example
+Traces: 'Move the keys from the desk to the safe', 'Put a cloth in the drawer', 'Put a bottle in a waste basket', 'take the candle from the sink to the toilet'. Truth: pick_and_place. Nothing was loaded each time, although the description says ALWAYS load and gives near-identical examples. Wording like 'ALWAYS' and 'Don't load nothing' did not change the behavior. Plain moves look too trivial to need a skill. Mentions of sink or toilet as places did not trigger clean.
+Fix: state that every put/move/take task needs a procedure skill, and make this the default when no other trigger applies.

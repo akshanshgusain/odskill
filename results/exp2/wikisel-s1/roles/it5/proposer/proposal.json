@@ -1,0 +1,10 @@
+{
+  "descriptions": {
+    "look_at_obj_in_light": "Use when the task says look at, examine, or inspect an object under/with a desklamp or floorlamp (e.g. \"look at the alarmclock under the desklamp\"). Find the object, then turn on the lamp.",
+    "pick_and_place": "Use for simple single-object tasks: \"put a mug on the desk\", \"put some soap in the cabinet\", \"put a/an X in/on Y\". No heating, cooling, cleaning, lamp, or count of two.",
+    "pick_clean_then_place": "Use when the object must be cleaned/washed first (\"clean\", \"clean X\", sink/water implied) then placed, e.g. \"put a clean plate in the cabinet\". Uses sinkbasin.",
+    "pick_cool_then_place": "Use when the object must be cooled first: words cool, cold, chilled, chill, refrigerate (\"put a cold apple on the table\", \"cooled lettuce\"). Uses fridge, then place.",
+    "pick_heat_then_place": "Use when the object must be heated first: words heat, hot, warm, cook, microwave (\"put a hot potato on the countertop\", \"heat the mug\"). Uses microwave, then place.",
+    "pick_two_obj_and_place": "Use when the task has two or a plural count of the same object: \"put two pillows on the sofa\", \"two/both/2 X in/on Y\". Find and place two separate objects."
+  }
+}

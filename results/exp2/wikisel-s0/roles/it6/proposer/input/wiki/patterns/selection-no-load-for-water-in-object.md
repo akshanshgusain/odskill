@@ -1,0 +1,1 @@
+Task: 'Put a bowl with water in it in the cabinet.' Truth: pick_clean_then_place. Nothing loaded. 'water' with no clean/wash/wet word was read as a plain move. Cue: water-related wording points to the sinkbasin skill. Descriptions in iterations 0-2 all scored 0 because no skill was loaded.

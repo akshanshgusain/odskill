@@ -1,0 +1,10 @@
+{
+  "descriptions": {
+    "look_at_obj_in_light": "MUST load before acting whenever the task says 'look at', 'examine', 'inspect' or 'find' an object 'under'/'in'/'with' a desklamp or floorlamp. Any task mentioning a lamp. Take the object, go to the lamp, use it.",
+    "pick_and_place": "MUST load before acting for a basic 'put a X in/on Y' or 'put some X on/in Y' task (one object, e.g. 'put a mug on the desk'). Load whenever the task has no clean/hot/cool/heat word, no lamp, and no 'two'. Find, take, place.",
+    "pick_clean_then_place": "MUST load before acting whenever the task says 'clean', 'wash' or 'rinse' (e.g. 'put a clean plate in the cabinet', 'clean X and put it in Y'). Take the object, clean it at the sinkbasin, then place it.",
+    "pick_cool_then_place": "MUST load before acting whenever the task says 'cool', 'cold', 'chilled' or 'refrigerate' (e.g. 'put a cool apple on the table', 'cool X and put it in Y'). Take the object, cool it with the fridge, then place it.",
+    "pick_heat_then_place": "MUST load before acting whenever the task says 'hot', 'heat', 'warm' or 'cook' (e.g. 'put a hot potato on the countertop', 'heat X and put it in Y'). Take the object, heat it in the microwave, then place it.",
+    "pick_two_obj_and_place": "MUST load before acting whenever the task has 'two' of something or a plural count (e.g. 'put two pillows on the sofa', 'find two cds and put them in the drawer'). Find and place two objects of the same kind, one at a time."
+  }
+}

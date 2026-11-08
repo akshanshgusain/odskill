@@ -1,0 +1,23 @@
+{
+  "proposal": {
+    "create_patterns": [
+      {
+        "name": "selection-no-load-in-any-iteration-despite-description-rewrites.md",
+        "content": "# No skill loaded in any iteration\n\nEvidence: all 8 traces (t1-t8) have no loads and no relevant skill loaded. These include plain puts (credit card, keys, throw pillow), 'two' tasks (alarm clocks, newspapers, salt shakers, pencils) and 'examine the statue with the lamp'. val_f1 was 0.000 for the baseline and for iterations 1-4, and every per-skill recall was 0.\n\nInterpretation: rewriting the descriptions (keywords, examples, 'Use when...') did not change the outcome. The failure is probably that the agent never loads any skill, not that it picks the wrong one. Wording is probably not the cause. Check the load mechanism before making more description edits.\n\nNote: t4 'examine the statue with the lamp' has ground truth pick_and_place, not look_at_obj_in_light. The label and the lamp wording disagree.\n\nSee also selection-no-load-for-examine-under-lamp and selection-no-load-for-plain-put."
+      }
+    ],
+    "update_patterns": [],
+    "update_index": "Added selection-no-load-in-any-iteration-despite-description-rewrites: all 8 traces had no load and every iteration scored 0.000, so the cause is probably not the description wording. Existing stems: selection-missed-clean-when-microwave-mentioned, selection-missed-clean-when-wet-or-clean-adjective, selection-missed-cool-when-cooled-adjective, selection-no-load-for-clean-adjective, selection-no-load-for-clean-then-microwave-destination, selection-no-load-for-cook-then-fridge, selection-no-load-for-plain-move, selection-no-load-for-plain-put, selection-no-load-for-plural-without-number, selection-no-load-for-put-away-two, selection-no-load-for-single-object-move, selection-no-load-for-two-objects-move, selection-no-load-for-water-in-object, selection-no-load-when-clean-implied, selection-no-load-when-two-objects-named, selection-no-load-for-examine-under-lamp, selection-no-load-for-singular-task-labeled-two.\n- [selection-missed-clean-when-microwave-mentioned](<wiki/patterns/selection-missed-clean-when-microwave-mentioned.md>)\n\n- [selection-missed-clean-when-wet-or-clean-adjective](<wiki/patterns/selection-missed-clean-when-wet-or-clean-adjective.md>)\n\n- [selection-missed-cool-when-cooled-adjective](<wiki/patterns/selection-missed-cool-when-cooled-adjective.md>)\n\n- [selection-no-load-for-clean-adjective](<wiki/patterns/selection-no-load-for-clean-adjective.md>)\n\n- [selection-no-load-for-clean-then-microwave-destination](<wiki/patterns/selection-no-load-for-clean-then-microwave-destination.md>)\n\n- [selection-no-load-for-cook-then-fridge](<wiki/patterns/selection-no-load-for-cook-then-fridge.md>)\n\n- [selection-no-load-for-examine-under-lamp](<wiki/patterns/selection-no-load-for-examine-under-lamp.md>)\n\n- [selection-no-load-for-plain-move](<wiki/patterns/selection-no-load-for-plain-move.md>)\n\n- [selection-no-load-for-plain-put](<wiki/patterns/selection-no-load-for-plain-put.md>)\n\n- [selection-no-load-for-plural-without-number](<wiki/patterns/selection-no-load-for-plural-without-number.md>)\n\n- [selection-no-load-for-put-away-two](<wiki/patterns/selection-no-load-for-put-away-two.md>)\n\n- [selection-no-load-for-single-object-move](<wiki/patterns/selection-no-load-for-single-object-move.md>)\n\n- [selection-no-load-for-singular-task-labeled-two](<wiki/patterns/selection-no-load-for-singular-task-labeled-two.md>)\n\n- [selection-no-load-for-two-objects-move](<wiki/patterns/selection-no-load-for-two-objects-move.md>)\n\n- [selection-no-load-for-water-in-object](<wiki/patterns/selection-no-load-for-water-in-object.md>)\n\n- [selection-no-load-when-clean-implied](<wiki/patterns/selection-no-load-when-clean-implied.md>)\n\n- [selection-no-load-when-two-objects-named](<wiki/patterns/selection-no-load-when-two-objects-named.md>)\n\n- [selection-no-load-in-any-iteration-despite-description-rewrites](<wiki/patterns/selection-no-load-in-any-iteration-despite-description-rewrites.md>)\n",
+    "append_log": "Read t1-t8. All had no load. Added one cross-iteration pattern: description rewrites did not help."
+  },
+  "read_trace_ids": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+    "t7",
+    "t8"
+  ]
+}

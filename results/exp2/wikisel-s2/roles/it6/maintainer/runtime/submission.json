@@ -1,0 +1,39 @@
+{
+  "proposal": {
+    "create_patterns": [
+      {
+        "name": "selection-nothing-loaded-for-rinse-paraphrase.md",
+        "content": "# Nothing loaded for 'rinse' (clean paraphrase)\nTask: 'Rinse a cloth and place it behind the sink.' Truth: pick_clean_then_place. Nothing was loaded. The description keys on 'clean/wash', so 'rinse' was not matched.\nFix: list rinse, scrub, and wipe as clean triggers.\n"
+      },
+      {
+        "name": "selection-nothing-loaded-for-microwave-as-source.md",
+        "content": "# Nothing loaded when microwave is only implied heating\nTask: 'Put mug in out the microwave going back to the coffee maker.' Truth: pick_heat_then_place. Nothing was loaded. The task has no heat/hot/cook word and the garbled phrasing hides the heating step. The heat description also warns 'Not for clean X in the microwave', which may make the selector cautious.\nFix: say that using the microwave means heat.\n"
+      },
+      {
+        "name": "selection-nothing-loaded-even-with-exact-example-match.md",
+        "content": "# Nothing loaded even when the task matches an example\nTraces: 'Move the keys from the desk to the safe', 'Put a cloth in the drawer', 'Put a bottle in a waste basket', 'take the candle from the sink to the toilet'. Truth: pick_and_place. Nothing was loaded each time, although the description says ALWAYS load and gives near-identical examples. Wording like 'ALWAYS' and 'Don't load nothing' did not change the behavior. Plain moves look too trivial to need a skill. Mentions of sink or toilet as places did not trigger clean.\nFix: state that every put/move/take task needs a procedure skill, and make this the default when no other trigger applies.\n"
+      },
+      {
+        "name": "selection-nothing-loaded-for-two-with-exact-example.md",
+        "content": "# Nothing loaded for 'Put two compact disks in the safe'\nTruth: pick_two_obj_and_place. Nothing was loaded although 'two' is explicit and the examples are close ('two sets of keys in the safe'). The selector skips loading even for clear keyword matches. This is a loading-behavior failure, not a description-ambiguity failure.\n"
+      },
+      {
+        "name": "selection-examine-with-lamp-loaded-look-at-but-truth-pick-and-place.md",
+        "content": "# 'examine the statue with the lamp' loaded look_at_obj_in_light, but truth was pick_and_place\nThe look_at description lists this exact task as its example, so the selector loaded it. The label here was pick_and_place, so the example conflicts with the ground truth. Treat lamp-task labels as noisy and do not trust the example wording. Related: selection-lamp-examine-task-labeled-pick-and-place.\n"
+      }
+    ],
+    "update_patterns": [],
+    "update_index": "Existing patterns retained: selection-lamp-examine-task-labeled-pick-and-place.md, selection-lamp-mentioned-confusion-examine-vs-turn-on.md, selection-missed-heat-when-cook-mentioned.md, selection-missed-two-object-when-count-two-stated.md, selection-no-skill-loaded-for-plain-pick-and-place.md, selection-nothing-loaded-despite-always-load-wording.md, selection-nothing-loaded-for-clean-with-microwave-destination.md, selection-nothing-loaded-for-cleaned-adjective.md, selection-nothing-loaded-for-implicit-clean-no-keyword.md, selection-nothing-loaded-for-plain-move.md, selection-nothing-loaded-for-plural-without-two-word.md, selection-nothing-loaded-for-throw-away-or-take-paraphrase.md, selection-nothing-loaded-for-two-count.md, selection-nothing-loaded-for-washed-paraphrase.md. Added: selection-nothing-loaded-for-rinse-paraphrase, selection-nothing-loaded-for-microwave-as-source, selection-nothing-loaded-even-with-exact-example-match, selection-nothing-loaded-for-two-with-exact-example, selection-examine-with-lamp-loaded-look-at-but-truth-pick-and-place.\n- [selection-nothing-loaded-for-rinse-paraphrase](<wiki/patterns/selection-nothing-loaded-for-rinse-paraphrase.md>)\n\n- [selection-nothing-loaded-for-microwave-as-source](<wiki/patterns/selection-nothing-loaded-for-microwave-as-source.md>)\n\n- [selection-nothing-loaded-even-with-exact-example-match](<wiki/patterns/selection-nothing-loaded-even-with-exact-example-match.md>)\n\n- [selection-nothing-loaded-for-two-with-exact-example](<wiki/patterns/selection-nothing-loaded-for-two-with-exact-example.md>)\n\n- [selection-examine-with-lamp-loaded-look-at-but-truth-pick-and-place](<wiki/patterns/selection-examine-with-lamp-loaded-look-at-but-truth-pick-and-place.md>)\n",
+    "append_log": "Read t1-t8. Seven of eight traces had nothing loaded. The eighth loaded look_at_obj_in_light where the label was pick_and_place. Added 5 patterns."
+  },
+  "read_trace_ids": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+    "t7",
+    "t8"
+  ]
+}

@@ -1,0 +1,1 @@
+The cue can sit inside a longer sentence. 'cupboard beneath the sink' (t3) is a distractor, and the real cue is 'cooled'. 'microwave ... cabinet above it' (t6) means heat. 'two sets of keys' (t8) means pick_two_obj_and_place. Choose the skill from the transform word or the count, not from the location nouns.

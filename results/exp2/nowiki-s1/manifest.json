@@ -1,0 +1,22 @@
+{
+  "arm": "nowiki",
+  "noise_k": 20,
+  "seed": 1,
+  "iterations": 6,
+  "train_n": 120,
+  "val_n": 60,
+  "passes": 1,
+  "workers": 6,
+  "executor": "anthropic/claude-haiku-5.5",
+  "optimizer": "anthropic/claude-sonnet-5.5",
+  "split": "val",
+  "full": false,
+  "allow_test": false,
+  "effort": "low",
+  "agent_prompt": "neutral",
+  "names": "canonical",
+  "descriptions_file": "",
+  "body_sha256": "d0515c6cf2a25f63b27972cf5e4a5b13738a442543a381c30a3e88d4f1102ad1",
+  "final_f1": 0.7676767676767675,
+  "body_sha256_after": "d0515c6cf2a25f63b27972cf5e4a5b13738a442543a381c30a3e88d4f1102ad1"
+}

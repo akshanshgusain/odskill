@@ -1,0 +1,6 @@
+{
+  "descriptions": {
+    "look_at_obj_in_light": "ALWAYS load first, before any action, for any task to \"look at\", \"examine\", \"inspect\" or \"see\" an object \"under\"/\"with\"/\"in the light of\" a desklamp or floorlamp, e.g. \"look at the alarmclock under the desklamp\". Steps: find X, take it, go to lamp, use lamp.",
+    "pick_and_place": "ALWAYS load first, before any action, for plain tasks phrased \"put a/some X in/on/into Y\" or \"move X to Y\", e.g. \"put a mug on the desk\" (one object, no heating/cooling/cleaning words). Not for \"hot/cold/clean\", not \"two\", not lamp tasks. Search, take X, go to Y, put."
+  }
+}

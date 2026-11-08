@@ -1,0 +1,10 @@
+{
+  "descriptions": {
+    "look_at_obj_in_light": "ALWAYS load first, before any action, for any task with \"look at\", \"examine\", \"inspect\" or \"see\" an object \"under\"/\"with\"/\"in the light of\" a desklamp or floorlamp (e.g. \"look at the alarmclock under the desklamp\"). Any task mentioning a desklamp or floorlamp belongs here. Steps: find X, take it, go to lamp, use lamp.",
+    "pick_and_place": "ALWAYS load first, before any action, for ANY plain move task: \"put a/some X in/on/into Y\", \"place X on Y\", \"move X to Y\", \"put a mug on the desk\", \"put some soap in the cabinet\". One object, no hot/cold/clean/wash/cool/heat words, no \"two\", no lamp. Default skill for simple put tasks. Search, take X, go to Y, put.",
+    "pick_clean_then_place": "ALWAYS load first, before any action, for tasks containing \"clean\", \"washed\" or \"wash\", e.g. \"put a clean X in/on Y\" or \"clean some X and put it in Y\". Even if the task also says put/place, load this one. Take X, clean at sinkbasin, then put.",
+    "pick_cool_then_place": "ALWAYS load first, before any action, for tasks containing \"cool\", \"cold\", \"chilled\" or \"refrigerated\", e.g. \"put a cool X in/on Y\", \"put a cold X in Y\" or \"cool some X and put it in Y\". Even if the task also says put/place, load this one. Take X, cool it with the fridge, then put.",
+    "pick_heat_then_place": "ALWAYS load first, before any action, for tasks containing \"hot\", \"heated\", \"heat\", \"warm\" or \"cooked\", e.g. \"put a hot X in/on Y\" or \"heat some X and put it in Y\". Even if the task also says put/place, load this one. Take X, heat it with the microwave, then put.",
+    "pick_two_obj_and_place": "ALWAYS load first, before any action, for tasks containing \"two\", \"2\" or \"both\", e.g. \"put two X in/on Y\" (two objects of the same kind, like two pillows, two cups, two soapbars). Takes priority over plain put tasks. Find and place each one in turn."
+  }
+}

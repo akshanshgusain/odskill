@@ -1,0 +1,13 @@
+anthropic/claude-haiku-5.5 train pass=0 full=False pending 120/120
+request_tools: load_skill
+anthropic/claude-haiku-5.5 val pass=0 full=False pending 60/60
+anthropic/claude-haiku-5.5 train pass=0 full=False pending 120/120
+anthropic/claude-haiku-5.5 val pass=0 full=False pending 60/60
+anthropic/claude-haiku-5.5 train pass=0 full=False pending 120/120
+anthropic/claude-haiku-5.5 val pass=0 full=False pending 60/60
+anthropic/claude-haiku-5.5 train pass=0 full=False pending 120/120
+anthropic/claude-haiku-5.5 val pass=0 full=False pending 60/60
+anthropic/claude-haiku-5.5 train pass=0 full=False pending 120/120
+anthropic/claude-haiku-5.5 val pass=0 full=False pending 60/60
+anthropic/claude-haiku-5.5 train pass=0 full=False pending 120/120
+anthropic/claude-haiku-5.5 val pass=0 full=False pending 60/60

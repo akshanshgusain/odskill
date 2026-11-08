@@ -1,0 +1,10 @@
+{
+  "descriptions": {
+    "look_at_obj_in_light": "Use for tasks to examine, look at, or inspect an object under a lamp/desklamp: find the object, then turn on the light.",
+    "pick_and_place": "Use for plain tasks to put, move, or put away ONE object (no number) in/on a receptacle, with no cleaning, heating, or cooling.",
+    "pick_clean_then_place": "Use when the object must be cleaned/washed/clean/wet (or clean is implied) before placing, typically via sink. Even if a microwave is the destination, clean first.",
+    "pick_cool_then_place": "Use when the object must be cooled/chilled/cold (or a cooled item) before placing; cool it in the fridge, then place.",
+    "pick_heat_then_place": "Use when the object must be heated/hot/warm/cooked (e.g. cook then put in fridge) before placing; heat it in the microwave, then place.",
+    "pick_two_obj_and_place": "Use when the task involves TWO objects (two, both, or plural like 'some X' with two found) to move or put away into one receptacle."
+  }
+}

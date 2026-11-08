@@ -1,0 +1,145 @@
+supervisor exec
+10:22:35 phase 3 estimate $0.91 from pilot $0.000544/episode; hard cap $8
+10:22:35 phase 3 spent=$0.0000 projection=$8.00 sum=$8.00 ceiling=$40 ok
+10:22:35 start forced-canonical-k20-haiku-plain workers=6 budget=$1.00 pid=28779
+10:22:35 start forced-canonical-k20-haiku-directive workers=6 budget=$1.00 pid=28780
+10:22:35 start forced-canonical-k20-deepseek-plain workers=6 budget=$1.00 pid=28781
+10:22:35 start forced-canonical-k20-deepseek-directive workers=6 budget=$1.00 pid=28782
+10:22:35 start forced-canonical-k100-haiku-plain workers=6 budget=$1.00 pid=28783
+10:22:35 start forced-canonical-k100-haiku-directive workers=6 budget=$1.00 pid=28784
+10:22:35 start forced-canonical-k100-deepseek-plain workers=6 budget=$1.00 pid=28785
+10:22:35 start forced-canonical-k100-deepseek-directive workers=6 budget=$1.00 pid=28786
+10:23:55 done forced-canonical-k100-deepseek-directive exit=0
+10:24:05 start forced-canonical-k300-haiku-plain workers=6 budget=$0.95 pid=28888
+10:24:05 done forced-canonical-k20-deepseek-plain exit=0
+10:24:05 done forced-canonical-k20-deepseek-directive exit=0
+10:24:05 done forced-canonical-k100-deepseek-plain exit=0
+10:24:15 start forced-canonical-k300-haiku-directive workers=6 budget=$1.00 pid=28907
+10:24:15 start forced-canonical-k300-deepseek-plain workers=6 budget=$1.00 pid=28908
+10:24:15 start forced-canonical-k300-deepseek-directive workers=6 budget=$0.90 pid=28909
+10:24:15 done forced-canonical-k20-haiku-plain exit=0
+10:24:15 done forced-canonical-k20-haiku-directive exit=0
+10:24:15 done forced-canonical-k100-haiku-plain exit=0
+10:24:15 done forced-canonical-k100-haiku-directive exit=0
+10:24:25 start neutral-canonical-k20-haiku-plain workers=6 budget=$1.00 pid=28935
+10:24:25 start neutral-canonical-k20-haiku-directive workers=6 budget=$1.00 pid=28936
+10:24:25 start neutral-canonical-k20-deepseek-plain workers=6 budget=$1.00 pid=28937
+10:24:25 start neutral-canonical-k20-deepseek-directive workers=6 budget=$0.88 pid=28938
+10:24:46 dropping to 4 cells cpu=93% worker_problems=0
+10:25:26 done forced-canonical-k300-deepseek-plain exit=0
+10:25:36 done forced-canonical-k300-haiku-plain exit=0
+10:25:36 done forced-canonical-k300-deepseek-directive exit=0
+10:25:36 done neutral-canonical-k20-haiku-plain exit=0
+10:25:36 done neutral-canonical-k20-haiku-directive exit=0
+10:25:36 done neutral-canonical-k20-deepseek-plain exit=0
+10:25:36 done neutral-canonical-k20-deepseek-directive exit=0
+10:25:46 start neutral-canonical-k100-haiku-plain workers=6 budget=$1.00 pid=29051
+10:25:46 start neutral-canonical-k100-haiku-directive workers=6 budget=$1.00 pid=29052
+10:25:46 start neutral-canonical-k100-deepseek-plain workers=6 budget=$1.00 pid=29053
+10:25:46 done forced-canonical-k300-haiku-directive exit=0
+10:25:56 start neutral-canonical-k100-deepseek-directive workers=6 budget=$1.00 pid=29084
+10:26:26 done neutral-canonical-k100-haiku-plain exit=0
+10:26:26 done neutral-canonical-k100-haiku-directive exit=0
+10:26:26 done neutral-canonical-k100-deepseek-plain exit=0
+10:26:26 done neutral-canonical-k100-deepseek-directive exit=0
+10:26:36 start neutral-canonical-k300-haiku-plain workers=6 budget=$1.00 pid=29109
+10:26:36 start neutral-canonical-k300-haiku-directive workers=6 budget=$1.00 pid=29110
+10:26:36 start neutral-canonical-k300-deepseek-plain workers=6 budget=$1.00 pid=29111
+10:26:36 start neutral-canonical-k300-deepseek-directive workers=6 budget=$1.00 pid=29112
+10:27:16 done neutral-canonical-k300-haiku-plain exit=0
+10:27:16 done neutral-canonical-k300-haiku-directive exit=0
+10:27:16 done neutral-canonical-k300-deepseek-plain exit=0
+10:27:16 done neutral-canonical-k300-deepseek-directive exit=0
+10:27:26 start neutral-opaque-k100-haiku-plain workers=6 budget=$1.00 pid=29160
+10:27:27 start neutral-opaque-k100-haiku-directive workers=6 budget=$1.00 pid=29161
+10:27:27 start neutral-opaque-k100-deepseek-plain workers=6 budget=$1.00 pid=29162
+10:27:27 start neutral-opaque-k100-deepseek-directive workers=6 budget=$1.00 pid=29163
+10:28:07 done neutral-opaque-k100-haiku-plain exit=0
+10:28:07 done neutral-opaque-k100-haiku-directive exit=0
+10:28:07 done neutral-opaque-k100-deepseek-plain exit=0
+10:28:07 done neutral-opaque-k100-deepseek-directive exit=0
+10:28:25 decision neutral-canonical-k20-haiku
+10:28:25 phase 5 Haiku $0.000197/episode per-run cap $2.79 six runs $16.75 baselines $0.05
+10:28:25 phase 5 spent=$1.0012 projection=$16.80 sum=$17.80 ceiling=$40 ok
+10:28:25 start baseline-plain-s0 workers=6 budget=$0.02 pid=29214
+10:28:25 start baseline-plain-s1 workers=6 budget=$0.02 pid=29215
+10:28:25 start baseline-plain-s2 workers=6 budget=$0.02 pid=29216
+10:28:55 done baseline-plain-s0 exit=0
+10:28:55 done baseline-plain-s1 exit=0
+10:28:55 done baseline-plain-s2 exit=0
+10:29:05 start evolve-nowiki-s0 workers=6 budget=$2.79 pid=29253
+10:29:05 start evolve-wikisel-s0 workers=6 budget=$2.79 pid=29254
+10:29:05 start evolve-nowiki-s1 workers=6 budget=$2.79 pid=29255
+10:29:05 start evolve-wikisel-s1 workers=6 budget=$2.79 pid=29256
+10:29:05 start evolve-nowiki-s2 workers=6 budget=$2.79 pid=29257
+10:29:05 start evolve-wikisel-s2 workers=6 budget=$2.79 pid=29258
+10:45:39 done evolve-nowiki-s0 exit=0
+10:46:47 done evolve-wikisel-s0 exit=0
+10:46:59 done evolve-wikisel-s1 exit=0
+10:47:47 done evolve-nowiki-s1 exit=0
+10:47:47 done evolve-nowiki-s2 exit=0
+10:50:15 done evolve-wikisel-s2 exit=0
+10:50:25 phase 6 Haiku $0.000197/episode × 2144 × 1.3 = $0.55; DeepSeek $0.000193/episode × 1072 × 1.3 = $0.27
+10:50:25 phase 6 spent=$3.7294 projection=$0.82 sum=$4.55 ceiling=$40 ok
+10:50:25 start test-haiku-plain workers=6 budget=$0.07 pid=32098
+10:50:25 start test-haiku-directive workers=6 budget=$0.07 pid=32099
+10:50:26 start test-haiku-nowiki-s0 workers=6 budget=$0.07 pid=32106
+10:50:26 start test-haiku-nowiki-s1 workers=6 budget=$0.07 pid=32113
+10:50:26 start test-haiku-nowiki-s2 workers=6 budget=$0.07 pid=32124
+10:50:27 start test-haiku-wikisel-s0 workers=6 budget=$0.07 pid=32129
+10:50:27 start test-haiku-wikisel-s1 workers=6 budget=$0.07 pid=32149
+10:50:28 start test-haiku-wikisel-s2 workers=6 budget=$0.07 pid=32156
+10:50:29 start test-deepseek-plain workers=6 budget=$0.03 pid=32163
+10:50:30 start test-deepseek-directive workers=6 budget=$0.03 pid=32170
+10:50:31 start test-deepseek-nowiki-s0 workers=6 budget=$0.03 pid=32177
+10:50:32 start test-deepseek-nowiki-s1 workers=6 budget=$0.03 pid=32184
+10:50:34 start test-deepseek-nowiki-s2 workers=6 budget=$0.03 pid=32191
+10:50:35 start test-deepseek-wikisel-s0 workers=6 budget=$0.03 pid=32198
+10:50:36 start test-deepseek-wikisel-s1 workers=6 budget=$0.03 pid=32199
+10:50:37 start test-deepseek-wikisel-s2 workers=6 budget=$0.03 pid=32212
+10:56:04 signal 15; stopping children
+10:56:11 STOP ceiling or signal spent=$4.0062
+10:56:55 batch finished spent=$4.0063
+supervisor resume
+11:00:23 phase 3 estimate $0.91 from pilot $0.000544/episode; hard cap $8
+11:00:23 phase 3 spent=$4.0063 projection=$8.00 sum=$12.01 ceiling=$40 ok
+11:00:32 decision neutral-canonical-k20-haiku
+11:00:32 phase 5 Haiku $0.000197/episode per-run cap $2.79 six runs $16.75 baselines $0.05
+11:00:32 phase 5 spent=$4.0063 projection=$16.80 sum=$20.80 ceiling=$40 ok
+11:00:32 phase 6 Haiku $0.000197/episode × 2144 × 1.3 = $0.55; DeepSeek $0.000193/episode × 1072 × 1.3 = $0.27
+11:00:32 phase 6 spent=$4.0063 projection=$0.82 sum=$4.82 ceiling=$40 ok
+11:00:32 phase 6 resume: arms that load cost more than the Experiment 1 rate. Remaining authorization $0.65 on top of test spend $0.28.
+11:00:32 phase 6 resume spent=$4.0063 projection=$0.65 sum=$4.66 ceiling=$40 ok
+11:00:32 start test-haiku-plain workers=6 budget=$0.05 pid=35321
+11:00:32 start test-haiku-directive workers=6 budget=$0.05 pid=35322
+11:00:32 start test-haiku-nowiki-s0 workers=6 budget=$0.09 pid=35332
+11:00:32 start test-haiku-nowiki-s1 workers=6 budget=$0.08 pid=35339
+11:00:33 start test-haiku-nowiki-s2 workers=6 budget=$0.05 pid=35343
+11:00:33 start test-haiku-wikisel-s0 workers=6 budget=$0.05 pid=35359
+11:00:34 start test-haiku-wikisel-s1 workers=6 budget=$0.05 pid=35371
+11:00:34 start test-haiku-wikisel-s2 workers=6 budget=$0.05 pid=35380
+11:00:35 start test-deepseek-plain workers=6 budget=$0.02 pid=35391
+11:00:36 start test-deepseek-directive workers=6 budget=$0.01 pid=35398
+11:00:37 start test-deepseek-nowiki-s0 workers=6 budget=$0.04 pid=35399
+11:00:37 start test-deepseek-nowiki-s1 workers=6 budget=$0.03 pid=35412
+11:00:38 start test-deepseek-nowiki-s2 workers=6 budget=$0.03 pid=35419
+11:00:39 start test-deepseek-wikisel-s0 workers=6 budget=$0.01 pid=35428
+11:00:40 start test-deepseek-wikisel-s1 workers=6 budget=$0.01 pid=35435
+11:00:41 start test-deepseek-wikisel-s2 workers=6 budget=$0.02 pid=35437
+11:05:37 done test-deepseek-plain exit=0
+11:05:37 done test-deepseek-directive exit=0
+11:05:37 done test-deepseek-wikisel-s0 exit=0
+11:05:37 done test-deepseek-wikisel-s1 exit=0
+11:05:37 done test-deepseek-wikisel-s2 exit=0
+11:05:47 done test-deepseek-nowiki-s1 exit=0
+11:05:47 done test-deepseek-nowiki-s2 exit=0
+11:05:58 done test-deepseek-nowiki-s0 exit=0
+11:08:53 done test-haiku-plain exit=0
+11:08:53 done test-haiku-nowiki-s2 exit=0
+11:08:53 done test-haiku-wikisel-s0 exit=0
+11:08:53 done test-haiku-wikisel-s1 exit=0
+11:09:03 done test-haiku-directive exit=0
+11:09:03 done test-haiku-wikisel-s2 exit=0
+11:09:24 done test-haiku-nowiki-s0 exit=0
+11:09:34 done test-haiku-nowiki-s1 exit=0
+11:11:38 batch finished spent=$4.4488

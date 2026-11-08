@@ -1,0 +1,6 @@
+look_at_obj_in_light: ALWAYS load for tasks like "look at X under the desklamp", "examine X with the floorlamp", or "inspect X in light". Take the object, go to the lamp, use it to turn it on. Any task mentioning a lamp.
+pick_and_place: Load for tasks "put a/some X in/on Y" or "move X to Y" with a single object and no heated/cooled/cleaned/hot/cold/clean/lamp/two/"two" words. Plain find, take, put.
+pick_clean_then_place: Load for tasks with "clean", "wash", or "rinse" an object then put it somewhere (e.g. "put a clean plate in the cabinet", "clean some mug and put it on the desk"). Uses sinkbasin.
+pick_cool_then_place: Load for tasks with "cool", "cold", "chill", or "refrigerate" an object then put it somewhere (e.g. "put a cool apple on the table", "cool some mug and put it in the cabinet"). Uses fridge.
+pick_heat_then_place: Load for tasks with "hot", "heat", "warm", or "cook" an object then put it somewhere (e.g. "put a hot potato on the countertop", "heat some egg and put it on the table"). Uses microwave.
+pick_two_obj_and_place: Load for tasks with "two" or a count of 2 objects, e.g. "put two pillows on the sofa", "find two soapbars and put them in the cabinet". Find and place both, one at a time.

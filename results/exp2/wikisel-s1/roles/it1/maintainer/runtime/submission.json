@@ -1,0 +1,31 @@
+{
+  "proposal": {
+    "create_patterns": [
+      {
+        "name": "selection-loaded-nothing-for-plain-pick-and-place.md",
+        "content": "# Loaded nothing for plain single-object placement\n\nTraces t1, t4, t6. Tasks: salt shaker into drawer, salt shaker on black table, move watch from drawer to coffee table. Ground truth was pick_and_place. No skill was loaded.\n\nCue: one object, a move/put verb, a destination, and no state change (heat, cool, clean) and no count. Load pick_and_place. Verbs like 'move' count too.\n"
+      },
+      {
+        "name": "selection-loaded-nothing-for-two-object-placement.md",
+        "content": "# Loaded nothing when task has two objects\n\nTraces t5, t7, t8. Tasks: two spray bottles on a cabinet, alarm clocks moved to a shelf, two shakers on the end table. Ground truth was pick_two_obj_and_place. No skill was loaded.\n\nCue: 'two', or a plural noun that implies two (alarm clocks), with a destination. Load pick_two_obj_and_place, not pick_and_place. The plural alone can be the only cue.\n"
+      },
+      {
+        "name": "selection-loaded-nothing-for-heat-or-clean-transform.md",
+        "content": "# Loaded nothing when a state change is requested\n\nTraces t2, t3. 'Heat a tomato and place it' needed pick_heat_then_place. 'Place a rinsed knife on a counter' needed pick_clean_then_place. No skill was loaded.\n\nCue: heat or clean words, including indirect ones such as 'rinsed', mean the transform skill. Match the implied state change to the skill, not plain pick_and_place. Cooling maps to pick_cool_then_place the same way.\n"
+      }
+    ],
+    "update_patterns": [],
+    "update_index": "# Index\n\n- selection-loaded-nothing-for-plain-pick-and-place: single-object placement tasks, no skill loaded.\n- selection-loaded-nothing-for-two-object-placement: two-object or plural tasks, no skill loaded.\n- selection-loaded-nothing-for-heat-or-clean-transform: heat or rinse tasks, no skill loaded.\n\n- [selection-loaded-nothing-for-plain-pick-and-place](<wiki/patterns/selection-loaded-nothing-for-plain-pick-and-place.md>)\n\n- [selection-loaded-nothing-for-two-object-placement](<wiki/patterns/selection-loaded-nothing-for-two-object-placement.md>)\n\n- [selection-loaded-nothing-for-heat-or-clean-transform](<wiki/patterns/selection-loaded-nothing-for-heat-or-clean-transform.md>)\n",
+    "append_log": "Read t1-t8. All 8 had no skill loaded, and the ground-truth skill was never loaded. Wrote 3 patterns grouped by the kind of task."
+  },
+  "read_trace_ids": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+    "t7",
+    "t8"
+  ]
+}

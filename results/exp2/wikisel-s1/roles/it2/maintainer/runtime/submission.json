@@ -1,0 +1,23 @@
+{
+  "proposal": {
+    "create_patterns": [
+      {
+        "name": "selection-loaded-nothing-for-bare-plural-two-object-task.md",
+        "content": "# Loaded nothing when the task has a bare plural\n\nTrace t7: 'Move the alarm clocks on the desk to the drawer shelf.' The ground truth was pick_two_obj_and_place. Nothing was loaded. The task has no word 'two', so the plural noun is the only cue.\n\nOther traces with an explicit 'two' also loaded nothing: t2, t3, t5 and t8.\n\nRule: if the object noun is plural, or the task says two, load pick_two_obj_and_place. Do not fall back to pick_and_place.\n\nEvidence is aggregate only: all 8 traces loaded nothing, and baseline recall was 0 for every skill."
+      }
+    ],
+    "update_patterns": [],
+    "update_index": "- selection-loaded-nothing-for-plain-pick-and-place: single-object placement tasks, no skill loaded (t1, t4, t6).\n- selection-loaded-nothing-for-two-object-placement: two-object tasks, no skill loaded (t2, t3, t5, t8).\n- selection-loaded-nothing-for-bare-plural-two-object-task: a plural noun with no number word, no skill loaded (t7).\n- selection-loaded-nothing-for-heat-or-clean-transform: heat or rinse tasks, no skill loaded. No trace in this batch.\n- [selection-loaded-nothing-for-heat-or-clean-transform](<wiki/patterns/selection-loaded-nothing-for-heat-or-clean-transform.md>)\n\n- [selection-loaded-nothing-for-plain-pick-and-place](<wiki/patterns/selection-loaded-nothing-for-plain-pick-and-place.md>)\n\n- [selection-loaded-nothing-for-two-object-placement](<wiki/patterns/selection-loaded-nothing-for-two-object-placement.md>)\n\n- [selection-loaded-nothing-for-bare-plural-two-object-task](<wiki/patterns/selection-loaded-nothing-for-bare-plural-two-object-task.md>)\n",
+    "append_log": "Read t1-t8. Every trace loaded no skill. The ground truths were pick_and_place (t1, t4, t6) and pick_two_obj_and_place (t2, t3, t5, t7, t8). Added a bare-plural pattern for t7 and refreshed the index."
+  },
+  "read_trace_ids": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+    "t7",
+    "t8"
+  ]
+}

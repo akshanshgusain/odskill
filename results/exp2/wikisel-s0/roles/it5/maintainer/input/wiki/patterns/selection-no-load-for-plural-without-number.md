@@ -1,0 +1,1 @@
+Task: 'Move the alarm clocks on the desk to the drawer shelf.' Truth: pick_two_obj_and_place. Nothing loaded. The task has a plural noun and no digit or the word 'two'. Descriptions that key only on the word 'two' miss it. Cue: a plural object noun means the two-object skill.

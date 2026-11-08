@@ -1,0 +1,6 @@
+look_at_obj_in_light: ALWAYS load first for tasks phrased "look at / examine X under/with the desklamp or floorlamp". Steps: find X, take it, go to lamp, use lamp.
+pick_and_place: ALWAYS load first for tasks phrased "put a/some X in/on Y" (single object, plain move). Not for hot/cold/clean, not "two", not lamp tasks.
+pick_clean_then_place: ALWAYS load first for tasks phrased "put a clean X in/on Y" or clean/wash X then place it. Take X, clean at sinkbasin, then put.
+pick_cool_then_place: ALWAYS load first for tasks phrased "put a cool/cold/chilled X in/on Y". Take X, cool it with the fridge, then put.
+pick_heat_then_place: ALWAYS load first for tasks phrased "put a hot/heated/warm X in/on Y". Take X, heat it with the microwave, then put.
+pick_two_obj_and_place: ALWAYS load first for tasks phrased "put two X in/on Y" (two objects of the same kind). Find and place each one in turn.

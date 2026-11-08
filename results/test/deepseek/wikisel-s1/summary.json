@@ -1,0 +1,25 @@
+{
+  "recall": 0.007462686567164179,
+  "precision": 0.25,
+  "f1": 0.014492753623188404,
+  "noise_load_rate": 0.25,
+  "wrong_type_load_rate": 0.5,
+  "loaded_any": 0.007462686567164179,
+  "n": 134,
+  "per_pass": [
+    {
+      "n": 134,
+      "recall": 0.007462686567164179,
+      "precision": 0.25,
+      "f1": 0.014492753623188404,
+      "noise_load_rate": 0.25,
+      "wrong_type_load_rate": 0.5,
+      "loaded_any": 0.007462686567164179
+    }
+  ],
+  "by_task_type": {},
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "arm": "wikisel",
+  "agent_prompt": "neutral",
+  "names": "canonical"
+}

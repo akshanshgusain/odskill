@@ -1,0 +1,27 @@
+{
+  "proposal": {
+    "create_patterns": [
+      {
+        "name": "selection-loaded-nothing-for-clean-adjective-task.md",
+        "content": "# Loaded nothing for clean-adjective task\n\nTask: 'Place a clean fork in the drawer at the end of the counter.' Truth: pick_clean_then_place. Nothing was loaded.\n\nThe word 'clean' is used as an adjective and no sink is mentioned. The long location phrase ('drawer at the end of the counter') hides the cue. The selector treated the task as a plain put. Fix: treat clean/washed/rinsed as a cue for pick_clean_then_place, even when the verb is only 'place'.\n\nEvidence: t7. Every offered description was bare, and none mentioned adjective forms."
+      },
+      {
+        "name": "selection-loaded-nothing-for-heated-adjective-task.md",
+        "content": "# Loaded nothing for heated-adjective task\n\nTask: 'Place a heated plate on the counter.' Truth: pick_heat_then_place. Nothing was loaded.\n\nThe cue is the participle 'heated', not the verb 'heat'. The selector read it as a plain place task. Fix: treat heated/hot/warmed as cues for pick_heat_then_place. This is the same failure as the cooled-adjective page, but for heat. The microwave is not mentioned.\n\nEvidence: t8. Compare t2, 'Heat a tomato...', where the verb form was also missed."
+      }
+    ],
+    "update_patterns": [],
+    "update_index": "Batch: all 8 traces loaded nothing. Mapping: t1 and t4 are plain puts (selection-loaded-nothing-for-simple-put-in-or-on, selection-loaded-nothing-for-plain-pick-and-place, selection-missed-plain-place-for-simple-put). t2 is the heat verb (selection-loaded-nothing-for-heat-verb-task, selection-missed-heat-when-microwave-or-heat-verb-mentioned, selection-loaded-nothing-for-heat-or-clean-transform). t3 is the cooled adjective (selection-loaded-nothing-for-cooled-adjective-task, selection-missed-cool-when-cooled-adjective-used). t5 and t6 are two or plural (selection-loaded-nothing-for-counted-or-plural-objects, selection-loaded-nothing-for-bare-plural-two-object-task, selection-loaded-nothing-for-two-object-placement, selection-missed-two-object-when-two-counted). t7 is the clean adjective (selection-loaded-nothing-for-clean-adjective-task, selection-missed-clean-when-sink-water-implied). t8 is the heated adjective (selection-loaded-nothing-for-heated-adjective-task). General pages: selection-loaded-nothing-despite-explicit-keyword-match, selection-ignored-cue-words-inside-long-task-text.\n- [selection-ignored-cue-words-inside-long-task-text](<wiki/patterns/selection-ignored-cue-words-inside-long-task-text.md>)\n\n- [selection-loaded-nothing-despite-explicit-keyword-match](<wiki/patterns/selection-loaded-nothing-despite-explicit-keyword-match.md>)\n\n- [selection-loaded-nothing-for-bare-plural-two-object-task](<wiki/patterns/selection-loaded-nothing-for-bare-plural-two-object-task.md>)\n\n- [selection-loaded-nothing-for-cooled-adjective-task](<wiki/patterns/selection-loaded-nothing-for-cooled-adjective-task.md>)\n\n- [selection-loaded-nothing-for-counted-or-plural-objects](<wiki/patterns/selection-loaded-nothing-for-counted-or-plural-objects.md>)\n\n- [selection-loaded-nothing-for-heat-or-clean-transform](<wiki/patterns/selection-loaded-nothing-for-heat-or-clean-transform.md>)\n\n- [selection-loaded-nothing-for-heat-verb-task](<wiki/patterns/selection-loaded-nothing-for-heat-verb-task.md>)\n\n- [selection-loaded-nothing-for-plain-pick-and-place](<wiki/patterns/selection-loaded-nothing-for-plain-pick-and-place.md>)\n\n- [selection-loaded-nothing-for-simple-put-in-or-on](<wiki/patterns/selection-loaded-nothing-for-simple-put-in-or-on.md>)\n\n- [selection-loaded-nothing-for-two-object-placement](<wiki/patterns/selection-loaded-nothing-for-two-object-placement.md>)\n\n- [selection-missed-clean-when-sink-water-implied](<wiki/patterns/selection-missed-clean-when-sink-water-implied.md>)\n\n- [selection-missed-cool-when-cooled-adjective-used](<wiki/patterns/selection-missed-cool-when-cooled-adjective-used.md>)\n\n- [selection-missed-heat-when-microwave-or-heat-verb-mentioned](<wiki/patterns/selection-missed-heat-when-microwave-or-heat-verb-mentioned.md>)\n\n- [selection-missed-plain-place-for-simple-put](<wiki/patterns/selection-missed-plain-place-for-simple-put.md>)\n\n- [selection-missed-two-object-when-two-counted](<wiki/patterns/selection-missed-two-object-when-two-counted.md>)\n\n- [selection-loaded-nothing-for-clean-adjective-task](<wiki/patterns/selection-loaded-nothing-for-clean-adjective-task.md>)\n\n- [selection-loaded-nothing-for-heated-adjective-task](<wiki/patterns/selection-loaded-nothing-for-heated-adjective-task.md>)\n",
+    "append_log": "Read t1-t8. All loaded nothing. Added pages for the clean-adjective and heated-adjective cases. Other cases were already covered by existing pages."
+  },
+  "read_trace_ids": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+    "t7",
+    "t8"
+  ]
+}

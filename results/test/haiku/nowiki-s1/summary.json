@@ -1,0 +1,34 @@
+{
+  "recall": 0.6082089552238806,
+  "precision": 0.9592592592592593,
+  "f1": 0.7440361342030511,
+  "noise_load_rate": 0.0,
+  "wrong_type_load_rate": 0.040740740740740744,
+  "loaded_any": 0.6082089552238806,
+  "n": 268,
+  "per_pass": [
+    {
+      "n": 134,
+      "recall": 0.582089552238806,
+      "precision": 0.9629629629629629,
+      "f1": 0.7255813953488373,
+      "noise_load_rate": 0.0,
+      "wrong_type_load_rate": 0.037037037037037035,
+      "loaded_any": 0.582089552238806
+    },
+    {
+      "n": 134,
+      "recall": 0.6343283582089553,
+      "precision": 0.9555555555555556,
+      "f1": 0.762490873057265,
+      "noise_load_rate": 0.0,
+      "wrong_type_load_rate": 0.044444444444444446,
+      "loaded_any": 0.6343283582089553
+    }
+  ],
+  "by_task_type": {},
+  "model": "anthropic/claude-haiku-5.5",
+  "arm": "nowiki",
+  "agent_prompt": "neutral",
+  "names": "canonical"
+}

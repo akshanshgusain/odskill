@@ -1,0 +1,176 @@
+[
+ {
+  "role": "system",
+  "content": [
+   {
+    "type": "text",
+    "text": "You keep a wiki of skill-selection failures. Read the staged traces. Each trace has the task text, the offered index, the loads, and the ground-truth skill. Write pattern pages named selection-<what happened>, for example selection-missed-heat-when-microwave-mentioned. finish with the four paper fields create_patterns, update_patterns, update_index, append_log. update_index must mention every pattern stem. Do not edit selection-impact, bodies, descriptions, or catalog.",
+    "cache_control": {
+     "type": "ephemeral"
+    }
+   }
+  ]
+ },
+ {
+  "role": "user",
+  "content": "Selection evidence\nHarness aggregates only. No per-task validation details.\n\n# Candidate descriptions\n\n## iteration 0 baseline\n- look_at_obj_in_light: Procedure for examining an object under a light.\n- pick_and_place: Procedure for picking up one object and putting it somewhere.\n- pick_clean_then_place: Procedure for cleaning an object and then putting it somewhere.\n- pick_cool_then_place: Procedure for cooling an object and then putting it somewhere.\n- pick_heat_then_place: Procedure for heating an object and then putting it somewhere.\n- pick_two_obj_and_place: Procedure for picking up two objects and putting them somewhere.\nval_f1 0.000\n- look_at_obj_in_light \u2014 recall 0.000 precision 0.000\n- pick_and_place \u2014 recall 0.000 precision 0.000\n- pick_clean_then_place \u2014 recall 0.000 precision 0.000\n- pick_cool_then_place \u2014 recall 0.000 precision 0.000\n- pick_heat_then_place \u2014 recall 0.000 precision 0.000\n- pick_two_obj_and_place \u2014 recall 0.000 precision 0.000\n\n## iteration 1 accept\n- look_at_obj_in_light: Use when the task is to look at, examine, or inspect an object under a desklamp or floorlamp (e.g. 'look at the alarmclock under the desklamp', 'hold a pencil and turn on the lamp'). Involves turning on the lamp while holding the object.\n- pick_and_place: Use for a plain single-object move: take one object and put/move it in or on a destination (e.g. 'put the blue vase in the safe', 'move keys from shelf to desktop'). No heating, cooling, cleaning, lamp, or count of two.\n- pick_clean_then_place: Use when the task says to clean/wash an object (e.g. 'put a clean plate in the cabinet'): take it, clean at the sinkbasin, then place it at the destination.\n- pick_cool_then_place: Use when the task says to cool, chill, or make an object cold (e.g. 'put a cold apple on the table'): take it, cool in the fridge, then place it.\n- pick_heat_then_place: Use when the task says to heat, warm, or cook an object (e.g. 'put a hot potato on the countertop', 'cook a plate of food then put it in the fridge'): heat in the microwave, then place it.\n- pick_two_obj_and_place: Use when the task states a count of two objects (e.g. 'put two spray bottles in the bin', 'two spatulas in the drawer'): find and place both, one at a time, at the destination.\nval_f1 0.121\n- look_at_obj_in_light \u2014 recall 0.000 precision 0.000\n- pick_and_place \u2014 recall 0.000 precision 0.000\n- pick_clean_then_place \u2014 recall 0.000 precision 0.000\n- pick_cool_then_place \u2014 recall 0.400 precision 1.000\n- pick_heat_then_place \u2014 recall 0.000 precision 0.000\n- pick_two_obj_and_place \u2014 recall 0.000 precision 0.000\n\n## iteration 2 accept\n- look_at_obj_in_light: Use when the task is to look at, examine, or inspect an object with/under a desklamp or floorlamp (e.g. 'look at the alarmclock under the desklamp', 'examine the statue with the lamp'). Involves turning on the lamp while holding the object.\n- pick_and_place: ALWAYS load for a plain single-object move: take one object and put/move it in or on a destination (e.g. 'put the phone on the dresser', 'put a cloth in the drawer', 'move keys from desk to safe'). Use when there is no heat/cool/clean word, no lamp, and no count of two. Don't load nothing.\n- pick_clean_then_place: Use when the task says clean/wash an object (e.g. 'put a clean plate in the cabinet', 'put a clean pan in the microwave'): take it, clean at the sinkbasin, then place it. Trigger is the word 'clean', even if the destination is a microwave or fridge.\n- pick_cool_then_place: Use when the task says to cool, chill, or make an object cold (e.g. 'put a cold apple on the table'): take it, cool in the fridge, then place it.\n- pick_heat_then_place: Use when the task says heat, warm, hot, or cook an object (e.g. 'put a hot potato on the countertop', 'cook a plate of food then put it in the fridge'): heat in the microwave, then place it. Not for 'clean X in the microwave'.\n- pick_two_obj_and_place: Use whenever the task states a count of two (e.g. 'put two smartphones on the sofa', 'two sets of keys in the safe', 'two newspapers on the stand'). The word 'two' can be mid-sentence and any destination; find and place both, one at a time.\nval_f1 0.229\n- look_at_obj_in_light \u2014 recall 0.100 precision 1.000\n- pick_and_place \u2014 recall 0.000 precision 0.000\n- pick_clean_then_place \u2014 recall 0.000 precision 0.000\n- pick_cool_then_place \u2014 recall 0.500 precision 1.000\n- pick_heat_then_place \u2014 recall 0.100 precision 1.000\n- pick_two_obj_and_place \u2014 recall 0.100 precision 1.000\n\n## iteration 3 reject\n- look_at_obj_in_light: Use when the task is to look at, examine, or inspect an object with/under a desklamp or floorlamp (e.g. 'look at the alarmclock under the desklamp', 'examine the statue with the lamp'). The lamp is only a tool to turn on while holding the object; this is not pick_and_place.\n- pick_and_place: ALWAYS load for a plain single-object move: take one object and put/move/take/throw it into a destination (e.g. 'put the phone on the dresser', 'move keys from desk to safe', 'throw away / take the X to the bin'). Use when there is no heat/cool/clean word (hot, cold, clean, cleaned, cook), no lamp, and no count of two. Don't load nothing.\n- pick_clean_then_place: Use when the task says clean, cleaned, or wash an object (e.g. 'put a clean plate in the cabinet', 'put a cleaned pan in the microwave'): take it, clean at the sinkbasin, then place it. Trigger is the word 'clean'/'cleaned', even if the destination is a microwave or fridge.\n- pick_cool_then_place: Use when the task says to cool, chill, or make an object cold (e.g. 'put a cold apple on the table'): take it, cool in the fridge, then place it.\n- pick_heat_then_place: Use when the task says heat, warm, hot, or cook an object (e.g. 'put a hot potato on the countertop', 'cook a plate of food then put it in the fridge'): heat in the microwave, then place it. Not for 'clean X' with a microwave destination.\n- pick_two_obj_and_place: Use whenever the task states a count of two (e.g. 'put two smartphones on the sofa', 'two sets of keys in the safe', 'find two newspapers and put them on the stand'). The word 'two' can be mid-sentence and any destination; find and place both, one at a time.\nval_f1 0.176\n- look_at_obj_in_light \u2014 recall 0.000 precision 0.000\n- pick_and_place \u2014 recall 0.000 precision 0.000\n- pick_clean_then_place \u2014 recall 0.000 precision 0.000\n- pick_cool_then_place \u2014 recall 0.600 precision 1.000\n- pick_heat_then_place \u2014 recall 0.000 precision 0.000\n- pick_two_obj_and_place \u2014 recall 0.000 precision 0.000\n\n## iteration 4 reject\n- look_at_obj_in_light: Use when the task is to look at, examine, or inspect an object with/under a desklamp or floorlamp (e.g. 'look at the alarmclock under the desklamp', 'examine the statue with the lamp'). Involves turning on the lamp while holding the object.\n- pick_and_place: Use for a plain single-object move with no heat/cool/clean word, no lamp, no count of two: take one object and put/move/place/throw/take it to a destination (e.g. 'put the phone on the dresser', 'move keys from desk to safe'). Load this rather than nothing.\n- pick_clean_then_place: Use when the task says clean, cleaned, wash, or washed an object (e.g. 'put a clean plate in the cabinet', 'wash the mug and put it on the shelf'): take it, clean at the sinkbasin, then place it. Trigger is the clean/wash word, even if the destination is a microwave or fridge.\n- pick_cool_then_place: Use when the task says to cool, chill, or make an object cold (e.g. 'put a cold apple on the table'): take it, cool in the fridge, then place it.\n- pick_heat_then_place: Use when the task says heat, warm, hot, or cook an object (e.g. 'put a hot potato on the countertop', 'cook an egg then put it in the fridge'): heat in the microwave, then place it. Not for 'clean X in the microwave'.\n- pick_two_obj_and_place: Use whenever the task states a count of two or 'two X' anywhere in the sentence (e.g. 'put two smartphones on the sofa', 'two sets of keys in the safe'). Any destination; find and place both, one at a time.\nval_f1 0.094\n- look_at_obj_in_light \u2014 recall 0.100 precision 1.000\n- pick_and_place \u2014 recall 0.000 precision 0.000\n- pick_clean_then_place \u2014 recall 0.000 precision 0.000\n- pick_cool_then_place \u2014 recall 0.100 precision 1.000\n- pick_heat_then_place \u2014 recall 0.100 precision 1.000\n- pick_two_obj_and_place \u2014 recall 0.000 precision 0.000\n\nAccepted skills, latest TRAIN batch:\nNo accepted skill in the latest TRAIN batch.\n\nRead every traces/ file below, then finish with selection patterns.\n- traces/t1.md\n- traces/t2.md\n- traces/t3.md\n- traces/t4.md\n- traces/t5.md\n- traces/t6.md\n- traces/t7.md\n- traces/t8.md\n- wiki/bodies.md\n- wiki/descriptions.md\n- wiki/index.md\n- wiki/patterns/selection-lamp-examine-task-labeled-pick-and-place.md\n- wiki/patterns/selection-lamp-mentioned-confusion-examine-vs-turn-on.md\n- wiki/patterns/selection-missed-heat-when-cook-mentioned.md\n- wiki/patterns/selection-missed-two-object-when-count-two-stated.md\n- wiki/patterns/selection-no-skill-loaded-for-plain-pick-and-place.md\n- wiki/patterns/selection-nothing-loaded-despite-always-load-wording.md\n- wiki/patterns/selection-nothing-loaded-for-clean-with-microwave-destination.md\n- wiki/patterns/selection-nothing-loaded-for-cleaned-adjective.md\n- wiki/patterns/selection-nothing-loaded-for-implicit-clean-no-keyword.md\n- wiki/patterns/selection-nothing-loaded-for-plain-move.md\n- wiki/patterns/selection-nothing-loaded-for-plural-without-two-word.md\n- wiki/patterns/selection-nothing-loaded-for-throw-away-or-take-paraphrase.md\n- wiki/patterns/selection-nothing-loaded-for-two-count.md\n- wiki/patterns/selection-nothing-loaded-for-washed-paraphrase.md\n- wiki/selection-impact.md"
+ },
+ {
+  "role": "assistant",
+  "content": null,
+  "tool_calls": [
+   {
+    "type": "function",
+    "index": 0,
+    "id": "toolu_01B4TS5Lgg1XreqszFit7Ww5",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"traces/t1.md\"}"
+    }
+   },
+   {
+    "type": "function",
+    "index": 1,
+    "id": "toolu_01JY6nDebaGb7b4GWpvmywSp",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"traces/t2.md\"}"
+    }
+   },
+   {
+    "type": "function",
+    "index": 2,
+    "id": "toolu_01CjbPuAQhQmLAN9sNAhSAbd",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"traces/t3.md\"}"
+    }
+   },
+   {
+    "type": "function",
+    "index": 3,
+    "id": "toolu_01RSe7hAz1H6Epq982KT7wnv",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"traces/t4.md\"}"
+    }
+   },
+   {
+    "type": "function",
+    "index": 4,
+    "id": "toolu_01RCcafLEkXxVf8ZRjSYDyNR",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"traces/t5.md\"}"
+    }
+   },
+   {
+    "type": "function",
+    "index": 5,
+    "id": "toolu_01TfUcAbP6zhs7BB1pGiGR7Q",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"traces/t6.md\"}"
+    }
+   },
+   {
+    "type": "function",
+    "index": 6,
+    "id": "toolu_011sbdPea9VVuQVMcQKNfELr",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"traces/t7.md\"}"
+    }
+   },
+   {
+    "type": "function",
+    "index": 7,
+    "id": "toolu_01J5mHpj47kaSiDErcpwq3U4",
+    "function": {
+     "name": "read_file",
+     "arguments": "{\"path\": \"traces/t8.md\"}"
+    }
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01B4TS5Lgg1XreqszFit7Ww5",
+  "content": "Task: Rinse a cloth and place it behind the sink.\nGround-truth skill: pick_clean_then_place\nLoaded, in order: (none)\nRelevant loaded: no\n\nOffered index:\n- pick_cool_then_place: Use when the task says to cool, chill, or make an object cold (e.g. 'put a cold apple on the table'): take it, cool in the fridge, then place it.\n- look_at_obj_in_light: Use when the task is to look at, examine, or inspect an object with/under a desklamp or floorlamp (e.g. 'look at the alarmclock under the desklamp', 'examine the statue with the lamp'). Involves turning on the lamp while holding the object.\n- pick_heat_then_place: Use when the task says heat, warm, hot, or cook an object (e.g. 'put a hot potato on the countertop', 'cook a plate of food then put it in the fridge'): heat in the microwave, then place it. Not for 'clean X in the microwave'.\n- pick_two_obj_and_place: Use whenever the task states a count of two (e.g. 'put two smartphones on the sofa', 'two sets of keys in the safe', 'two newspapers on the stand'). The word 'two' can be mid-sentence and any destination; find and place both, one at a time.\n- pick_clean_then_place: Use when the task says clean/wash an object (e.g. 'put a clean plate in the cabinet', 'put a clean pan in the microwave'): take it, clean at the sinkbasin, then place it. Trigger is the word 'clean', even if the destination is a microwave or fridge.\n- pick_and_place: ALWAYS load for a plain single-object move: take one object and put/move it in or on a destination (e.g. 'put the phone on the dresser', 'put a cloth in the drawer', 'move keys from desk to safe'). Use when there is no heat/cool/clean word, no lamp, and no count of two. Don't load nothing.\n+ 20 distractor skills\n\n"
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01JY6nDebaGb7b4GWpvmywSp",
+  "content": "Task: examine the statue with the lamp\nGround-truth skill: pick_and_place\nLoaded, in order: look_at_obj_in_light\nRelevant loaded: no\n\nOffered index:\n- pick_cool_then_place: Use when the task says to cool, chill, or make an object cold (e.g. 'put a cold apple on the table'): take it, cool in the fridge, then place it.\n- look_at_obj_in_light: Use when the task is to look at, examine, or inspect an object with/under a desklamp or floorlamp (e.g. 'look at the alarmclock under the desklamp', 'examine the statue with the lamp'). Involves turning on the lamp while holding the object.\n- pick_heat_then_place: Use when the task says heat, warm, hot, or cook an object (e.g. 'put a hot potato on the countertop', 'cook a plate of food then put it in the fridge'): heat in the microwave, then place it. Not for 'clean X in the microwave'.\n- pick_two_obj_and_place: Use whenever the task states a count of two (e.g. 'put two smartphones on the sofa', 'two sets of keys in the safe', 'two newspapers on the stand'). The word 'two' can be mid-sentence and any destination; find and place both, one at a time.\n- pick_clean_then_place: Use when the task says clean/wash an object (e.g. 'put a clean plate in the cabinet', 'put a clean pan in the microwave'): take it, clean at the sinkbasin, then place it. Trigger is the word 'clean', even if the destination is a microwave or fridge.\n- pick_and_place: ALWAYS load for a plain single-object move: take one object and put/move it in or on a destination (e.g. 'put the phone on the dresser', 'put a cloth in the drawer', 'move keys from desk to safe'). Use when there is no heat/cool/clean word, no lamp, and no count of two. Don't load nothing.\n+ 20 distractor skills\n\n"
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01CjbPuAQhQmLAN9sNAhSAbd",
+  "content": "Task: Put a bottle in a waste basket.\nGround-truth skill: pick_and_place\nLoaded, in order: (none)\nRelevant loaded: no\n\nOffered index:\n- pick_cool_then_place: Use when the task says to cool, chill, or make an object cold (e.g. 'put a cold apple on the table'): take it, cool in the fridge, then place it.\n- look_at_obj_in_light: Use when the task is to look at, examine, or inspect an object with/under a desklamp or floorlamp (e.g. 'look at the alarmclock under the desklamp', 'examine the statue with the lamp'). Involves turning on the lamp while holding the object.\n- pick_heat_then_place: Use when the task says heat, warm, hot, or cook an object (e.g. 'put a hot potato on the countertop', 'cook a plate of food then put it in the fridge'): heat in the microwave, then place it. Not for 'clean X in the microwave'.\n- pick_two_obj_and_place: Use whenever the task states a count of two (e.g. 'put two smartphones on the sofa', 'two sets of keys in the safe', 'two newspapers on the stand'). The word 'two' can be mid-sentence and any destination; find and place both, one at a time.\n- pick_clean_then_place: Use when the task says clean/wash an object (e.g. 'put a clean plate in the cabinet', 'put a clean pan in the microwave'): take it, clean at the sinkbasin, then place it. Trigger is the word 'clean', even if the destination is a microwave or fridge.\n- pick_and_place: ALWAYS load for a plain single-object move: take one object and put/move it in or on a destination (e.g. 'put the phone on the dresser', 'put a cloth in the drawer', 'move keys from desk to safe'). Use when there is no heat/cool/clean word, no lamp, and no count of two. Don't load nothing.\n+ 20 distractor skills\n\n"
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01RSe7hAz1H6Epq982KT7wnv",
+  "content": "Task: Put mug in out the microwave going back to the coffee maker\nGround-truth skill: pick_heat_then_place\nLoaded, in order: (none)\nRelevant loaded: no\n\nOffered index:\n- pick_cool_then_place: Use when the task says to cool, chill, or make an object cold (e.g. 'put a cold apple on the table'): take it, cool in the fridge, then place it.\n- look_at_obj_in_light: Use when the task is to look at, examine, or inspect an object with/under a desklamp or floorlamp (e.g. 'look at the alarmclock under the desklamp', 'examine the statue with the lamp'). Involves turning on the lamp while holding the object.\n- pick_heat_then_place: Use when the task says heat, warm, hot, or cook an object (e.g. 'put a hot potato on the countertop', 'cook a plate of food then put it in the fridge'): heat in the microwave, then place it. Not for 'clean X in the microwave'.\n- pick_two_obj_and_place: Use whenever the task states a count of two (e.g. 'put two smartphones on the sofa', 'two sets of keys in the safe', 'two newspapers on the stand'). The word 'two' can be mid-sentence and any destination; find and place both, one at a time.\n- pick_clean_then_place: Use when the task says clean/wash an object (e.g. 'put a clean plate in the cabinet', 'put a clean pan in the microwave'): take it, clean at the sinkbasin, then place it. Trigger is the word 'clean', even if the destination is a microwave or fridge.\n- pick_and_place: ALWAYS load for a plain single-object move: take one object and put/move it in or on a destination (e.g. 'put the phone on the dresser', 'put a cloth in the drawer', 'move keys from desk to safe'). Use when there is no heat/cool/clean word, no lamp, and no count of two. Don't load nothing.\n+ 20 distractor skills\n\n"
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01RCcafLEkXxVf8ZRjSYDyNR",
+  "content": "Task: Move the keys from the desk to the safe.\nGround-truth skill: pick_and_place\nLoaded, in order: (none)\nRelevant loaded: no\n\nOffered index:\n- pick_cool_then_place: Use when the task says to cool, chill, or make an object cold (e.g. 'put a cold apple on the table'): take it, cool in the fridge, then place it.\n- look_at_obj_in_light: Use when the task is to look at, examine, or inspect an object with/under a desklamp or floorlamp (e.g. 'look at the alarmclock under the desklamp', 'examine the statue with the lamp'). Involves turning on the lamp while holding the object.\n- pick_heat_then_place: Use when the task says heat, warm, hot, or cook an object (e.g. 'put a hot potato on the countertop', 'cook a plate of food then put it in the fridge'): heat in the microwave, then place it. Not for 'clean X in the microwave'.\n- pick_two_obj_and_place: Use whenever the task states a count of two (e.g. 'put two smartphones on the sofa', 'two sets of keys in the safe', 'two newspapers on the stand'). The word 'two' can be mid-sentence and any destination; find and place both, one at a time.\n- pick_clean_then_place: Use when the task says clean/wash an object (e.g. 'put a clean plate in the cabinet', 'put a clean pan in the microwave'): take it, clean at the sinkbasin, then place it. Trigger is the word 'clean', even if the destination is a microwave or fridge.\n- pick_and_place: ALWAYS load for a plain single-object move: take one object and put/move it in or on a destination (e.g. 'put the phone on the dresser', 'put a cloth in the drawer', 'move keys from desk to safe'). Use when there is no heat/cool/clean word, no lamp, and no count of two. Don't load nothing.\n+ 20 distractor skills\n\n"
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01TfUcAbP6zhs7BB1pGiGR7Q",
+  "content": "Task: Put a cloth in the drawer.\nGround-truth skill: pick_and_place\nLoaded, in order: (none)\nRelevant loaded: no\n\nOffered index:\n- pick_cool_then_place: Use when the task says to cool, chill, or make an object cold (e.g. 'put a cold apple on the table'): take it, cool in the fridge, then place it.\n- look_at_obj_in_light: Use when the task is to look at, examine, or inspect an object with/under a desklamp or floorlamp (e.g. 'look at the alarmclock under the desklamp', 'examine the statue with the lamp'). Involves turning on the lamp while holding the object.\n- pick_heat_then_place: Use when the task says heat, warm, hot, or cook an object (e.g. 'put a hot potato on the countertop', 'cook a plate of food then put it in the fridge'): heat in the microwave, then place it. Not for 'clean X in the microwave'.\n- pick_two_obj_and_place: Use whenever the task states a count of two (e.g. 'put two smartphones on the sofa', 'two sets of keys in the safe', 'two newspapers on the stand'). The word 'two' can be mid-sentence and any destination; find and place both, one at a time.\n- pick_clean_then_place: Use when the task says clean/wash an object (e.g. 'put a clean plate in the cabinet', 'put a clean pan in the microwave'): take it, clean at the sinkbasin, then place it. Trigger is the word 'clean', even if the destination is a microwave or fridge.\n- pick_and_place: ALWAYS load for a plain single-object move: take one object and put/move it in or on a destination (e.g. 'put the phone on the dresser', 'put a cloth in the drawer', 'move keys from desk to safe'). Use when there is no heat/cool/clean word, no lamp, and no count of two. Don't load nothing.\n+ 20 distractor skills\n\n"
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_011sbdPea9VVuQVMcQKNfELr",
+  "content": "Task: Put two compact disks in the safe.\nGround-truth skill: pick_two_obj_and_place\nLoaded, in order: (none)\nRelevant loaded: no\n\nOffered index:\n- pick_cool_then_place: Use when the task says to cool, chill, or make an object cold (e.g. 'put a cold apple on the table'): take it, cool in the fridge, then place it.\n- look_at_obj_in_light: Use when the task is to look at, examine, or inspect an object with/under a desklamp or floorlamp (e.g. 'look at the alarmclock under the desklamp', 'examine the statue with the lamp'). Involves turning on the lamp while holding the object.\n- pick_heat_then_place: Use when the task says heat, warm, hot, or cook an object (e.g. 'put a hot potato on the countertop', 'cook a plate of food then put it in the fridge'): heat in the microwave, then place it. Not for 'clean X in the microwave'.\n- pick_two_obj_and_place: Use whenever the task states a count of two (e.g. 'put two smartphones on the sofa', 'two sets of keys in the safe', 'two newspapers on the stand'). The word 'two' can be mid-sentence and any destination; find and place both, one at a time.\n- pick_clean_then_place: Use when the task says clean/wash an object (e.g. 'put a clean plate in the cabinet', 'put a clean pan in the microwave'): take it, clean at the sinkbasin, then place it. Trigger is the word 'clean', even if the destination is a microwave or fridge.\n- pick_and_place: ALWAYS load for a plain single-object move: take one object and put/move it in or on a destination (e.g. 'put the phone on the dresser', 'put a cloth in the drawer', 'move keys from desk to safe'). Use when there is no heat/cool/clean word, no lamp, and no count of two. Don't load nothing.\n+ 20 distractor skills\n\n"
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01J5mHpj47kaSiDErcpwq3U4",
+  "content": "Task: take the candle from the sink to the toilet\nGround-truth skill: pick_and_place\nLoaded, in order: (none)\nRelevant loaded: no\n\nOffered index:\n- pick_cool_then_place: Use when the task says to cool, chill, or make an object cold (e.g. 'put a cold apple on the table'): take it, cool in the fridge, then place it.\n- look_at_obj_in_light: Use when the task is to look at, examine, or inspect an object with/under a desklamp or floorlamp (e.g. 'look at the alarmclock under the desklamp', 'examine the statue with the lamp'). Involves turning on the lamp while holding the object.\n- pick_heat_then_place: Use when the task says heat, warm, hot, or cook an object (e.g. 'put a hot potato on the countertop', 'cook a plate of food then put it in the fridge'): heat in the microwave, then place it. Not for 'clean X in the microwave'.\n- pick_two_obj_and_place: Use whenever the task states a count of two (e.g. 'put two smartphones on the sofa', 'two sets of keys in the safe', 'two newspapers on the stand'). The word 'two' can be mid-sentence and any destination; find and place both, one at a time.\n- pick_clean_then_place: Use when the task says clean/wash an object (e.g. 'put a clean plate in the cabinet', 'put a clean pan in the microwave'): take it, clean at the sinkbasin, then place it. Trigger is the word 'clean', even if the destination is a microwave or fridge.\n- pick_and_place: ALWAYS load for a plain single-object move: take one object and put/move it in or on a destination (e.g. 'put the phone on the dresser', 'put a cloth in the drawer', 'move keys from desk to safe'). Use when there is no heat/cool/clean word, no lamp, and no count of two. Don't load nothing.\n+ 20 distractor skills\n\n"
+ },
+ {
+  "role": "assistant",
+  "content": null,
+  "tool_calls": [
+   {
+    "type": "function",
+    "index": 0,
+    "id": "toolu_01N7HE7kd3KJFG5RHvosoo7n",
+    "function": {
+     "name": "finish",
+     "arguments": "{\"proposal\": {\"create_patterns\":[{\"name\":\"selection-nothing-loaded-for-rinse-paraphrase\",\"content\":\"# Nothing loaded for 'rinse' (clean paraphrase)\\nTask: 'Rinse a cloth and place it behind the sink.' Truth: pick_clean_then_place. Nothing was loaded. The description keys on 'clean/wash', so 'rinse' was not matched.\\nFix: list rinse, scrub, and wipe as clean triggers.\\n\"},{\"name\":\"selection-nothing-loaded-for-microwave-as-source\",\"content\":\"# Nothing loaded when microwave is only implied heating\\nTask: 'Put mug in out the microwave going back to the coffee maker.' Truth: pick_heat_then_place. Nothing was loaded. The task has no heat/hot/cook word and the garbled phrasing hides the heating step. The heat description also warns 'Not for clean X in the microwave', which may make the selector cautious.\\nFix: say that using the microwave means heat.\\n\"},{\"name\":\"selection-nothing-loaded-even-with-exact-example-match\",\"content\":\"# Nothing loaded even when the task matches an example\\nTraces: 'Move the keys from the desk to the safe', 'Put a cloth in the drawer', 'Put a bottle in a waste basket', 'take the candle from the sink to the toilet'. Truth: pick_and_place. Nothing was loaded each time, although the description says ALWAYS load and gives near-identical examples. Wording like 'ALWAYS' and 'Don't load nothing' did not change the behavior. Plain moves look too trivial to need a skill. Mentions of sink or toilet as places did not trigger clean.\\nFix: state that every put/move/take task needs a procedure skill, and make this the default when no other trigger applies.\\n\"},{\"name\":\"selection-nothing-loaded-for-two-with-exact-example\",\"content\":\"# Nothing loaded for 'Put two compact disks in the safe'\\nTruth: pick_two_obj_and_place. Nothing was loaded although 'two' is explicit and the examples are close ('two sets of keys in the safe'). The selector skips loading even for clear keyword matches. This is a loading-behavior failure, not a description-ambiguity failure.\\n\"},{\"name\":\"selection-examine-with-lamp-loaded-look-at-but-truth-pick-and-place\",\"content\":\"# 'examine the statue with the lamp' loaded look_at_obj_in_light, but truth was pick_and_place\\nThe look_at description lists this exact task as its example, so the selector loaded it. The label here was pick_and_place, so the example conflicts with the ground truth. Treat lamp-task labels as noisy and do not trust the example wording. Related: selection-lamp-examine-task-labeled-pick-and-place.\\n\"}],\"update_patterns\":[],\"update_index\":\"Added: selection-nothing-loaded-for-rinse-paraphrase, selection-nothing-loaded-for-microwave-as-source, selection-nothing-loaded-even-with-exact-example-match, selection-nothing-loaded-for-two-with-exact-example, selection-examine-with-lamp-loaded-look-at-but-truth-pick-and-place.\",\"append_log\":\"Read t1-t8. Seven of eight traces had nothing loaded. The eighth loaded look_at_obj_in_light where the label was pick_and_place. Added 5 patterns.\"}}"
+    }
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01N7HE7kd3KJFG5RHvosoo7n",
+  "content": "ContractError: update_index must retain existing pattern: selection-lamp-examine-task-labeled-pick-and-place.md"
+ },
+ {
+  "role": "assistant",
+  "content": null,
+  "tool_calls": [
+   {
+    "type": "function",
+    "index": 0,
+    "id": "toolu_01L9Vm4ZYjiBKmNGpSnApn1o",
+    "function": {
+     "name": "finish",
+     "arguments": "{\"proposal\": {\"create_patterns\":[{\"name\":\"selection-nothing-loaded-for-rinse-paraphrase\",\"content\":\"# Nothing loaded for 'rinse' (clean paraphrase)\\nTask: 'Rinse a cloth and place it behind the sink.' Truth: pick_clean_then_place. Nothing was loaded. The description keys on 'clean/wash', so 'rinse' was not matched.\\nFix: list rinse, scrub, and wipe as clean triggers.\\n\"},{\"name\":\"selection-nothing-loaded-for-microwave-as-source\",\"content\":\"# Nothing loaded when microwave is only implied heating\\nTask: 'Put mug in out the microwave going back to the coffee maker.' Truth: pick_heat_then_place. Nothing was loaded. The task has no heat/hot/cook word and the garbled phrasing hides the heating step. The heat description also warns 'Not for clean X in the microwave', which may make the selector cautious.\\nFix: say that using the microwave means heat.\\n\"},{\"name\":\"selection-nothing-loaded-even-with-exact-example-match\",\"content\":\"# Nothing loaded even when the task matches an example\\nTraces: 'Move the keys from the desk to the safe', 'Put a cloth in the drawer', 'Put a bottle in a waste basket', 'take the candle from the sink to the toilet'. Truth: pick_and_place. Nothing was loaded each time, although the description says ALWAYS load and gives near-identical examples. Wording like 'ALWAYS' and 'Don't load nothing' did not change the behavior. Plain moves look too trivial to need a skill. Mentions of sink or toilet as places did not trigger clean.\\nFix: state that every put/move/take task needs a procedure skill, and make this the default when no other trigger applies.\\n\"},{\"name\":\"selection-nothing-loaded-for-two-with-exact-example\",\"content\":\"# Nothing loaded for 'Put two compact disks in the safe'\\nTruth: pick_two_obj_and_place. Nothing was loaded although 'two' is explicit and the examples are close ('two sets of keys in the safe'). The selector skips loading even for clear keyword matches. This is a loading-behavior failure, not a description-ambiguity failure.\\n\"},{\"name\":\"selection-examine-with-lamp-loaded-look-at-but-truth-pick-and-place\",\"content\":\"# 'examine the statue with the lamp' loaded look_at_obj_in_light, but truth was pick_and_place\\nThe look_at description lists this exact task as its example, so the selector loaded it. The label here was pick_and_place, so the example conflicts with the ground truth. Treat lamp-task labels as noisy and do not trust the example wording. Related: selection-lamp-examine-task-labeled-pick-and-place.\\n\"}],\"update_patterns\":[],\"update_index\":\"Existing patterns retained: selection-lamp-examine-task-labeled-pick-and-place.md, selection-lamp-mentioned-confusion-examine-vs-turn-on.md, selection-missed-heat-when-cook-mentioned.md, selection-missed-two-object-when-count-two-stated.md, selection-no-skill-loaded-for-plain-pick-and-place.md, selection-nothing-loaded-despite-always-load-wording.md, selection-nothing-loaded-for-clean-with-microwave-destination.md, selection-nothing-loaded-for-cleaned-adjective.md, selection-nothing-loaded-for-implicit-clean-no-keyword.md, selection-nothing-loaded-for-plain-move.md, selection-nothing-loaded-for-plural-without-two-word.md, selection-nothing-loaded-for-throw-away-or-take-paraphrase.md, selection-nothing-loaded-for-two-count.md, selection-nothing-loaded-for-washed-paraphrase.md. Added: selection-nothing-loaded-for-rinse-paraphrase, selection-nothing-loaded-for-microwave-as-source, selection-nothing-loaded-even-with-exact-example-match, selection-nothing-loaded-for-two-with-exact-example, selection-examine-with-lamp-loaded-look-at-but-truth-pick-and-place.\",\"append_log\":\"Read t1-t8. Seven of eight traces had nothing loaded. The eighth loaded look_at_obj_in_light where the label was pick_and_place. Added 5 patterns.\"}}"
+    }
+   }
+  ]
+ },
+ {
+  "role": "tool",
+  "tool_call_id": "toolu_01L9Vm4ZYjiBKmNGpSnApn1o",
+  "content": "{\"accepted\": true, \"message\": \"Submission recorded; finish your response without further tool calls.\"}"
+ }
+]

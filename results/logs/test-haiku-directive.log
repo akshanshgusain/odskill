@@ -1,0 +1,7 @@
+mode eval arm=directive split=test
+anthropic/claude-haiku-5.5 test pass=0 full=False pending 134/134
+request_tools: load_skill
+mode eval arm=directive split=test
+anthropic/claude-haiku-5.5 test pass=0 full=False pending 60/134
+request_tools: load_skill
+anthropic/claude-haiku-5.5 test pass=1 full=False pending 134/134

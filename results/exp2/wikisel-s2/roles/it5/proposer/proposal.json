@@ -1,0 +1,6 @@
+{
+  "descriptions": {
+    "pick_clean_then_place": "Use when the task says clean/wash/rinse/scrub an object, or implies cleaning by putting it in the sink with water (e.g. 'put a clean plate in the cabinet', 'put soap in the sink with water to be placed on the toilet lid'): take it, clean at the sinkbasin, then place it. Applies even if the destination is a microwave or fridge.",
+    "pick_two_obj_and_place": "Use when the task states a count of two OR uses a plural object noun with no number (e.g. 'put two smartphones on the sofa', 'move the alarm clocks on the desk to the drawer shelf'). The word 'two' can be mid-sentence and any destination; find and place both, one at a time."
+  }
+}

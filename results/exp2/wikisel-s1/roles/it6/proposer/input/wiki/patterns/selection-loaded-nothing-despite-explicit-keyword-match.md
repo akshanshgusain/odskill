@@ -1,0 +1,1 @@
+In all 8 traces (t1-t8) the agent loaded no skill, even when the task text named the transform. Examples: 'Heat a tomato' (t2), 'cooled plate' (t3), 'clean fork' (t7), 'two spray bottles' (t5). Every iteration scored val_f1 0.000. Fix: load the skill whose cue word matches (heat, cool, clean, two). Use pick_and_place for a plain put.

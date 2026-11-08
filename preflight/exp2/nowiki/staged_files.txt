@@ -1,0 +1,72 @@
+Synthetic iteration-1 and iteration-2 proposer inputs. No API call.
+The common files are built once and staged to both arms.
+
+===== proposer prompt =====
+You edit ALFWorld skill descriptions so the executor loads the one relevant skill. You cannot change skill bodies. Call read_file on the staged files, then finish with JSON {"descriptions": {skill_name: one line}}. Omit a skill to leave it unchanged. Names must be one of: look_at_obj_in_light, pick_and_place, pick_clean_then_place, pick_cool_then_place, pick_heat_then_place, pick_two_obj_and_place.
+
+===== maintainer prompt =====
+You keep a wiki of skill-selection failures. Read the staged traces. Each trace has the task text, the offered index, the loads, and the ground-truth skill. Write pattern pages named selection-<what happened>, for example selection-missed-heat-when-microwave-mentioned. finish with the four paper fields create_patterns, update_patterns, update_index, append_log. update_index must mention every pattern stem. Do not edit selection-impact, bodies, descriptions, or catalog.
+
+===== history.md at iteration 1 =====
+# Candidate descriptions
+
+## iteration 0 baseline
+- look_at_obj_in_light: Procedure for examining an object under a light.
+- pick_and_place: Procedure for picking up one object and putting it somewhere.
+- pick_clean_then_place: Procedure for cleaning an object and then putting it somewhere.
+- pick_cool_then_place: Procedure for cooling an object and then putting it somewhere.
+- pick_heat_then_place: Procedure for heating an object and then putting it somewhere.
+- pick_two_obj_and_place: Procedure for picking up two objects and putting them somewhere.
+val_f1 1.000
+- look_at_obj_in_light — recall 0.000 precision 0.000
+- pick_and_place — recall 0.000 precision 0.000
+- pick_clean_then_place — recall 0.000 precision 0.000
+- pick_cool_then_place — recall 0.000 precision 0.000
+- pick_heat_then_place — recall 1.000 precision 1.000
+- pick_two_obj_and_place — recall 0.000 precision 0.000
+
+===== iteration 1 staged files =====
+bodies.md  bytes=6556  sha256=ac6971fc28a394866ce093722e039d35b037245f34ca4fd723e65390ded3a8ce
+descriptions.md  bytes=495  sha256=162b8c5f5feaf5503b0ec6ad16a16693c08e5dfde76a465a5cc656453bc8c9d0
+history.md  bytes=903  sha256=ee129f1372e1c086e2f8db477963bc1d5d06726c7b4141a671408ed4218db511
+train_metrics.md  bytes=87  sha256=7329ce9d24db8c224b5a1d2f733ddf897fb1c4028ddb88c04ced4d2629bd10fa
+
+===== iteration 2 staged files =====
+bodies.md  bytes=6556  sha256=ac6971fc28a394866ce093722e039d35b037245f34ca4fd723e65390ded3a8ce
+descriptions.md  bytes=507  sha256=d55f5963e87f2183521742c3f1be47b8e1670eb89811a4eac9f71901ac488b03
+history.md  bytes=1791  sha256=3c98fa956a4759fb580a67c899364fe1577f8051eefb5be607e1b88eab487b5d
+train_metrics.md  bytes=87  sha256=7329ce9d24db8c224b5a1d2f733ddf897fb1c4028ddb88c04ced4d2629bd10fa
+
+===== staged trace, canonical names =====
+Task: heat the apple and put it on the table
+Ground-truth skill: pick_heat_then_place
+Loaded, in order: pick_heat_then_place, project_planner
+Relevant loaded: yes
+
+Offered index:
+- pick_and_place: Procedure for picking up one object and putting it somewhere.
+- pick_clean_then_place: Procedure for cleaning an object and then putting it somewhere.
+- pick_two_obj_and_place: Procedure for picking up two objects and putting them somewhere.
+- pick_cool_then_place: Procedure for cooling an object and then putting it somewhere.
+- pick_heat_then_place: Procedure for heating an object and then putting it somewhere.
+- look_at_obj_in_light: Procedure for examining an object under a light.
+- project_planner: Create comprehensive project plans with timelines, dependencies, and resource allocation
++ 5 distractor skills
+
+
+===== staged trace, opaque names =====
+Task: heat the apple and put it on the table
+Ground-truth skill: pick_heat_then_place
+Loaded, in order: pick_heat_then_place, project_planner
+Relevant loaded: yes
+
+Offered index:
+- skill_03 (pick_and_place): Procedure for picking up one object and putting it somewhere.
+- skill_02 (pick_clean_then_place): Procedure for cleaning an object and then putting it somewhere.
+- skill_05 (pick_two_obj_and_place): Procedure for picking up two objects and putting them somewhere.
+- skill_06 (pick_cool_then_place): Procedure for cooling an object and then putting it somewhere.
+- skill_01 (pick_heat_then_place): Procedure for heating an object and then putting it somewhere.
+- skill_04 (look_at_obj_in_light): Procedure for examining an object under a light.
+- project_planner: Create comprehensive project plans with timelines, dependencies, and resource allocation
++ 5 distractor skills
+

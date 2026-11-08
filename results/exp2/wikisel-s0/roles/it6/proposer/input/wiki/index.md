@@ -1,0 +1,36 @@
+Added selection-no-load-in-any-iteration-despite-description-rewrites: all 8 traces had no load and every iteration scored 0.000, so the cause is probably not the description wording. Existing stems: selection-missed-clean-when-microwave-mentioned, selection-missed-clean-when-wet-or-clean-adjective, selection-missed-cool-when-cooled-adjective, selection-no-load-for-clean-adjective, selection-no-load-for-clean-then-microwave-destination, selection-no-load-for-cook-then-fridge, selection-no-load-for-plain-move, selection-no-load-for-plain-put, selection-no-load-for-plural-without-number, selection-no-load-for-put-away-two, selection-no-load-for-single-object-move, selection-no-load-for-two-objects-move, selection-no-load-for-water-in-object, selection-no-load-when-clean-implied, selection-no-load-when-two-objects-named, selection-no-load-for-examine-under-lamp, selection-no-load-for-singular-task-labeled-two.
+- [selection-missed-clean-when-microwave-mentioned](<wiki/patterns/selection-missed-clean-when-microwave-mentioned.md>)
+
+- [selection-missed-clean-when-wet-or-clean-adjective](<wiki/patterns/selection-missed-clean-when-wet-or-clean-adjective.md>)
+
+- [selection-missed-cool-when-cooled-adjective](<wiki/patterns/selection-missed-cool-when-cooled-adjective.md>)
+
+- [selection-no-load-for-clean-adjective](<wiki/patterns/selection-no-load-for-clean-adjective.md>)
+
+- [selection-no-load-for-clean-then-microwave-destination](<wiki/patterns/selection-no-load-for-clean-then-microwave-destination.md>)
+
+- [selection-no-load-for-cook-then-fridge](<wiki/patterns/selection-no-load-for-cook-then-fridge.md>)
+
+- [selection-no-load-for-examine-under-lamp](<wiki/patterns/selection-no-load-for-examine-under-lamp.md>)
+
+- [selection-no-load-for-plain-move](<wiki/patterns/selection-no-load-for-plain-move.md>)
+
+- [selection-no-load-for-plain-put](<wiki/patterns/selection-no-load-for-plain-put.md>)
+
+- [selection-no-load-for-plural-without-number](<wiki/patterns/selection-no-load-for-plural-without-number.md>)
+
+- [selection-no-load-for-put-away-two](<wiki/patterns/selection-no-load-for-put-away-two.md>)
+
+- [selection-no-load-for-single-object-move](<wiki/patterns/selection-no-load-for-single-object-move.md>)
+
+- [selection-no-load-for-singular-task-labeled-two](<wiki/patterns/selection-no-load-for-singular-task-labeled-two.md>)
+
+- [selection-no-load-for-two-objects-move](<wiki/patterns/selection-no-load-for-two-objects-move.md>)
+
+- [selection-no-load-for-water-in-object](<wiki/patterns/selection-no-load-for-water-in-object.md>)
+
+- [selection-no-load-when-clean-implied](<wiki/patterns/selection-no-load-when-clean-implied.md>)
+
+- [selection-no-load-when-two-objects-named](<wiki/patterns/selection-no-load-when-two-objects-named.md>)
+
+- [selection-no-load-in-any-iteration-despite-description-rewrites](<wiki/patterns/selection-no-load-in-any-iteration-despite-description-rewrites.md>)

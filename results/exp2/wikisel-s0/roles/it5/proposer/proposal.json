@@ -1,0 +1,10 @@
+{
+  "descriptions": {
+    "look_at_obj_in_light": "Use for tasks to look at, examine, or inspect an object under/with a desklamp or floorlamp (e.g. 'examine the book under the desklamp'). Take the object, then turn on the lamp.",
+    "pick_and_place": "Use for plain move/put/place/put-away tasks of ONE object to a destination with no heating, cooling, or cleaning (e.g. 'put a mug on the desk', 'move the soap to the cabinet'). Singular object, even if the task is labeled two.",
+    "pick_clean_then_place": "Use when the object must be cleaned, washed, or is described as clean/wet/dirty, then placed (e.g. 'put a clean plate in the cabinet'). Uses sinkbasin. Applies even if a microwave or other appliance is the destination.",
+    "pick_cool_then_place": "Use when the object must be cooled, chilled, cold, or cooled-down (e.g. 'put a cold apple on the table'), then placed. Uses the fridge to cool. Also for cook-then-fridge destinations where cooling is the step.",
+    "pick_heat_then_place": "Use when the object must be heated, warmed, hot, or cooked (e.g. 'put a hot potato on the countertop'), then placed. Uses the microwave to heat.",
+    "pick_two_obj_and_place": "Use when the task asks for two objects or a plural count (e.g. 'put two pillows on the sofa', 'put away two cups', two objects named). Carry one at a time and place both at the destination."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "arm": "nowiki",
+  "noise_k": 20,
+  "seed": 0,
+  "iterations": 6,
+  "train_n": 120,
+  "val_n": 60,
+  "passes": 1,
+  "workers": 6,
+  "executor": "deepseek/deepseek-v4.1-flash-1017",
+  "optimizer": "anthropic/claude-sonnet-5.5",
+  "split": "test",
+  "full": false,
+  "allow_test": true,
+  "effort": "low",
+  "agent_prompt": "neutral",
+  "names": "canonical",
+  "descriptions_file": "/Users/akshanshgusain/AWorkSpace/paper/results/exp2/nowiki-s0/descriptions.json",
+  "body_sha256": "d0515c6cf2a25f63b27972cf5e4a5b13738a442543a381c30a3e88d4f1102ad1"
+}

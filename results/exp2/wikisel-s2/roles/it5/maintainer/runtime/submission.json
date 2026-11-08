@@ -1,0 +1,27 @@
+{
+  "proposal": {
+    "create_patterns": [
+      {
+        "name": "selection-nothing-loaded-for-implicit-clean-no-keyword.md",
+        "content": "# Nothing loaded when clean is implied but the word is missing\n\nTrace t2: 'Put soap in the sink with water to be placed on the toilet lid.' The ground truth was pick_clean_then_place. Nothing was loaded.\n\nThe task never says clean or wash. It describes the cleaning act: an object goes in the sink with water. The clean description keys on the word 'clean', so the match failed.\n\nFix: the description should list implied cleaning cues, such as sink, water, rinse and scrub, alongside clean/wash. The agent should load a skill even when no trigger word matches. Offered descriptions are unchanged in this evidence.\n"
+      },
+      {
+        "name": "selection-nothing-loaded-for-plural-without-two-word.md",
+        "content": "# Nothing loaded when the count of two is implied by a plural\n\nTrace t4: 'Move the alarm clocks on the desk to the drawer shelf.' The ground truth was pick_two_obj_and_place. Nothing was loaded.\n\nThe task has no literal 'two'. The plural noun implies two objects. The two-object description triggers on the stated count, so it was not matched.\n\nFix: say that a plural object noun with no number also suggests pick_two_obj_and_place. Say that a skill must be loaded when the plain pick_and_place wording does not fit a plural task.\n"
+      }
+    ],
+    "update_patterns": [],
+    "update_index": "Added selection-nothing-loaded-for-implicit-clean-no-keyword (t2: soap in sink with water, no clean word) and selection-nothing-loaded-for-plural-without-two-word (t4: alarm clocks, plural with no 'two'). Existing stems still apply: selection-nothing-loaded-for-washed-paraphrase, selection-nothing-loaded-despite-always-load-wording, selection-nothing-loaded-for-plain-move, selection-nothing-loaded-for-throw-away-or-take-paraphrase, selection-nothing-loaded-for-cleaned-adjective, selection-nothing-loaded-for-two-count, selection-nothing-loaded-for-clean-with-microwave-destination, selection-lamp-examine-task-labeled-pick-and-place, selection-no-skill-loaded-for-plain-pick-and-place, selection-missed-two-object-when-count-two-stated, selection-lamp-mentioned-confusion-examine-vs-turn-on, selection-missed-heat-when-cook-mentioned.\n- [selection-lamp-examine-task-labeled-pick-and-place](<wiki/patterns/selection-lamp-examine-task-labeled-pick-and-place.md>)\n\n- [selection-lamp-mentioned-confusion-examine-vs-turn-on](<wiki/patterns/selection-lamp-mentioned-confusion-examine-vs-turn-on.md>)\n\n- [selection-missed-heat-when-cook-mentioned](<wiki/patterns/selection-missed-heat-when-cook-mentioned.md>)\n\n- [selection-missed-two-object-when-count-two-stated](<wiki/patterns/selection-missed-two-object-when-count-two-stated.md>)\n\n- [selection-no-skill-loaded-for-plain-pick-and-place](<wiki/patterns/selection-no-skill-loaded-for-plain-pick-and-place.md>)\n\n- [selection-nothing-loaded-despite-always-load-wording](<wiki/patterns/selection-nothing-loaded-despite-always-load-wording.md>)\n\n- [selection-nothing-loaded-for-clean-with-microwave-destination](<wiki/patterns/selection-nothing-loaded-for-clean-with-microwave-destination.md>)\n\n- [selection-nothing-loaded-for-cleaned-adjective](<wiki/patterns/selection-nothing-loaded-for-cleaned-adjective.md>)\n\n- [selection-nothing-loaded-for-plain-move](<wiki/patterns/selection-nothing-loaded-for-plain-move.md>)\n\n- [selection-nothing-loaded-for-throw-away-or-take-paraphrase](<wiki/patterns/selection-nothing-loaded-for-throw-away-or-take-paraphrase.md>)\n\n- [selection-nothing-loaded-for-two-count](<wiki/patterns/selection-nothing-loaded-for-two-count.md>)\n\n- [selection-nothing-loaded-for-washed-paraphrase](<wiki/patterns/selection-nothing-loaded-for-washed-paraphrase.md>)\n\n- [selection-nothing-loaded-for-implicit-clean-no-keyword](<wiki/patterns/selection-nothing-loaded-for-implicit-clean-no-keyword.md>)\n\n- [selection-nothing-loaded-for-plural-without-two-word](<wiki/patterns/selection-nothing-loaded-for-plural-without-two-word.md>)\n",
+    "append_log": "Read t1-t8. In every trace nothing was loaded. Added two patterns: implicit clean (t2) and plural without 'two' (t4). The other traces map to existing patterns."
+  },
+  "read_trace_ids": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+    "t7",
+    "t8"
+  ]
+}
